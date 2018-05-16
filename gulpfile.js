@@ -45,17 +45,15 @@ gulp.task("style", function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(sourcemaps.write("maps"))
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(sourcemaps.init())
     .pipe(postcss([
       cssnano()
     ]))
     .pipe(rename("style.min.css"))
-    .pipe(sourcemaps.write("maps"))
+    .pipe(sourcemaps.write("/maps"))
     .pipe(gulp.dest("build/css"))
     .pipe(browserSync.reload({stream: true}));
 });
