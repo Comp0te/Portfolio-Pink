@@ -1,10 +1,14 @@
-<header class="page-header">
+<header class="page-header container">
   <a class="page-header__logo-link">
-    <picture class="page-header__logo-svg">
-      <source media="(min-width: 960px)" srcset="img/logo-desktop.svg">
-      <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
-      <img src="img/logo-mobile.svg" alt="Логотип Пинк">
-    </picture>
+    <svg class="page-header__logo-mobile" width="74.43" height="22.86">
+      <use xlink:href="img/sprite.svg#logo-mobile"></use>
+    </svg>
+    <svg class="page-header__logo-tablet" width="146.3" height="40.38">
+      <use xlink:href="img/sprite.svg#logo-tablet"></use>
+    </svg>
+    <svg class="page-header__logo-desktop" width="146.3" height="40.37">
+      <use xlink:href="img/sprite.svg#logo-desktop"></use>
+    </svg>
   </a>
   <nav class="main-navigation">
     <button class="page-header__menu-toggle" type="button">
@@ -15,7 +19,8 @@
         <a href="#" class="main-navigation__link">Главная</a>
       </li>
       <li class="main-navigation__item">
-        <a href="#" class="main-navigation__link">Фотографии</a></li>
+        <a href="#" class="main-navigation__link">Фотографии</a>
+      </li>
       <li class="main-navigation__item">
         <a href="#" class="main-navigation__link">Конкурс</a>
       </li>
