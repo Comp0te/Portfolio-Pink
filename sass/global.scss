@@ -31,6 +31,18 @@
   font-display: swap;
 }
 
+html {
+  box-sizing: border-box;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
 }
