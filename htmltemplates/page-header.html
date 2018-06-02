@@ -1,5 +1,5 @@
 <header class="page-header page-header--menu-open">
-  <div class="page-header__wraper page-header__wraper--menu-open container">
+  <div class="page-header__wraper">
     <a class="page-header__logo-link">
       <svg class="page-header__logo-mobile" width="74.43" height="22.86">
         <use xlink:href="img/sprite.svg#logo-mobile"></use>
@@ -11,30 +11,30 @@
         <use xlink:href="img/sprite.svg#logo-desktop"></use>
       </svg>
     </a>
+    <nav class="main-navigation main-navigation--open page-header__navigation">
+      <button class="main-navigation__toggle" type="button">
+        <span class="visually-hidden">Переключатель меню</span>
+        <svg class="main-navigation__menu-cross" width="24" height="23">
+          <use xlink:href="img/sprite.svg#menu-cross"></use>
+        </svg>
+        <svg class="main-navigation__menu-burger" width="50" height="24">
+          <use xlink:href="img/sprite.svg#menu-burger"></use>
+        </svg>
+      </button>
+      <ul class="main-navigation__list main-navigation__list--open">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link main-navigation__link--active">Главная</a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">Фотографии</a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">Конкурс</a>
+        </li>
+        <li class="main-navigation__item">
+          <a href="#" class="main-navigation__link">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav class="main-navigation">
-    <button class="main-navigation__toggle" type="button">
-      <span class="visually-hidden">Переключатель меню</span>
-      <svg class="main-navigation__menu-cross main-navigation__menu-cross--open " width="24" height="23">
-        <use xlink:href="img/sprite.svg#menu-cross"></use>
-      </svg>
-      <svg class="main-navigation__menu-burger main-navigation__menu-burger--close" width="50" height="24">
-        <use xlink:href="img/sprite.svg#menu-burger"></use>
-      </svg>
-    </button>
-    <ul class="main-navigation__list">
-      <li class="main-navigation__item">
-        <a href="#" class="main-navigation__link">Главная</a>
-      </li>
-      <li class="main-navigation__item">
-        <a href="#" class="main-navigation__link">Фотографии</a>
-      </li>
-      <li class="main-navigation__item">
-        <a href="#" class="main-navigation__link">Конкурс</a>
-      </li>
-      <li class="main-navigation__item">
-        <a href="#" class="main-navigation__link">HTML Academy</a>
-      </li>
-    </ul>
-  </nav>
 </header>
