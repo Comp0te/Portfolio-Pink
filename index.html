@@ -5,9 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css\style.min.css">
-  <title>Пинк</title>
+  <title>Приложение "Пинк"</title>
 </head>
 <body>
   <include src="htmltemplates/page-header.html"></include>
+  <main>
+    <h1 class="visually-hidden">Приложение "Пинк"</h1>
+    <section class="download">
+      <div class="download__preview"></div>
+      <div class="download__wraper container">
+        <p class="download__slogan">Взгляните на жизнь иначе</p>
+        <button class="download__button button">Скачать приложение</button>
+        <svg class="download__apple-svg" width="47" height="56">
+          <use xlink:href="img/sprite.svg#logo-apple"></use>
+        </svg>
+        <svg class="download__android-svg" width="43" height="47">
+          <use xlink:href="img/sprite.svg#logo-android"></use>
+        </svg>
+        <svg class="download__microsoft-svg" width="44" height="41">
+          <use xlink:href="img/sprite.svg#logo-microsoft"></use>
+        </svg>
+        <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

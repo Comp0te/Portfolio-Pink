@@ -1,0 +1,28 @@
+.download__preview {
+  min-height: 462px;
+  margin-top: -66px;
+
+
+  background-image:
+    url("../img/iphone-hand-mobile-1x.png"),
+    url("../img/bg-download-mobile-1x.jpg");
+  background-position: left bottom, center top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 272px 314px, 659px auto;
+  background-color: #1d2631;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/iphone-hand-mobile-2x.png"),
+      url("../img/bg-download-mobile-2x.jpg");
+  }
+}
+
+.download__slogan {
+  display: none;
+}
+
+.download__button {
+  width: 100%;
+  margin-top: 28px;
+}
