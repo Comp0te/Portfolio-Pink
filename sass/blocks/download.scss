@@ -1,14 +1,13 @@
-.download__preview {
-  min-height: 462px;
+.download {
   margin-top: -66px;
-
+  padding-top: 490px;
 
   background-image:
     url("../img/iphone-hand-mobile-1x.png"),
     url("../img/bg-download-mobile-1x.jpg");
-  background-position: left bottom, center top;
+  background-position: right 14.375vw top 150px, center top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 272px 314px, 659px auto;
+  background-size: 272px auto, 659px auto;
   background-color: #1d2631;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -23,6 +22,179 @@
 }
 
 .download__button {
-  width: 100%;
-  margin-top: 28px;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  border-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: $pink-opacity;
+
+    transition-duration: 0s;
+  }
 }
+
+.download__list {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.download__item {
+  display: block;
+  margin-right: 16.6667%;
+  width: 100%;
+  height: auto;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download__android-svg,
+.download__apple-svg,
+.download__microsoft-svg {
+  width: 100%;
+  height: auto;
+  max-height: 60px;
+  min-width: 47px;
+
+  transition: transform 0.1s ease-in;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2, 1.2);
+  }
+
+  &:active {
+    transform: scale(0.8, 0.8);
+
+    transition-duration: 0s;
+  }
+}
+
+.download__availability {
+  margin: 0 7.8125%;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .download {
+    margin-top: -110px;
+    padding-top: 208px;
+    padding-bottom: 112px;
+
+    background-image:
+      url("../img/iphone-hand-tablet-1x.png"),
+      url("../img/bg-download-tablet-1x.jpg");
+    background-position: 25.75vw bottom, center top;
+    background-size: 470px auto, cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/iphone-hand-tablet-2x.png"),
+        url("../img/bg-download-tablet-2x.jpg");
+    }
+  }
+
+  .download__wraper {
+    width: 48.387%;
+  }
+
+  .download__slogan {
+    display: block;
+    width: 192px;
+    margin: 0 auto;
+    margin-bottom: 36px;
+
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .download__button {
+    width: 300px;
+    margin-bottom: 46px;
+  }
+
+  .download__list {
+    width: 70%;
+    max-width: 300px;
+    margin-bottom: 38px;
+  }
+
+  .download__availability {
+    width: 300px;
+    margin: 0 auto;
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download {
+    padding-top: 225px;
+    padding-bottom: 118px;
+
+    background-image: url("../img/bg-download-desktop-1x.jpg");
+    background-position: center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-desktop-2x.jpg");
+    }
+  }
+
+  .download__wraper {
+    width: 300px;
+  }
+
+  .download__slogan {
+    width: 240px;
+    margin-bottom: 60px;
+
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .download__button {
+    margin-bottom: 65px;
+  }
+
+  .download__android-svg,
+  .download__apple-svg,
+  .download__microsoft-svg {
+    width: auto;
+    min-width: auto;
+  }
+
+  .download__list {
+    margin-bottom: 55px;
+  }
+}
+
