@@ -12,20 +12,38 @@
   <main>
     <h1 class="visually-hidden">Приложение "Пинк"</h1>
     <section class="download">
-      <div class="download__preview"></div>
-      <div class="download__wraper container">
-        <p class="download__slogan">Взгляните на жизнь иначе</p>
-        <button class="download__button button">Скачать приложение</button>
-        <svg class="download__apple-svg" width="47" height="56">
-          <use xlink:href="img/sprite.svg#logo-apple"></use>
-        </svg>
-        <svg class="download__android-svg" width="43" height="47">
-          <use xlink:href="img/sprite.svg#logo-android"></use>
-        </svg>
-        <svg class="download__microsoft-svg" width="44" height="41">
-          <use xlink:href="img/sprite.svg#logo-microsoft"></use>
-        </svg>
-        <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+      <div class="container">
+        <div class="download__wraper">
+          <p class="download__slogan">Взгляните на жизнь иначе</p>
+          <a href="#" class="download__button button">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a href="#" class="download__link">
+                <span class="visually-hidden">Приложение в Appstore</span>
+                <svg class="download__apple-svg" width="47" height="56">
+                  <use xlink:href="img/sprite.svg#logo-apple"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="download__item">
+              <a href="#" class="download__link">
+                <span class="visually-hidden">Приложение в Google Play</span>
+                <svg class="download__android-svg" width="43" height="47">
+                  <use xlink:href="img/sprite.svg#logo-android"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="download__item">
+              <a href="#" class="download__link">
+                <span class="visually-hidden">Приложение в Windows Phone Store</span>
+                <svg class="download__microsoft-svg" width="44" height="41">
+                  <use xlink:href="img/sprite.svg#logo-microsoft"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+        </div>
       </div>
     </section>
   </main>
