@@ -35,6 +35,16 @@
   display: none;
 }
 
+.main-navigation--open {
+  .main-navigation__menu-cross {
+    display: block;
+  }
+
+  .main-navigation__menu-burger {
+    display: none;
+  }
+}
+
 .main-navigation__list {
   display: none;
 
@@ -101,16 +111,6 @@
   &[href]:active {
     color: $pink-opacity;
     transition-duration: 0s;
-  }
-}
-
-.main-navigation--open {
-  .main-navigation__menu-cross {
-    display: block;
-  }
-
-  .main-navigation__menu-burger {
-    display: none;
   }
 }
 

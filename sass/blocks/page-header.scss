@@ -31,6 +31,10 @@
   }
 }
 
+.page-header--menu-open .page-header__logo-link {
+  padding-bottom: 25px;
+}
+
 .page-header__logo-tablet,
 .page-header__logo-desktop {
   display: none;
@@ -38,10 +42,6 @@
 
 .page-header__menu-toggle {
   position: absolute;
-}
-
-.page-header--menu-open .page-header__logo-link {
-  padding-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
