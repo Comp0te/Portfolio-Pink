@@ -1,0 +1,113 @@
+.features {
+  padding-top: 40px;
+}
+
+.features__slogan {
+  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 300;
+  text-align: center;
+  color: #283645;
+
+  &:last-of-type {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.features__wraper {
+  padding-top: 110px;
+  padding-bottom: 320px;
+
+  background-image:
+    url("../img/features-mobile-1x.png"),
+    url("../img/features-triangle.svg");
+  background-position: center bottom, center top -10px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 157px auto, 1170px 116px;
+  background-color: #f2f2f2;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/features-mobile-2x.png");
+  }
+}
+
+.features__list {
+  padding-top: 8px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  list-style: none;
+}
+
+.features__item {
+  max-width: 390px;
+  margin-bottom: 38px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: #283645;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.features__name {
+  display: block;
+  margin-bottom: 17px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 55px;
+  }
+
+  .features__slogan {
+    margin-bottom: 3px;
+
+    font-size: 40px;
+
+    &:last-of-type {
+      width: 380px;
+    }
+  }
+
+  .features__wraper {
+    min-height: 530px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+
+    background-image:
+      url("../img/features-tablet-1x.png"),
+      url("../img/features-triangle.svg");
+    background-size: 268px auto,  1170px 116px;
+    background-position: right 56.8181vw bottom, center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/features-tablet-2x.png");
+    }
+  }
+
+  .features__list {
+    width: 53.0303%;
+    margin-left: 46.9797%;
+  }
+
+  .features__item {
+    max-width: auto;
+
+    text-align: left;
+  }
+}
