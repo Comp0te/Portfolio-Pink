@@ -1,0 +1,125 @@
+.research {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .research {
+    display: block;
+  }
+
+  .research__wraper {
+    position: relative;
+
+    min-height: 400px;
+    padding: 98px 0 90px 310px;
+
+    background-image: url("../img/timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px auto;
+    background-position: left top 59px;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      top: 114px;
+      left: 17px;
+
+      width: 204px;
+      height: 204px;
+
+      font-family: inherit;
+      font-size: 96px;
+      line-height: 149.47px;
+      font-weight: 700;
+      text-align: center;
+      color: $pink;
+
+      border: 14px solid $pink;
+      border-radius: 50%;
+    }
+  }
+
+  .research__title {
+    padding-right: 45.1613%;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .research__about {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #283645;
+  }
+
+  .research__link {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $pink;
+
+    transition: color 0.2s ease, text-shadow 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      color: #283645;
+      text-shadow: 0 -2px 2px $pink;
+    }
+
+    &:active {
+      color: rgba($color: #283645, $alpha: 0.3);
+      text-shadow: none;
+      transition-duration: 0s;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .research {
+    background-color: #f2f2f2;
+  }
+
+  .research__wraper {
+    padding: 144px 45px 112px 368px;
+
+    background-size: 298px auto;
+
+    &::before {
+      left: 23px;
+      top: 128px;
+
+      width: 253px;
+      height: 253px;
+
+      font-size: 120px;
+      line-height: 186.84px;
+
+      border-width: 18px;
+    }
+  }
+
+  .research__title {
+    margin-bottom: 20px;
+  }
+
+  .research__about {
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
