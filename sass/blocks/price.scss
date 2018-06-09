@@ -1,0 +1,30 @@
+.price {
+  position: relative;
+
+  padding-top: 445px;
+  padding-bottom: 45px;
+  overflow: hidden;
+
+  background-image: url("../img/features-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 1214px auto;
+  background-position: center top;
+  background-color: #f2f2f2;
+}
+
+.price__table {
+  position: absolute;
+  top: 125px;
+
+  /*&--left-col {
+    left: ;
+  }
+
+  &--middle-col {
+    left: ;
+  }
+
+  &--right-col {
+    left: ;
+  }*/
+}

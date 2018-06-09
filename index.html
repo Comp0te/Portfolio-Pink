@@ -82,6 +82,7 @@
       </div>
     </section>
     <section class="review container">
+      <h2 class="visually-hidden">Комментарии пользователей</h2>
       <ul class="review__list">
         <li class="review__item review__item--active">
           <blockquote class="review__content">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
@@ -101,27 +102,106 @@
       </ul>
       <ul class="review__bullets bullets">
         <li class="bullets__item">
-          <button class="bullets__btn bullets__btn--active">
-            <span class="visually-hidden">Переключить на первый обзор</span>
+          <button class="bullets__btn bullets__btn--active review__toggle">
+            <span class="visually-hidden">Переключить на первый комментарий</span>
           </button>
         </li>
         <li class="bullets__item">
-          <button class="bullets__btn">
-            <span class="visually-hidden">Переключить на второй обзор</span>
+          <button class="bullets__btn review__toggle">
+            <span class="visually-hidden">Переключить на второй комментарий</span>
           </button>
         </li>
         <li class="bullets__item">
-          <button class="bullets__btn">
-            <span class="visually-hidden">Переключить на третий обзор</span>
+          <button class="bullets__btn review__toggle">
+            <span class="visually-hidden">Переключить на третий комментарий</span>
           </button>
         </li>
       </ul>
       <button class="review__arrow review__arrow--left arrow arrow--left">
-        <span class="visually-hidden">Переключить на предущий обзор</span>
+        <span class="visually-hidden">Переключить на предущий комментарий</span>
       </button>
       <button class="review__arrow review__arrow--right arrow arrow--right">
-        <span class="visually-hidden">Переключить на следующий обзор</span>
+        <span class="visually-hidden">Переключить на следующий комментарий</span>
       </button>
+    </section>
+    <section class="price">
+      <div class="container">
+        <h2 class="visually-hidden">Стоимость приложениия</h2>
+        <table class="price__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="price__colhead" scope="col">
+                <span class="price__tarif">База</span>
+                <b class="price__value">1,99 USD</b>
+              </th>
+              <th class="price__colhead price__colhead--hit" scope="col">
+                <span class="price__tarif">Стандарт</span>
+                <b class="price__value">3,99 USD</b>
+              </th>
+              <th class="price__colhead" scope="col">
+                <span class="price__tarif">Анлим</span>
+                <b class="price__value">9,99 USD</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="price__rowhead"  scope="row">Розовый фильтр</th>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+            <tr>
+              <th class="price__rowhead" scope="row">Смайлики</th>
+              <td class="price__cell price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+            <tr>
+              <th class="price__rowhead" scope="row">Комментарии</th>
+              <td class="price__cell price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="price__bullets bullets">
+          <li class="bullets__item">
+            <button class="bullets__btn price__toggle">
+              <span class="visually-hidden">Переключить на первую и вторую колонку</span>
+            </button>
+          </li>
+          <li class="bullets__item">
+            <button class="bullets__btn bullets__btn--active price__toggle">
+              <span class="visually-hidden">Переключить на третью колонку</span>
+            </button>
+          </li>
+          <li class="bullets__item">
+            <button class="bullets__btn price__toggle">
+              <span class="visually-hidden">Переключатель на четвертую колонку</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>
