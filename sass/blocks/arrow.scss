@@ -1,0 +1,30 @@
+.arrow {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0 solid #283645;
+  border-top-width: 2px;
+  outline: none;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--left {
+    border-left-width: 2px;
+    transform: rotate(-45deg);
+  }
+
+  &--right {
+    border-right-width: 2px;
+    transform: rotate(45deg);
+  }
+}

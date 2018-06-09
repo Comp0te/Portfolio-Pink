@@ -1,0 +1,54 @@
+.bullets {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.bullets__item {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.bullets__btn {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 3.5px solid #283645;
+  border-radius: 50%;
+  outline: none;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    width: 14px;
+    height: 14px;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    &:focus {
+      opacity: 1;
+      box-shadow: 0 0 3px 3px $pink-opacity;
+    }
+  }
+}
