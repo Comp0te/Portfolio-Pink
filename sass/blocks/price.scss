@@ -17,8 +17,10 @@
   background-color: #ffffff;
 }
 
-th {
+.price__empty-cell {
   padding: 0;
+
+  background-color: #f2f2f2;
 }
 
 .price__colhead {
@@ -92,32 +94,11 @@ th {
 
   border: 2px solid #e5e5e5;
 
-  &--yes::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-
-    height: 30px;
-    width: 4px;
-
-    background-color: #3dc644;
-    border-radius: 2px;
-    transform: rotate(45deg);
-  }
-
-  &--yes::after {
-    content: "";
-    position: absolute;
-    top: 37px;
-    right: 28px;
-
-    height: 4px;
-    width: 17px;
-
-    background-color: #3dc644;
-    border-radius: 2px;
-    transform: rotate(45deg);
+  &--yes {
+    background-image: url("../img/price-yes.svg");
+    background-repeat: no-repeat;
+    background-size: 30.37px auto;
+    background-position: right 13px top 20px;
   }
 
   &--no::before {
@@ -205,5 +186,64 @@ th {
     &--active {
       display: table-cell;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    padding-top: 102px;
+    padding-bottom: 70px;
+  }
+
+  .price__table {
+    margin-bottom: 0;
+  }
+
+  .price__colhead {
+    height: 80px;
+    padding: 0;
+
+    vertical-align: middle;
+
+    &--hit::before {
+      left: -26px;
+      top: 2px;
+
+      width: 85px;
+    }
+  }
+
+  .price__tarif {
+    font-size: 16px;
+  }
+
+  .price__value {
+    font-size: 18px;
+  }
+
+  .price__rowhead {
+    width: 25%;
+    height: 49px;
+    padding-left: 15px;
+
+    text-transform: none;
+  }
+
+  .price__cell {
+    width: 25%;
+
+    &--yes {
+      background-position: center center;
+    }
+
+    &--no::after,
+    &--no::before {
+      top: 5px;
+      right: 50%;
+    }
+  }
+
+  .price__bullets {
+    display: none;
   }
 }
