@@ -1,5 +1,8 @@
 .features {
   padding-top: 40px;
+
+  background-image: linear-gradient(176deg, #ffffff 250px, #f2f2f2 251px);
+  background-color: #f2f2f2;
 }
 
 .features__slogan {
@@ -23,18 +26,13 @@
   padding-top: 118px;
   padding-bottom: 282px;
 
-  background-image:
-    url("../img/features-mobile-1x.png"),
-    url("../img/features-triangle.svg");
-  background-position: center bottom, center top -10px;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 157px auto, 1170px 116px;
-  background-color: #f2f2f2;
+  background-image: url("../img/features-mobile-1x.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 157px auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image:
-      url("../img/features-mobile-2x.png"),
-      url("../img/features-triangle.svg");
+    background-image: url("../img/features-mobile-2x.png");
   }
 }
 
@@ -86,16 +84,12 @@
     padding-top: 90px;
     padding-bottom: 2px;
 
-    background-image:
-      url("../img/features-tablet-1x.png"),
-      url("../img/features-triangle.svg");
-    background-size: 268px auto,  1170px 116px;
-    background-position: right 56.8181vw bottom, center top;
+    background-image: url("../img/features-tablet-1x.png");
+    background-size: 268px auto;
+    background-position: right 56.8181vw bottom;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image:
-        url("../img/features-tablet-2x.png"),
-        url("../img/features-triangle.svg");
+      background-image: url("../img/features-tablet-2x.png");
     }
   }
 
@@ -128,16 +122,12 @@
   .features__wraper {
     padding-top: 350px;
 
-    background-image:
-      url("../img/features-desktop-1x.png"),
-      url("../img/features-triangle.svg");
-    background-size: 932px auto, contain;
-    background-position: center top, center top;
+    background-image: url("../img/features-desktop-1x.png");
+    background-size: 932px auto;
+    background-position: center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image:
-        url("../img/features-desktop-2x.png"),
-        url("../img/features-triangle.svg");
+      background-image: url("../img/features-desktop-2x.png");
     }
   }
 
