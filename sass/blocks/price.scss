@@ -1,30 +1,209 @@
 .price {
-  position: relative;
-
-  padding-top: 445px;
+  padding-top: 225px;
   padding-bottom: 45px;
-  overflow: hidden;
 
-  background-image: url("../img/features-triangle.svg");
-  background-repeat: no-repeat;
-  background-size: 1214px auto;
-  background-position: center top;
+  background-image: linear-gradient(176deg, #ffffff 61px, #f2f2f2 62px);
   background-color: #f2f2f2;
 }
 
 .price__table {
-  position: absolute;
-  top: 125px;
+  width: 100%;
+  margin-bottom: 40px;
 
-  /*&--left-col {
-    left: ;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+}
+
+th {
+  padding: 0;
+}
+
+.price__colhead {
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 18px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #283645;
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+
+  &--hit {
+    position: relative;
+
+    overflow: hidden;
+
+    &::before {
+      content: "Хит";
+      position: absolute;
+      left: -27px;
+      top: 9px;
+
+      width: 104px;
+      height: 33px;
+
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      background-color: $pink;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.price__tarif {
+  display: block;
+}
+
+.price__value {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.price__rowhead {
+  vertical-align: middle;
+  height: 61px;
+  width: 82.142857%;
+  padding: 0;
+  padding-left: 23px;
+
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #283645;
+
+  border: 2px solid #e5e5e5;
+}
+
+.price__cell {
+  position: relative;
+
+  width: 17.8571%;
+  padding: 0;
+
+  border: 2px solid #e5e5e5;
+
+  &--yes::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    height: 30px;
+    width: 4px;
+
+    background-color: #3dc644;
+    border-radius: 2px;
+    transform: rotate(45deg);
   }
 
-  &--middle-col {
-    left: ;
+  &--yes::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: 28px;
+
+    height: 4px;
+    width: 17px;
+
+    background-color: #3dc644;
+    border-radius: 2px;
+    transform: rotate(45deg);
   }
 
-  &--right-col {
-    left: ;
-  }*/
+  &--no::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 25px;
+
+    height: 37px;
+    width: 4px;
+
+    background-color: #f25b26;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+
+  &--no::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 25px;
+
+    height: 37px;
+    width: 4px;
+
+    background-color: #f25b26;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .price__table {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: -96px;
+
+      height: 283px;
+      width: 18px;
+
+      background-image: linear-gradient(to bottom, #283645 98px, #ffffff 99px, #ffffff 157px, #e5e5e5 158px, #e5e5e5 159px, #ffffff 160px, #ffffff 218px, #e5e5e5 219px, #e5e5e5 220px, #ffffff 221px, #ffffff 279px, #e5e5e5 280px, #e5e5e5 281px, #f2f2f2 282px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -96px;
+
+      height: 283px;
+      width: 18px;
+
+      background-image: linear-gradient(to bottom, #283645 98px, #ffffff 99px, #ffffff 157px, #e5e5e5 158px, #e5e5e5 159px, #ffffff 160px, #ffffff 218px, #e5e5e5 219px, #e5e5e5 220px, #ffffff 221px, #ffffff 279px, #e5e5e5 280px, #e5e5e5 281px, #f2f2f2 282px);
+    }
+  }
+
+  .price__colhead {
+    display: none;
+
+    &--active {
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: -96px;
+
+      display: table-cell;
+    }
+  }
+
+  .price__rowhead {
+    position: relative;
+
+    border-right: none;
+  }
+
+  .price__cell {
+    display: none;
+
+    border-left: none;
+
+    &--active {
+      display: table-cell;
+    }
+  }
 }
