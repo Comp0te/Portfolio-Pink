@@ -1,0 +1,46 @@
+.map {
+  height: 200px;
+  overflow: hidden;
+
+  background-image: url("../img/map-fallback-mobile-1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 660px auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-fallback-mobile-2x.jpg");
+  }
+}
+
+.map__iframe {
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 375px;
+
+    background-image: url("../img/map-fallback-tablet-1x.jpg");
+    background-size: 960px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-fallback-tablet-2x.jpg");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 500px;
+
+    background-image: url("../img/map-fallback-desktop-1x.jpg");
+    background-size: 2560px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-fallback-desktop-2x.jpg");
+    }
+  }
+}
