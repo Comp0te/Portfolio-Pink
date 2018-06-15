@@ -14,7 +14,7 @@
   line-height: 1.15;
   font-weight: 300;
   text-align: center;
-  color: #283645;
+  color: $minor-color;
 
   &:last-of-type {
     width: 240px;
@@ -53,7 +53,7 @@
   line-height: 24px;
   font-weight: 400;
   text-align: center;
-  color: #283645;
+  color: $minor-color;
 }
 
 .features__name {

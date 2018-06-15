@@ -11,7 +11,7 @@
   line-height: 30px;
   font-weight: 300;
   text-align: center;
-  color: #283645;
+  color: $minor-color;
 }
 
 .contacts__list {
@@ -30,7 +30,7 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
-  color: #283645;
+  color: $minor-color;
 
   &:last-child {
     margin-bottom: 40px;
@@ -44,7 +44,7 @@
   line-height: 30px;
   font-weight: 300;
   text-align: center;
-  color: $pink;
+  color: $brand-color;
   text-decoration: none;
 }
 

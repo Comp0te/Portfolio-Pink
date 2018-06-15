@@ -17,11 +17,11 @@
 
   &:hover,
   &:focus {
-    fill: $pink;
+    fill: $brand-color;
   }
 
   &:active {
-    fill: $pink-opacity;
+    fill: $brand-color-opacity;
 
     transition-duration: 0s;
   }
@@ -103,13 +103,13 @@
 
   &:focus,
   &[href]:hover {
-    color: $pink;
+    color: $brand-color;
 
     transform: scale(1.1, 1.1);
   }
 
   &[href]:active {
-    color: $pink-opacity;
+    color: $brand-color-opacity;
     transition-duration: 0s;
   }
 }

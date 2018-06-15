@@ -33,13 +33,13 @@
 
   &:hover,
   &:focus {
-    color: $pink;
+    color: $brand-color;
 
     background-color: #ffffff;
   }
 
   &:active {
-    color: $pink-opacity;
+    color: $brand-color-opacity;
 
     transition-duration: 0s;
   }

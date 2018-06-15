@@ -4,7 +4,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 
   &--menu-open {
-    background-color: #283645;
+    background-color: $minor-color;
   }
 }
 
@@ -22,7 +22,7 @@
 
   &:focus,
   &[href]:hover {
-    fill: $pink;
+    fill: $brand-color;
   }
 
   &[href]:active {

@@ -23,7 +23,7 @@
   padding: 0;
 
   background-color: transparent;
-  border: 3.5px solid #283645;
+  border: 3.5px solid $minor-color;
   border-radius: 50%;
   outline: none;
   opacity: 0.3;
@@ -48,7 +48,7 @@
 
     &:focus {
       opacity: 1;
-      box-shadow: 0 0 3px 3px $pink-opacity;
+      box-shadow: 0 0 3px 3px $brand-color-opacity;
     }
   }
 }

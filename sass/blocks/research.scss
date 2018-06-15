@@ -33,9 +33,9 @@
       line-height: 149.47px;
       font-weight: 700;
       text-align: center;
-      color: $pink;
+      color: $brand-color;
 
-      border: 14px solid $pink;
+      border: 14px solid $brand-color;
       border-radius: 50%;
     }
   }
@@ -58,25 +58,25 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    color: #283645;
+    color: $minor-color;
   }
 
   .research__link {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    color: $pink;
+    color: $brand-color;
 
     transition: color 0.2s ease, text-shadow 0.2s ease-out;
 
     &:hover,
     &:focus {
-      color: #283645;
-      text-shadow: 0 -2px 2px $pink;
+      color: $minor-color;
+      text-shadow: 0 -2px 2px $brand-color;
     }
 
     &:active {
-      color: rgba($color: #283645, $alpha: 0.3);
+      color: rgba($color: $minor-color, $alpha: 0.3);
       text-shadow: none;
       transition-duration: 0s;
     }
