@@ -46,6 +46,18 @@
   text-align: center;
   color: $brand-color;
   text-decoration: none;
+
+  &:active {
+    color: $minor-color;
+
+    opacity: 0.3;
+  }
+
+  &:hover:not(:active),
+  &:focus:not(:active) {
+    color: $minor-color;
+    text-decoration: underline;
+  }
 }
 
 .contacts__map {
