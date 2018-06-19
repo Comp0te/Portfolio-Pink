@@ -20,42 +20,45 @@
         <div class="download__wraper">
           <p class="download__slogan">Взгляните на жизнь иначе</p>
           <a href="#" class="download__button button">Скачать приложение</a>
-          <ul class="download__list">
-            <li class="download__item">
+          <ul class="download__list" aria-labelledby="aria-availability">
+            <li class="download__item" role="presentation">
               <a href="#" class="download__link">
                 <span class="visually-hidden">Приложение в Appstore</span>
-                <svg class="download__apple-svg" width="47" height="56">
+                <svg class="download__apple-svg" width="47" height="56" role="presentation">
+                  <title>Приложение в Appstore</title>
                   <use xlink:href="img/sprite.svg#logo-apple"></use>
                 </svg>
               </a>
             </li>
-            <li class="download__item">
+            <li class="download__item" role="presentation">
               <a href="#" class="download__link">
                 <span class="visually-hidden">Приложение в Google Play</span>
-                <svg class="download__android-svg" width="43" height="47">
+                <svg class="download__android-svg" width="43" height="47" role="presentation">
+                  <title>Приложение в Google Play</title>
                   <use xlink:href="img/sprite.svg#logo-android"></use>
                 </svg>
               </a>
             </li>
-            <li class="download__item">
+            <li class="download__item" role="presentation">
               <a href="#" class="download__link">
                 <span class="visually-hidden">Приложение в Windows Phone Store</span>
-                <svg class="download__microsoft-svg" width="44" height="41">
+                <svg class="download__microsoft-svg" width="44" height="41" role="presentation">
+                  <title>Приложение в Windows Phone Store</title>
                   <use xlink:href="img/sprite.svg#logo-microsoft"></use>
                 </svg>
               </a>
             </li>
           </ul>
-          <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+          <p class="download__availability" id="aria-availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
         </div>
       </div>
     </section>
     <section class="features">
-      <h2 class="visually-hidden">Характеристики приложения</h2>
+      <h2 class="visually-hidden" id="aria-features">Характеристики приложения</h2>
       <p class="features__slogan">Устали от серости мегаполиса?</p>
       <p class="features__slogan">Нам есть, что вам предложить!</p>
       <div class="features__wraper">
-        <ul class="features__list container">
+        <ul class="features__list container" aria-labelledby="aria-features">
           <li class="features__item">
             <span class="features__name">Поднимает настроение</span>
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
@@ -74,16 +77,16 @@
     <section class="research">
       <div class="container">
         <h2 class="visually-hidden">Исследование о приложении</h2>
-        <div class="research__wraper">
+        <div class="research__wraper" role="presentation">
           <p class="research__title">Эффект на&nbsp;24&nbsp;часа!</p>
-          <p class="research__about">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
-          <a href="#" class="research__link">Узнать больше об исследовании</a>
+          <p class="research__about" id="aria-research">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
+          <a href="#" class="research__link" aria-describedby="aria-research">Узнать больше об исследовании</a>
         </div>
       </div>
     </section>
     <section class="review container">
-      <h2 class="visually-hidden">Комментарии пользователей</h2>
-      <ul class="review__list">
+      <h2 class="visually-hidden" id="aria-review">Комментарии пользователей</h2>
+      <ul class="review__list" aria-labelledby="aria-review" aria-live="polite" aria-atomic="true">
         <li class="review__item review__item--active">
           <blockquote class="review__content">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
           <p class="review__author">Николай Петров</p>
@@ -100,18 +103,18 @@
           <p class="review__about-author">34 года, успешная бизнес-леди</p>
         </li>
       </ul>
-      <ul class="review__bullets bullets">
-        <li class="bullets__item">
+      <ul class="review__bullets bullets" aria-label="Управлением отображением комметариев">
+        <li class="bullets__item" role="presentation">
           <button class="bullets__btn bullets__btn--active review__toggle" type="button">
             <span class="visually-hidden">Переключить на первый комментарий</span>
           </button>
         </li>
-        <li class="bullets__item">
+        <li class="bullets__item" role="presentation">
           <button class="bullets__btn review__toggle" type="button">
             <span class="visually-hidden">Переключить на второй комментарий</span>
           </button>
         </li>
-        <li class="bullets__item">
+        <li class="bullets__item" role="presentation">
           <button class="bullets__btn review__toggle" type="button">
             <span class="visually-hidden">Переключить на третий комментарий</span>
           </button>
@@ -127,7 +130,7 @@
     <section class="price">
       <div class="container">
         <h2 class="visually-hidden">Стоимость приложениия</h2>
-        <table class="price__table">
+        <table class="price__table" aria-live="polite" aria-atomic="true">
           <caption class="visually-hidden">Стоимость функциональных возможностей приложения</caption>
           <thead>
             <tr>
@@ -185,18 +188,18 @@
             </tr>
           </tbody>
         </table>
-        <ul class="price__bullets bullets">
-          <li class="bullets__item">
+        <ul class="price__bullets bullets" aria-label="Управлением отображением тарифов">
+          <li class="bullets__item" role="presentation">
             <button class="bullets__btn price__toggle" type="button">
               <span class="visually-hidden">Переключить на тариф база</span>
             </button>
           </li>
-          <li class="bullets__item">
+          <li class="bullets__item" role="presentation">
             <button class="bullets__btn bullets__btn--active price__toggle" type="button">
               <span class="visually-hidden">Переключить на тариф стандарт</span>
             </button>
           </li>
-          <li class="bullets__item">
+          <li class="bullets__item" role="presentation">
             <button class="bullets__btn price__toggle" type="button">
               <span class="visually-hidden">Переключатель на тариф анлим</span>
             </button>
@@ -205,10 +208,10 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
+      <h2 class="visually-hidden" id="aria-contacts">Контакты</h2>
       <div class="container">
         <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <ul class="contacts__list">
+        <ul class="contacts__list" aria-labelledby="aria-contacts">
           <li class="contacts__item">Звоните:
             <a href="tel:+78125556666" class="contacts__link">+7 (812) 555-66-66</a>
           </li>

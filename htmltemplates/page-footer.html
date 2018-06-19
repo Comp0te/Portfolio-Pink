@@ -1,5 +1,5 @@
 <footer class="page-footer container">
-  <a href="#" class="page-footer__logo-link">
+  <a href="index.html" class="page-footer__logo-link">
     <span class="visually-hidden">Главная страница приложения пинк</span>
     <svg class="page-footer__logo-tablet" width="147" height="40" role="presentation">
       <title>Логотип приложения Пинк</title>
@@ -10,8 +10,8 @@
       <use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
     </svg>
   </a>
-  <ul class="page-footer__social socials">
-    <li class="socials__item">
+  <ul class="page-footer__social socials" aria-label="Мы в социальных сетях">
+    <li class="socials__item" role="presentation">
       <a href="#" class="socials__link">
         <span class="visually-hidden">Мы в twitter</span>
         <svg class="socials__svg" width="18" height="14" role="presentation">
@@ -20,7 +20,7 @@
         </svg>
       </a>
     </li>
-    <li class="socials__item">
+    <li class="socials__item" role="presentation">
       <a href="#" class="socials__link">
         <span class="visually-hidden">Мы в facebook</span>
         <svg class="socials__svg" width="9" height="18" role="presentation">
@@ -29,7 +29,7 @@
         </svg>
       </a>
     </li>
-    <li class="socials__item">
+    <li class="socials__item" role="presentation">
       <a href="#" class="socials__link">
         <span class="visually-hidden">Мы на youtube</span>
         <svg class="socials__svg" width="15" height="13" role="presentation">
@@ -39,10 +39,9 @@
     </li>
   </ul>
   <p class="page-footer__academy">
-    <span class="page-footer__academy-text">Разработано</span>
-    <a href="#" class="page-footer__academy-link">
-      <span class="visually-hidden">Главная страница HTML Academy</span>
-      <svg class="page-footer__academy-logo" width="27" height="34" role="presentation">
+    <span class="page-footer__academy-text" id="aria-academy">Макет разработан</span>
+    <a href="#" class="page-footer__academy-link" aria-labelledby="aria-academy">
+      <svg class="page-footer__academy-logo" width="27" height="34">
         <title>Логотип HTML Academy</title>
         <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
       </svg>
