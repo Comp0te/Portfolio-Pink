@@ -16,13 +16,13 @@
     background-image: url("../img/timer.svg");
     background-repeat: no-repeat;
     background-size: 238px auto;
-    background-position: left top 59px;
+    background-position: left top 63px;
 
     &::before {
       content: "24";
 
       position: absolute;
-      top: 114px;
+      top: 118px;
       left: 17px;
 
       width: 204px;
@@ -30,7 +30,7 @@
 
       font-family: inherit;
       font-size: 96px;
-      line-height: 149.47px;
+      line-height: 170px;
       font-weight: 700;
       text-align: center;
       color: $brand-color;
@@ -43,7 +43,7 @@
   .research__title {
     padding-right: 45.1613%;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     font-size: 30px;
     line-height: 36px;
@@ -90,19 +90,20 @@
   }
 
   .research__wraper {
-    padding: 144px 45px 112px 368px;
+    padding: 135px 45px 112px 368px;
 
     background-size: 298px auto;
+    background-position: left top 43px;
 
     &::before {
       left: 23px;
-      top: 128px;
+      top: 108px;
 
       width: 253px;
       height: 253px;
 
       font-size: 120px;
-      line-height: 186.84px;
+      line-height: 212.84px;
 
       border-width: 18px;
     }

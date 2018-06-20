@@ -5,10 +5,10 @@
 .contacts__title {
   width: 230px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   font-size: 24px;
-  line-height: 30px;
+  line-height: 27px;
   font-weight: 300;
   text-align: center;
   color: $minor-color;
@@ -24,12 +24,13 @@
 }
 
 .contacts__item {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-align: center;
+  letter-spacing: 1px;
   color: $minor-color;
 
   &:last-child {
@@ -44,6 +45,7 @@
   line-height: 30px;
   font-weight: 300;
   text-align: center;
+  letter-spacing: normal;
   color: $brand-color;
   text-decoration: none;
 
@@ -80,12 +82,12 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 50px;
+    padding-top: 46px;
   }
 
   .contacts__title {
     width: 380px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     font-size: 40px;
     line-height: 48px;
@@ -113,12 +115,12 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    padding-top: 70px;
+    padding-top: 63px;
   }
 
   .contacts__title {
     width: 470px;
-    margin-bottom: 60px;
+    margin-bottom: 54px;
 
     font-size: 50px;
     line-height: 60px;
@@ -136,6 +138,10 @@
     &:nth-child(1) {
       order: -2;
     }
+  }
+
+  .contacts__link {
+    padding-top: 19px;
   }
 
   /*.contacts__map::after {

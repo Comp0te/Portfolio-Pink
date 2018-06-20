@@ -1,13 +1,14 @@
 .download {
   margin-top: -66px;
   padding-top: 490px;
+  padding-bottom: 32px;
 
   background-image:
     url("../img/iphone-hand-mobile-1x.png"),
     url("../img/bg-download-mobile-1x.jpg");
-  background-position: right 14.375vw top 150px, center top;
+  background-position: right 19.375vw top 175px, center top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 272px auto, 659px auto;
+  background-size: 258px auto, 659px auto;
   background-color: #1d2631;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -24,7 +25,7 @@
 .download__button {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   color: #ffffff;
   text-decoration: none;
@@ -52,7 +53,7 @@
   align-items: center;
   width: 75%;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   padding: 0;
 
   list-style: none;
@@ -128,10 +129,10 @@
     display: block;
     width: 192px;
     margin: 0 auto;
-    margin-bottom: 36px;
+    margin-bottom: 33px;
 
     font-size: 40px;
-    line-height: 42px;
+    line-height: 45px;
     font-weight: 300;
     text-align: center;
     color: #ffffff;
@@ -145,7 +146,7 @@
   .download__list {
     width: 70%;
     max-width: 300px;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
   }
 
   .download__availability {
@@ -158,7 +159,7 @@
 
 @media (min-width: $desktop-width) {
   .download {
-    padding-top: 225px;
+    padding-top: 219px;
     padding-bottom: 118px;
 
     background-image: url("../img/bg-download-desktop-1x.jpg");

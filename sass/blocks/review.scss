@@ -1,5 +1,5 @@
 .review {
-  padding-top: 45px;
+  padding-top: 40px;
   padding-bottom: 8px;
 }
 
@@ -12,7 +12,7 @@
 
 .review__item {
   display: none;
-  height: 260px;
+  height: 254px;
 
   font-size: 18px;
   line-height: 30px;
@@ -48,10 +48,11 @@
 .review__author {
   order: 1;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 11px;
 
   font-weight: 700;
   color: #000000;
+  letter-spacing: 1px;
 }
 
 .review__about-author {
@@ -69,18 +70,19 @@
   }
 
   .review__item {
-    height: 215px;
+    height: 220px;
   }
 
   .review__content {
     order: 0;
+    margin-bottom: 34px;
 
     font-size: 18px;
   }
 
   .review__author {
     order: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 
     font-size: 20px;
   }
@@ -96,7 +98,7 @@
 @media (min-width: $desktop-width) {
   .review {
     position: relative;
-    padding-top: 190px;
+    padding-top: 186px;
 
     background-image: url("../img/quotes.svg");
     background-repeat: no-repeat;
@@ -114,7 +116,7 @@
   }
 
   .review__content {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .review__author {
@@ -133,7 +135,7 @@
 
   .review__arrow {
     position: absolute;
-    top: 225px;
+    top: 220px;
 
     display: block;
 

@@ -10,7 +10,7 @@
 .bullets__item {
   display: flex;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 17px;
 
   &:last-child {
     margin-right: 0;
@@ -39,9 +39,10 @@
   }
 
   &--active {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
 
+    border-width: 2.5px;
     opacity: 1;
 
     pointer-events: none;

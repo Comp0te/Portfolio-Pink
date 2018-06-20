@@ -12,7 +12,7 @@
 
   .page-footer__logo-link {
     display: block;
-    padding: 20px 5px 20px 0;
+    margin-bottom: 14px;
 
     fill: $minor-color;
     border-radius: 50%/50%;
@@ -37,6 +37,10 @@
 
   .page-footer__logo-desktop {
     display: none;
+  }
+
+  .page-footer__social {
+    margin-right: 26px;
   }
 
   .page-footer__academy {
@@ -82,12 +86,20 @@
     min-height: 197px;
   }
 
+  .page-footer__logo-link {
+    margin-bottom: 21px;
+  }
+
   .page-footer__logo-tablet {
     display: none;
   }
 
   .page-footer__logo-desktop {
     display: block;
+  }
+
+  .page-footer__social {
+    margin-right: -7px;
   }
 
   .page-footer__academy-text {
