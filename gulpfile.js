@@ -31,7 +31,7 @@ gulp.task("copy", function() {
   return gulp
     .src([
       "fonts/**/*.{woff,woff2}",
-      "img/*.{jpg,png,svg}",
+      "img/*.{jpg,png,svg,webp}",
       "js/**"
     ], {
       base: "."
@@ -118,7 +118,7 @@ gulp.task("webp", function() {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("img/webp"));
+    .pipe(gulp.dest("img"));
 });
 
 gulp.task("validate", function() {
