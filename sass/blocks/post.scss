@@ -1,0 +1,62 @@
+.post__wraper-photo {
+  width: 280px;
+  height: 180px;
+  margin: 0 auto;
+
+  &--panorama {
+    position: relative;
+
+    width: 320px;
+    height: 137px;
+
+    &::before {
+      content: "Панорама дня";
+      position: absolute;
+      top: 0;
+      right: 20px;
+
+      width: 140px;
+      height: 36px;
+      padding: 6px 0;
+
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      background-color: $brand-color;
+    }
+  }
+}
+
+.post__wraper {
+  padding: 20px 18px;
+
+  color: $minor-color;
+  line-height: 24px;
+  font-size: 14px;
+
+  background-color: #f2f2f2;
+
+  &--panorama {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.post__author {
+  font-weight: 700;
+}
+
+.post__time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.post__content {
+  margin: 0;
+  margin-bottom: 10px;
+}

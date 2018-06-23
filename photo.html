@@ -17,10 +17,10 @@
   <include src="htmltemplates/page-header.html"></include>
   <main>
     <section class="photo">
-      <div class="photo__wraper-heading container">
-        <h1 class="photo-heading">Фотографии пользователей</h1>
+      <div class="photo__wraper-heading">
+        <h1 class="photo__heading">Фотографии пользователей</h1>
       </div>
-      <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <p class="photo__intro container">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
       <article class="photo__panorama post">
         <h2 class="visually-hidden">Панорама дня</h2>
         <div class="post__wraper-photo post__wraper-photo--panorama">
@@ -33,7 +33,7 @@
             <img src="img/panorama-mobile-1x.jpg" srcset="img/panorama-mobile-2x.jpg 2x" alt="Подвесной мост в горах над ущельем реки">
           </picture>
         </div>
-        <div class="post__wraper container">
+        <div class="post__wraper post__wraper--panorama">
           <b class="post__author">Анна</b>
           <time class="post__time">(5 минут назад)</time>
           <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -184,7 +184,7 @@
         </li>
       </ul>
     </section>
-    <section class="upload container">
+    <!--<section class="upload container">
       <h2 class="visually-hidden">Обработать фотографию и выложить</h2>
       <p class="upload__slogan">Затмите их всех!</p>
       <p class="upload__slogan">Выкладывайте все, что накопилось в телефоне!</p>
@@ -247,7 +247,7 @@
           <button class="upload__reset button" type="reset" disabled>Отмена</button>
         </div>
       </form>
-    </section>
+    </section>-->
   </main>
   <include src="htmltemplates/page-footer.html"></include>
 </body>
