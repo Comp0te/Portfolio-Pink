@@ -159,8 +159,7 @@
 
 @media (min-width: $desktop-width) {
   .download {
-    padding-top: 219px;
-    padding-bottom: 118px;
+    padding: 0;
 
     background-image: url("../img/bg-download-desktop-1x.jpg");
     background-position: center top;
@@ -172,7 +171,19 @@
   }
 
   .download__wraper {
-    width: 300px;
+    width: 940px;
+    padding-top: 219px;
+    padding-bottom: 118px;
+    padding-right: 640px;
+
+    background-image: url("../img/iphone-hand-desktop-1x.png");
+    background-position: right 40px bottom -5px;
+    background-size: 555px auto, cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop-2x.jpg");
+    }
   }
 
   .download__slogan {
