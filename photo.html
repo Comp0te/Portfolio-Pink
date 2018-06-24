@@ -21,7 +21,7 @@
         <h1 class="photo__heading">Фотографии пользователей</h1>
       </div>
       <p class="photo__intro container">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
-      <article class="photo__panorama post">
+      <article class="photo__panorama post post--panorama">
         <h2 class="visually-hidden">Панорама дня</h2>
         <div class="post__wraper-photo post__wraper-photo--panorama">
           <picture class="post__photo">
@@ -33,10 +33,12 @@
             <img src="img/panorama-mobile-1x.jpg" srcset="img/panorama-mobile-2x.jpg 2x" alt="Подвесной мост в горах над ущельем реки">
           </picture>
         </div>
-        <div class="post__wraper post__wraper--panorama">
+        <div class="post__wraper-author post__wraper-author--panorama">
           <b class="post__author">Анна</b>
           <time class="post__time">(5 минут назад)</time>
-          <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        </div>
+        <p class="post__content post__content--panorama">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <div class="post__wraper-like post__wraper-like--panorama">
           <button class="post__button" type="button">
             <span class="visually-hidden">Мне нравится</span>
           </button>
@@ -56,10 +58,12 @@
                 <img src="img/photo-1-mobile-1x.jpg" srcset="img/photo-1-mobile-2x.jpg 2x" alt="Машина на фоне стены">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Левон</b>
               <time class="post__time">(5 часов назад)</time>
-              <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            </div>
+            <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
@@ -79,10 +83,12 @@
                 <img src="img/photo-2-mobile-1x.jpg" srcset="img/photo-2-mobile-2x.jpg 2x" alt="Ударная установка">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Антон</b>
               <time class="post__time">(12 часов назад)</time>
-              <p class="post__content">Соседи будут рады!</p>
+            </div>
+            <p class="post__content">Соседи будут рады!</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
@@ -102,10 +108,12 @@
                 <img src="img/photo-3-mobile-1x.jpg" srcset="img/photo-3-mobile-2x.jpg 2x" alt="Стена из стекла в небоскребе">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Борис</b>
               <time class="post__time">(20 часов назад)</time>
-              <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            </div>
+            <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
@@ -125,10 +133,12 @@
                 <img src="img/photo-4-mobile-1x.jpg" srcset="img/photo-4-mobile-2x.jpg 2x" alt="Крытая точка продажи арбузов и дынь - Кубанская бахча">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Сергей</b>
               <time class="post__time">(25 часов назад)</time>
-              <p class="post__content">Самая кубанская в мире!</p>
+            </div>
+            <p class="post__content">Самая кубанская в мире!</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
@@ -148,10 +158,12 @@
                 <img src="img/photo-5-mobile-1x.jpg" srcset="img/photo-5-mobile-2x.jpg 2x" alt="Горный пейзаж на фоне мужских ног">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Максим</b>
               <time class="post__time">(40 часов назад)</time>
-              <p class="post__content">Где снег-то?</p>
+            </div>
+            <p class="post__content">Где снег-то?</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
@@ -171,10 +183,12 @@
                 <img src="img/photo-6-mobile-1x.jpg" srcset="img/photo-6-mobile-2x.jpg 2x" alt="Восход солнца из окна самолета">
               </picture>
             </div>
-            <div class="post__wraper">
+            <div class="post__wraper-author">
               <b class="post__author">Надежда</b>
               <time class="post__time">(45 часов назад)</time>
-              <p class="post__content">Всем GM и взаимные лайки!</p>
+            </div>
+            <p class="post__content">Всем GM и взаимные лайки!</p>
+            <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
               </button>
