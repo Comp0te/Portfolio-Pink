@@ -31,7 +31,6 @@
 .photo__intro {
   padding-top: 50px;
   padding-bottom: 50px;
-  margin: 0;
 
   font-size: 14px;
   line-height: 30px;
@@ -42,15 +41,36 @@
 
 .photo__panorama {
   margin-bottom: 20px;
+}
 
-  background-color: #f2f2f2;
-  background-origin: content-box;
+.photo__container-title {
+  position: relative;
+}
+
+.photo__panorama-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 2;
+
+  width: 140px;
+  height: 36px;
+  padding: 6px 0;
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: $brand-color;
 }
 
 .photo__list {
   display: flex;
   flex-direction: column;
-  margin: 0;
 
   list-style: none;
 }
@@ -96,6 +116,12 @@
     margin-bottom: 50px;
   }
 
+  .photo__panorama-title {
+    right: 20px;
+    left: auto;
+    top: 54px;
+  }
+
   .photo__list {
     display: flex;
     flex-flow: row wrap;
@@ -123,6 +149,23 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-download-desktop-2x.jpg");
+    }
+  }
+
+  .photo__intro {
+    padding-bottom: 90px;
+  }
+
+  .photo__item {
+    width: 31.9149%;
+    margin-bottom: 55px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 }

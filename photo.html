@@ -22,7 +22,9 @@
       </div>
       <p class="photo__intro container">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
       <article class="photo__panorama post post--panorama">
-        <h2 class="visually-hidden">Панорама дня</h2>
+        <div class="photo__container-title container">
+          <h2 class="photo__panorama-title">Панорама дня</h2>
+        </div>
         <div class="post__wraper-photo post__wraper-photo--panorama">
           <picture class="post__photo">
             <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop-1x.webp 1x, img/panorama-desktop-2x.webp 2x">
@@ -198,7 +200,7 @@
         </li>
       </ul>
     </section>
-    <!--<section class="upload container">
+    <section class="upload container">
       <h2 class="visually-hidden">Обработать фотографию и выложить</h2>
       <p class="upload__slogan">Затмите их всех!</p>
       <p class="upload__slogan">Выкладывайте все, что накопилось в телефоне!</p>
@@ -261,7 +263,7 @@
           <button class="upload__reset button" type="reset" disabled>Отмена</button>
         </div>
       </form>
-    </section>-->
+    </section>
   </main>
   <include src="htmltemplates/page-footer.html"></include>
 </body>
