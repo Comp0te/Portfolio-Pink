@@ -1,0 +1,45 @@
+.tools {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  align-items: center;
+  width: 71.43%;
+  max-width: 300px;
+  padding: 0;
+  margin: 0 auto;
+
+  list-style: none;
+}
+
+.tools__item {
+}
+
+.tools__icon {
+  fill: $minor-color;
+}
+
+.tools__button {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: default;
+
+    .tools__icon {
+      fill: $brand-color;
+    }
+  }
+}
+

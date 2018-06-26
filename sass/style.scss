@@ -1,14 +1,17 @@
+/*common-style*/
 @import "normalize.scss";
 @import "variables.scss";
 @import "common.scss";
 @import "mixins.scss";
 @import "global.scss";
-
+/*minor block style*/
 @import "blocks/button.scss";
 @import "blocks/bullets.scss";
 @import "blocks/arrow.scss";
 @import "blocks/container.scss";
-
+@import "blocks/tools.scss";
+@import "blocks/crawlers.scss";
+/*main block style*/
 @import "blocks/page-header.scss";
 @import "blocks/main-navigation.scss";
 @import "blocks/download.scss";
@@ -22,3 +25,4 @@
 @import "blocks/page-footer.scss";
 @import "blocks/photo.scss";
 @import "blocks/post.scss";
+@import "blocks/upload.scss";

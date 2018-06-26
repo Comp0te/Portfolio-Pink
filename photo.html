@@ -7,9 +7,9 @@
   <meta name="author" content="Vinnik Dmitriy"/>
   <meta name="description" content="Просмотр фотографий пользователей приложения Пинк, добавление своих фотографий и коментариев">
   <meta name="keywords" content="Фотографии пользователей, комментарии, загрузка своих фоторгафий">
-  <link rel="preload" href="/fonts/opensans-regular-webfont.woff2" as="font">
-  <link rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font">
-  <link rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Пинк - фоторгафии пользователей</title>
 </head>
@@ -202,8 +202,7 @@
     </section>
     <section class="upload container">
       <h2 class="visually-hidden">Обработать фотографию и выложить</h2>
-      <p class="upload__slogan">Затмите их всех!</p>
-      <p class="upload__slogan">Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="upload__slogan">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
       <form class="upload__form" action="#" method="POST" enctype="multipart/form-data">
         <div class="upload__wraper-photo">
           <picture>
@@ -213,12 +212,12 @@
           <label for="user-photo">
             <span class="visually-hidden">Нажмите сюда, чтобы выбрать фотографию</span>
           </label>
-          <input class="upload__source-photo" type="file" name="user-photo" id="user-photo">
+          <input class="upload__source-photo visually-hidden" type="file" name="user-photo" id="user-photo" tabindex="-1">
         </div>
         <div class="upload__wraper">
           <ul class="upload__tools tools">
             <li class="tools__item" role="presentation">
-              <button class="upload__crop-btn upload__crop--active tools__button" type="button">
+              <button class="upload__crop-btn upload__crop--active tools__button" type="button" disabled>
                 <span class="visually-hidden">Обрезать фотографию</span>
                 <svg class="tools__icon" width="44" height="44" role="presentation">
                   <title>Обрезать фотографию</title>
@@ -248,15 +247,15 @@
           <ul class="upload__crawlers crawlers">
             <li class="crawlers__item" role="presentation">
               <div class="crawlers__scale"></div>
-              <div class="upload__crop-crawler upload__crop-crawler--active crawlers__toggle"></div>
+              <div class="upload__crop-crawler upload__crop-crawler--active crawlers__toggle" draggable="true" tabindex="0"></div>
             </li>
             <li class="crawlers__item" role="presentation">
               <div class="crawlers__scale"></div>
-              <div class="upload__fill-crawler crawlers__toggle"></div>
+              <div class="upload__fill-crawler crawlers__toggle" draggable="true" tabindex="0"></div>
             </li>
             <li class="crawlers__item" role="presentation">
               <div class="crawlers__scale"></div>
-              <div class="upload__contrast-crawler crawlers__toggle"></div>
+              <div class="upload__contrast-crawler crawlers__toggle" draggable="true" tabindex="0"></div>
             </li>
           </ul>
           <button class="upload__submit button" type="submit">Запостить</button>

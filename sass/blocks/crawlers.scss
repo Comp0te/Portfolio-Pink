@@ -1,0 +1,39 @@
+.crawlers {
+  position: relative;
+
+  width: 280px;
+  min-height: 70px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.crawlers__item {
+  position: absolute;
+  left: 20px;
+  top: 0;
+
+  min-height: 70px;
+}
+
+.crawlers__scale {
+  width: 240px;
+  height: 2px;
+  margin: 35px auto;
+
+  background-color: $minor-color;
+}
+
+.crawlers__toggle {
+  position: absolute;
+  top: 29px;
+  left: 210px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #f2f2f2;
+  border: 2px solid $brand-color;
+  border-radius: 50%;
+}
