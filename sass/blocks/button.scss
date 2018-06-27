@@ -18,7 +18,8 @@
 
   transition:
     color 0.2s ease-in,
-    background-color 0.2s ease-out;
+    background-color 0.2s ease-out,
+    opacity 0.2s linear;
 }
 
 @media (min-width: $desktop-width) {
