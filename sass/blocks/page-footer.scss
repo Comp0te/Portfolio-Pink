@@ -1,83 +1,97 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 284px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &--off {
+    display: none;
+  }
+}
+
+.page-footer__logo-link {
+  display: block;
+
+  fill: $minor-color;
+  border-radius: 50%/50%;
+  outline: none;
+
+  transition: fill 0.2s ease, box-shadow 0.2s ease-out;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover:not(:active),
+  &:focus:not(:active) {
+    fill: $brand-color;
+    box-shadow:
+      3px 3px 3px 0 $brand-color-opacity,
+      -3px -3px 3px 0 $brand-color-opacity;
+
+    animation: skew 3s linear infinite;
+  }
+}
+
+.page-footer__logo-desktop {
   display: none;
-  min-height: 127px;
+}
+
+.page-footer__academy {
+  display: flex;
+  margin: 0;
+}
+
+.page-footer__academy-text {
+  padding: 8px 0;
+  margin-right: 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: $minor-color;
+}
+
+.page-footer__academy-link {
+  display: block;
+
+  outline: none;
+  fill: $brand-color;
+  border-radius: 50%;
+
+  transition: fill 0.2s ease-in;
+
+  &:active {
+    fill: rgba($color: $minor-color, $alpha: 0.3);
+
+    transition-duration: 0s;
+  }
+
+  &:hover:not(:active),
+  &:focus:not(:active) {
+    fill: $minor-color;
+
+    animation: rotate 3s linear 0.2s infinite;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    min-height: 127px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .page-footer__logo-link {
-    display: block;
     margin-bottom: 14px;
-
-    fill: $minor-color;
-    border-radius: 50%/50%;
-    outline: none;
-
-    transition: fill 0.2s ease, box-shadow 0.2s ease-out;
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &:hover:not(:active),
-    &:focus:not(:active) {
-      fill: $brand-color;
-      box-shadow:
-        3px 3px 3px 0 $brand-color-opacity,
-        -3px -3px 3px 0 $brand-color-opacity;
-
-      animation: skew 3s linear infinite;
-    }
-  }
-
-  .page-footer__logo-desktop {
-    display: none;
   }
 
   .page-footer__social {
     margin-right: 26px;
-  }
-
-  .page-footer__academy {
-    display: flex;
-    margin: 0;
-  }
-
-  .page-footer__academy-text {
-    padding: 8px 0;
-    margin-right: 15px;
-
-    font-size: 14px;
-    line-height: 18px;
-    color: $minor-color;
-  }
-
-  .page-footer__academy-link {
-    display: block;
-
-    outline: none;
-    fill: $brand-color;
-    border-radius: 50%;
-
-    transition: fill 0.2s ease-in;
-
-    &:active {
-      fill: rgba($color: $minor-color, $alpha: 0.3);
-
-      transition-duration: 0s;
-    }
-
-    &:hover:not(:active),
-    &:focus:not(:active) {
-      fill: $minor-color;
-
-      animation: rotate 3s linear 0.2s infinite;
-    }
   }
 }
 
