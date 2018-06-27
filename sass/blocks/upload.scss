@@ -1,5 +1,11 @@
+.upload {
+  padding-bottom: 40px;
+
+  background-color: #f2f2f2;
+}
+
 .upload__slogan {
-  padding-top: 42px;
+  padding-top: 22px;
   padding-bottom: 62px;
   margin: 0;
 
@@ -8,10 +14,12 @@
   font-weight: 400;
   text-align: center;
   color: $minor-color;
+
+  background-color: #ffffff;
 }
 
 .upload__form {
-  background-color: #f2f2f2;
+  padding-top: 20px;
 }
 
 .upload__wraper-photo {
@@ -20,6 +28,90 @@
   text-align: center;
 }
 
-.upload__tools {
-  /*margin-bottom: 33px;*/
+.upload__submit {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 35px;
+
+  color: $brand-color;
+
+  border-color: $brand-color;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    background-color: $brand-color;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+
+    transition-duration: 0s;
+  }
+}
+
+.upload__reset {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 12px;
+
+  color: $minor-color;
+
+  border-color: $minor-color;
+  outline: none;
+  opacity: 0.1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+
+    background-color: $minor-color;
+
+    transition-duration: 0s;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .upload__slogan {
+    padding-top: 45px;
+    padding-bottom: 73px;
+    font-size: 18px;
+  }
+
+  .upload__form {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+  }
+
+  .upload__wraper-photo {
+    width: 48.3871%;
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
+  .upload__wraper {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    width: 48.3871%;
+  }
+
+  .upload__submit {
+    width: 86.667%;
+    margin-top: 67px;
+  }
+
+  .upload__reset {
+    width: 86.667%;
+    margin-top: 24px;
+  }
 }
