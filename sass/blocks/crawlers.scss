@@ -11,7 +11,7 @@
 
   display: none;
   min-height: 70px;
-  padding: 35px 0;
+  padding: 34px 0;
 
   &::after {
     content: "";
@@ -43,7 +43,6 @@
 .crawlers__toggle {
   position: absolute;
   top: -6px;
-  left: 200px;
 
   width: 14px;
   height: 14px;
@@ -59,9 +58,14 @@
   }
 }
 
+.crawlers__crop {
+  left: 191px;
+}
+
 @media (min-width: $tablet-width) {
   .crawlers {
     width: 75%;
+    padding-left: 5px;
   }
 
   .crawlers__item {
@@ -93,7 +97,8 @@
 
 @media (min-width: $desktop-width) {
   .crawlers {
-    width: 315px;
+    width: 318px;
+    padding-left: 0;
   }
 
   .crawlers__item {

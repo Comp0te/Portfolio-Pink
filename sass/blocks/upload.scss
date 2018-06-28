@@ -1,12 +1,12 @@
 .upload {
-  padding-bottom: 40px;
+  padding-bottom: 41px;
 
   background-color: #f2f2f2;
 }
 
 .upload__slogan {
   padding-top: 22px;
-  padding-bottom: 62px;
+  padding-bottom: 42px;
   margin: 0;
 
   font-size: 14px;
@@ -32,7 +32,7 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 39px;
 
   color: $brand-color;
 
@@ -80,9 +80,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .upload {
+    padding-bottom: 51px;
+  }
+
   .upload__slogan {
-    padding-top: 45px;
-    padding-bottom: 73px;
+    padding-top: 44px;
+    padding-bottom: 69px;
     font-size: 18px;
   }
 
@@ -107,19 +111,25 @@
 
   .upload__submit {
     width: 86.667%;
-    margin-top: 67px;
+    margin-top: 64px;
+    margin-right: 13px;
   }
 
   .upload__reset {
     width: 86.667%;
-    margin-top: 24px;
+    margin-top: 27px;
+    margin-right: 13px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .upload {
+    padding-bottom: 54px;
+  }
+
   .upload__slogan {
-    padding-top: 10px;
-    padding-bottom: 70px;
+    padding-top: 3px;
+    padding-bottom: 66px;
   }
 
   .upload__wraper-photo {
@@ -128,18 +138,26 @@
   }
 
   .upload__wraper {
-    width: 410px;
+    width: 412px;
     margin-right: 60px;
+    padding-bottom: 3px;
   }
 
   .upload__submit {
     width: 183px;
-    margin-top: 146px;
+    margin-top: 143px;
     margin-right: 44px;
+
+    font-size: 18px;
+    letter-spacing: normal;
   }
 
   .upload__reset {
     width: 183px;
-    margin-top: 146px;
+    margin-top: 143px;
+    margin-right: 0;
+
+    font-size: 18px;
+    letter-spacing: normal;
   }
 }

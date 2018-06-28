@@ -18,7 +18,7 @@
 
 .post__wraper-author {
   padding: 0 18px;
-  padding-top: 20px;
+  padding-top: 17px;
 
   &--panorama {
     margin: 0 20px;
@@ -63,7 +63,7 @@
   width: 13px;
   height: 12px;
   padding: 0;
-  margin-right: 18px;
+  margin-right: 14px;
 
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
@@ -106,6 +106,9 @@
   }
 
   .post__wraper-author {
+    padding-top: 24px;
+    padding-left: 28px;
+
     &--panorama {
       width: calc(50% - 20px);
       margin-right: 0;
@@ -114,10 +117,11 @@
 
   .post__author {
     order: 0;
-    margin-right: 5px;
   }
 
   .post__content {
+    padding: 0 27px;
+
     &--panorama {
       order: 1;
       padding-bottom: 25px;
@@ -129,12 +133,15 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-left: 27px;
+    padding-bottom: 23px;
     margin-top: auto;
 
     &--panorama {
       justify-content: flex-end;
       width: calc(50% - 20px);
       padding-top: 25px;
+      padding-right: 15px;
       padding-bottom: 0;
       margin-left: 0;
     }
@@ -143,6 +150,7 @@
   .post__button {
     order: 1;
     margin-left: 18px;
+    margin-bottom: 5px;
   }
 }
 
@@ -150,22 +158,32 @@
   .post__wraper-author {
     &--panorama {
       width: 640px;
-      padding-left: 28px;
+      margin-left: auto;
+    }
+  }
+
+  .post__wraper-photo {
+    overflow: hidden;
+
+    &--panorama .post__photo {
+      max-width: none;
     }
   }
 
   .post__content {
     &--panorama {
-      width: 940px;
-      padding-left: 28px;
-      padding-right: 28px;
+      width: 100%;
+      margin: 0 auto;
+      margin-left: calc(50% - 470px);
+      margin-right: calc(50% - 470px);
     }
   }
 
   .post__wraper-like {
     &--panorama {
       width: 300px;
-      padding-right: 28px;
+      padding-right: 18px;
+      margin-right: auto;
     }
   }
 }

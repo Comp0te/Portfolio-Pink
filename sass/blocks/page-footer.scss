@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 284px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   &--off {
     display: none;
@@ -91,17 +91,21 @@
   }
 
   .page-footer__social {
-    margin-right: 26px;
+    margin-right: 17px;
+  }
+
+  .page-footer__academy {
+    padding-top: 9px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    min-height: 197px;
+    min-height: 226px;
   }
 
   .page-footer__logo-link {
-    margin-bottom: 21px;
+    margin-bottom: -9px;
   }
 
   .page-footer__logo-tablet {
@@ -113,11 +117,17 @@
   }
 
   .page-footer__social {
-    margin-right: -7px;
+    margin-right: -16px;
+    margin-top: 27px;
+  }
+
+  .page-footer__academy {
+    margin-top: 27px;
   }
 
   .page-footer__academy-text {
     font-size: 18px;
+    padding-top: 4px;
   }
 }
 
