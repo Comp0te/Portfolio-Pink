@@ -90,3 +90,31 @@
     left: 96px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .crawlers {
+    width: 315px;
+  }
+
+  .crawlers__item {
+    &::after {
+      left: -95px;
+    }
+  }
+
+  .crawlers__scale {
+    width: 288px;
+  }
+
+  .crawlers__crop {
+    left: 71px;
+  }
+
+  .crawlers__fill {
+    left: 248px;
+  }
+
+  .crawlers__contrast {
+    left: 161px;
+  }
+}

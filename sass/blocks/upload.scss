@@ -115,3 +115,31 @@
     margin-top: 24px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .upload__slogan {
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  .upload__wraper-photo {
+    width: 300px;
+    margin-left: 80px;
+  }
+
+  .upload__wraper {
+    width: 410px;
+    margin-right: 60px;
+  }
+
+  .upload__submit {
+    width: 183px;
+    margin-top: 146px;
+    margin-right: 44px;
+  }
+
+  .upload__reset {
+    width: 183px;
+    margin-top: 146px;
+  }
+}

@@ -62,3 +62,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .tools {
+    width: 47px;
+    margin-right: 48px;
+  }
+
+  .tools__item {
+    transform: none;
+  }
+}
+
