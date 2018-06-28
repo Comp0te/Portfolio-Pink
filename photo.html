@@ -18,14 +18,14 @@
   <main>
     <section class="photo">
       <div class="photo__wraper-heading">
-        <h1 class="photo__heading">Фотографии пользователей</h1>
+        <h1 class="photo__heading" id="aria-photo">Фотографии пользователей</h1>
       </div>
       <p class="photo__intro container">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
-      <article class="photo__panorama post post--panorama">
-        <div class="photo__container-title container">
-          <h2 class="photo__panorama-title">Панорама дня</h2>
+      <article class="photo__panorama post post--panorama" aria-labelledby="aria-panorama">
+        <div class="photo__container-title container" role="presentation">
+          <h2 class="photo__panorama-title" id="aria-panorama">Панорама дня</h2>
         </div>
-        <div class="post__wraper-photo post__wraper-photo--panorama">
+        <div class="post__wraper-photo post__wraper-photo--panorama" role="presentation">
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop-1x.webp 1x, img/panorama-desktop-2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet-1x.webp 1x, img/panorama-tablet-2x.webp 2x">
@@ -35,11 +35,11 @@
             <img class="post__photo" src="img/panorama-mobile-1x.jpg" srcset="img/panorama-mobile-2x.jpg 2x" alt="Подвесной мост в горах над ущельем реки">
           </picture>
         </div>
-        <div class="post__wraper-author post__wraper-author--panorama">
+        <div class="post__wraper-author post__wraper-author--panorama" aria-label="Автор и дата поста">
           <b class="post__author">Анна</b>
-          <time class="post__time">(5 минут назад)</time>
+          <time datetime="2018-07-07" class="post__time">(5 минут назад)</time>
         </div>
-        <p class="post__content post__content--panorama">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <p class="post__content post__content--panorama" aria-label="Комментарий пользователя">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         <div class="post__wraper-like post__wraper-like--panorama">
           <button class="post__button" type="button">
             <span class="visually-hidden">Мне нравится</span>
@@ -47,10 +47,10 @@
           <span class="post__like">Нравится: 215</span>
         </div>
       </article>
-      <ul class="photo__list container">
+      <ul class="photo__list container" aria-labelledby="aria-photo">
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-1-desktop-1x.webp 1x, img/photo-1-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-1-tablet-1x.webp 1x, img/photo-1-tablet-2x.webp 2x">
@@ -60,11 +60,11 @@
                 <img class="post__photo" src="img/photo-1-mobile-1x.jpg" srcset="img/photo-1-mobile-2x.jpg 2x" alt="Машина на фоне стены">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Левон</b>
-              <time class="post__time">(5 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(5 часов назад)</time>
             </div>
-            <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -75,7 +75,7 @@
         </li>
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-2-desktop-1x.webp 1x, img/photo-2-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-2-tablet-1x.webp 1x, img/photo-2-tablet-2x.webp 2x">
@@ -85,11 +85,11 @@
                 <img class="post__photo" src="img/photo-2-mobile-1x.jpg" srcset="img/photo-2-mobile-2x.jpg 2x" alt="Ударная установка">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Антон</b>
-              <time class="post__time">(12 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(12 часов назад)</time>
             </div>
-            <p class="post__content">Соседи будут рады!</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Соседи будут рады!</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -100,7 +100,7 @@
         </li>
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-3-desktop-1x.webp 1x, img/photo-3-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-3-tablet-1x.webp 1x, img/photo-3-tablet-2x.webp 2x">
@@ -110,11 +110,11 @@
                 <img class="post__photo" src="img/photo-3-mobile-1x.jpg" srcset="img/photo-3-mobile-2x.jpg 2x" alt="Стена из стекла в небоскребе">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Борис</b>
-              <time class="post__time">(20 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(20 часов назад)</time>
             </div>
-            <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Здесь могла быть ваша цитата о высоком и вечном.</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -125,7 +125,7 @@
         </li>
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-4-desktop-1x.webp 1x, img/photo-4-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-4-tablet-1x.webp 1x, img/photo-4-tablet-2x.webp 2x">
@@ -135,11 +135,11 @@
                 <img class="post__photo" src="img/photo-4-mobile-1x.jpg" srcset="img/photo-4-mobile-2x.jpg 2x" alt="Крытая точка продажи арбузов и дынь - Кубанская бахча">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Сергей</b>
-              <time class="post__time">(25 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(25 часов назад)</time>
             </div>
-            <p class="post__content">Самая кубанская в мире!</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Самая кубанская в мире!</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -150,7 +150,7 @@
         </li>
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-5-desktop-1x.webp 1x, img/photo-5-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-5-tablet-1x.webp 1x, img/photo-5-tablet-2x.webp 2x">
@@ -160,11 +160,11 @@
                 <img class="post__photo" src="img/photo-5-mobile-1x.jpg" srcset="img/photo-5-mobile-2x.jpg 2x" alt="Горный пейзаж на фоне мужских ног">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Максим</b>
-              <time class="post__time">(40 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(40 часов назад)</time>
             </div>
-            <p class="post__content">Где снег-то?</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Где снег-то?</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -175,7 +175,7 @@
         </li>
         <li class="photo__item">
           <article class="post">
-            <div class="post__wraper-photo">
+            <div class="post__wraper-photo" role="presentation">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-6-desktop-1x.webp 1x, img/photo-6-desktop-2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-6-tablet-1x.webp 1x, img/photo-6-tablet-2x.webp 2x">
@@ -185,11 +185,11 @@
                 <img class="post__photo" src="img/photo-6-mobile-1x.jpg" srcset="img/photo-6-mobile-2x.jpg 2x" alt="Восход солнца из окна самолета">
               </picture>
             </div>
-            <div class="post__wraper-author">
+            <div class="post__wraper-author" aria-label="Автор и дата поста">
               <b class="post__author">Надежда</b>
-              <time class="post__time">(45 часов назад)</time>
+              <time datetime="2018-07-07" class="post__time">(45 часов назад)</time>
             </div>
-            <p class="post__content">Всем GM и взаимные лайки!</p>
+            <p class="post__content" aria-label="Комментарий пользователя">Всем GM и взаимные лайки!</p>
             <div class="post__wraper-like">
               <button class="post__button" type="button">
                 <span class="visually-hidden">Мне нравится</span>
@@ -205,7 +205,7 @@
       <p class="upload__slogan">Затмите их всех!
         <br>Выкладывайте все, что накопилось в телефоне!</p>
       <form class="upload__form container" action="#" method="POST" enctype="multipart/form-data">
-        <div class="upload__wraper-photo">
+        <div class="upload__wraper-photo" aria-label="Выбрать фотографию для загрузки">
           <picture>
             <source type="image/webp" srcset="img/photo-upload-1x.webp 1x, img/photo-upload-2x.webp 2x">
             <img class="upload__photo" src="img/photo-upload-1x.jpg" srcset="img/photo-upload-2x.jpg 2x" alt="Зимняя заснеженная дорога">
@@ -219,7 +219,7 @@
           <ul class="upload__tools tools">
             <li class="tools__item" role="presentation">
               <button class="upload__crop-btn upload__crop--active tools__button" type="button" disabled>
-                <span class="visually-hidden">Обрезать фотографию</span>
+                <span class="visually-hidden" id="aria-crop">Обрезать фотографию</span>
                 <svg class="tools__icon" width="44" height="44" role="presentation">
                   <title>Обрезать фотографию</title>
                   <use xlink:href="img/sprite.svg#crop"></use>
@@ -228,7 +228,7 @@
             </li>
             <li class="tools__item" role="presentation">
               <button class="upload__fill-btn tools__button" type="button">
-                <span class="visually-hidden">Залить фотографию розовым</span>
+                <span class="visually-hidden" id="aria-fill">Залить фотографию розовым</span>
                 <svg class="tools__icon" width="48" height="44" role="presentation">
                   <title>Залить фотографию розовым</title>
                   <use xlink:href="img/sprite.svg#fill"></use>
@@ -237,7 +237,7 @@
             </li>
             <li class="tools__item" role="presentation">
               <button class="upload__contrast-btn tools__button" type="button">
-                <span class="visually-hidden">Задать фотографии контраст</span>
+                <span class="visually-hidden" id="aria-contrast">Задать фотографии контраст</span>
                 <svg class="tools__icon" width="32" height="32" role="presentation">
                   <title>Задать фотографии контраст</title>
                   <use xlink:href="img/sprite.svg#contrast"></use>
@@ -247,17 +247,17 @@
           </ul>
           <ul class="upload__crawlers crawlers">
             <li class="crawlers__item crawlers__item--active" role="presentation">
-              <div class="crawlers__scale">
+              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-crop">
                 <div class="crawlers__crop crawlers__toggle" draggable="true" tabindex="0"></div>
               </div>
             </li>
             <li class="crawlers__item" role="presentation">
-              <div class="crawlers__scale">
+              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-fill">
                 <div class="crawlers__fill crawlers__toggle" draggable="true" tabindex="0"></div>
               </div>
             </li>
             <li class="crawlers__item" role="presentation">
-              <div class="crawlers__scale">
+              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-contrast">
                 <div class="crawlers__contrast crawlers__toggle" draggable="true" tabindex="0"></div>
               </div>
             </li>
