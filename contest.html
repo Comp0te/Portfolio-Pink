@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Vinnik Dmitriy"/>
+  <meta name="description" content="Конкурс на лучшее путешествие Пинк, заполните форму и выиграйте приз">
+  <meta name="keywords" content="Конкурс, ценный приз, оправить форму в Пинк">
+  <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Конкурс Пинк</title>
+</head>
+<body>
+  <include src="htmltemplates/page-header.html"></include>
+  <main>
+    <section class="contest">
+      <div class="contest__intro">
+        <h1 class="contest__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
+      <p class="contest__about">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <form class="contest__form" action="#" method="POST" enctype="text/plain">
+        <fieldset class="contest__full-name container">
+          <legend class="visually-hidden">ФИО</legend>
+          <ul class="full-name">
+            <li class="full-name__item">
+              <label class="full-name__label" for="surname">Фамилия:</label>
+              <input class="full-name__input" type="text" placeholder="Укажите фамилию *" autocomplete="family-name" spellcheck="true"
+                name="surname" id="surname" minlength="2" required>
+            </li>
+            <li class="full-name__item">
+              <label class="full-name__label" for="name">Имя:</label>
+              <input class="full-name__input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name"
+                id="name" minlength="2" required>
+            </li>
+            <li class="full-name__item">
+              <label class="full-name__label" for="patronymic">Отчество:</label>
+              <input class="full-name__input" type="text" placeholder="Ну и отчество тоже" autocomplete="additional-name" spellcheck="true"
+                name="patronymic" id="patronymic" minlength="2">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="contest__os os">
+          <legend class="os__title">С каким приложением путешествовали?</legend>
+          <ul class="os__list">
+            <li class="os__item">
+              <input class="os__input visually-hidden" type="radio" name="os"  value="ios" id="ios" checked>
+              <label class="os__label" for="ios">Pink для iOS</label>
+            </li>
+            <li class="os__item">
+              <input class="os__input visually-hidden" type="radio" name="os" value="android" id="android">
+              <label class="os__label" for="android">Pink на Android</label>
+            </li>
+            <li class="os__item">
+              <input class="os__input visually-hidden" type="radio" name="os" value="windowsPhone" id="windowsPhone">
+              <label class="os__label" for="windowsPhone">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="contest__contacts form-contacts container">
+          <legend class="form-contacts__title">Контактная информация</legend>
+          <ul class="form-contacts__list">
+            <li class="form-contacts__item">
+              <input class="form-contacts__input form-contacts__input--tel" type="tel" placeholder="Номер, пожалуйста" autocomplete="tel" name="tel" id="tel" minlength="9" maxlength="14" pattern="[0-9]{3}-[0-9]{2}-[0-9]{7}">
+              <label class="form-contacts__label" for="tel">Номер телефона</label>
+            </li>
+            <li class="form-contacts__item">
+              <input class="form-contacts__input form-contacts__input--email" type="email" placeholder="Введите почту *" autocomplete="email" name="email" id="email" required>
+              <label class="form-contacts__label" for="email">Адрес почты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="contest__achievements achievements">
+          <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="achievements__list">
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="shark" id="check1" checked>
+              <label class="achievements__label" for="check1">Сделал селфи с акулой</label>
+            </li>
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="beaсh" id="check2" checked>
+              <label class="achievements__label" for="check2">Обгорел на пляже</label>
+            </li>
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="Chuck" id="check3">
+              <label class="achievements__label" for="check3">Видел Чака Норриса</label>
+            </li>
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="souvenir" id="check4">
+              <label class="achievements__label" for="check4">Накупил сувениров</label>
+            </li>
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="tower" id="check5" checked>
+              <label class="achievements__label" for="check5">Удержал башню</label>
+            </li>
+            <li class="achievements__item">
+              <input class="visually-hidden" type="checkbox" name="achievements" value="hotel" id="check6">
+              <label class="achievements__label" for="check6">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="contest__emotions emotions container">
+          <legend class="emotions__title">Опишите свои эмоции</legend>
+          <textarea class="emotions__textarea" name="emotions" id="emotions" cols="30" rows="6" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <label class="visually-hidden" for="emotions">Напишите ваши эмоции сюда</label>
+        </fieldset>
+        <div class="contest__submit container">
+          <button class="contest__submit-btn button" type="submit">Отправить форму</button>
+          <p class="contest__required-text">* — обязательные поля</p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <include src="htmltemplates/page-footer.html"></include>
+</body>
+</html>
