@@ -20,12 +20,13 @@
       <div class="contest__intro" role="presentation">
         <h1 class="contest__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
-      <p class="contest__about">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните
-        форму ниже:</p>
+      <p class="contest__about container">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="contest__about-request">Пожалуйста, заполните форму ниже:</span>
+      </p>
       <form class="contest__form" action="#" method="POST" enctype="text/plain">
-        <fieldset class="contest__full-name container">
+        <fieldset class="contest__full-name full-name container">
           <legend class="visually-hidden">ФИО</legend>
-          <ul class="full-name">
+          <ul class="full-name__list">
             <li class="full-name__item">
               <label class="full-name__label" for="surname">Фамилия:</label>
               <input class="full-name__input" type="text" placeholder="Укажите фамилию *" autocomplete="family-name" spellcheck="true"
@@ -47,16 +48,16 @@
           <legend class="os__title">С каким приложением путешествовали?</legend>
           <ul class="os__list">
             <li class="os__item">
-              <input class="os__input visually-hidden" type="radio" name="os" value="ios" id="ios" checked>
-              <label class="os__label" for="ios">Pink для iOS</label>
+              <input class="os__radio visually-hidden" type="radio" name="os" value="ios" id="ios" checked>
+              <label class="os__label" for="ios" tabindex="0">Pink для iOS</label>
             </li>
             <li class="os__item">
-              <input class="os__input visually-hidden" type="radio" name="os" value="android" id="android">
-              <label class="os__label" for="android">Pink на Android</label>
+              <input class="os__radio visually-hidden" type="radio" name="os" value="android" id="android">
+              <label class="os__label" for="android" tabindex="0">Pink на Android</label>
             </li>
             <li class="os__item">
-              <input class="os__input visually-hidden" type="radio" name="os" value="windowsPhone" id="windowsPhone">
-              <label class="os__label" for="windowsPhone">Windows Phone</label>
+              <input class="os__radio visually-hidden" type="radio" name="os" value="windowsPhone" id="windowsPhone">
+              <label class="os__label" for="windowsPhone" tabindex="0">Windows Phone</label>
             </li>
           </ul>
         </fieldset>

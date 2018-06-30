@@ -1,0 +1,65 @@
+.contest__intro {
+  margin-top: -66px;
+
+  background-image: url("../img/bg-download-mobile-1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 659px auto;
+  background-color: #1d2631;
+}
+
+.contest__heading {
+  width: 270px;
+  padding-top: 102px;
+  padding-bottom: 39px;
+  margin: 0 auto;
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contest__about {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: $minor-color;
+}
+
+.contest__about-request {
+  display: none;
+}
+
+.contest__form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: $mobile-only) {
+  .contest__os {
+    order: 2;
+
+    background-color: #f2f2f2;
+  }
+
+  .contest__contacts {
+    order: 1;
+  }
+
+  .contest__emotions {
+    order: 3;
+  }
+
+  .contest__submit {
+    order: 4;
+  }
+}
+
+
