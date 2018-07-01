@@ -21,7 +21,7 @@
   }
 
   &:active {
-    fill: $brand-color-opacity;
+    fill: rgba($color: $brand-color, $alpha: 0.3);
 
     transition-duration: 0s;
   }
@@ -109,7 +109,7 @@
   }
 
   &[href]:active {
-    color: $brand-color-opacity;
+    color: rgba($color: $brand-color, $alpha: 0.3);
     transition-duration: 0s;
   }
 }

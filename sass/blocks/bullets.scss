@@ -49,7 +49,7 @@
 
     &:focus {
       opacity: 1;
-      box-shadow: 0 0 3px 3px $brand-color-opacity;
+      box-shadow: 0 0 3px 3px rgba($color: $brand-color, $alpha: 0.3);
     }
   }
 }

@@ -29,8 +29,8 @@
   &:focus:not(:active) {
     fill: $brand-color;
     box-shadow:
-      3px 3px 3px 0 $brand-color-opacity,
-      -3px -3px 3px 0 $brand-color-opacity;
+      3px 3px 3px 0 rgba($color: $brand-color, $alpha: 0.3),
+      -3px -3px 3px 0 rgba($color: $brand-color, $alpha: 0.3);
 
     animation: skew 3s linear infinite;
   }
