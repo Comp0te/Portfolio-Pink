@@ -42,6 +42,55 @@
   flex-direction: column;
 }
 
+.contest__submit-button {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.contest__required-text {
+  margin-top: 30px;
+  margin-bottom: 17px;
+
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $minor-color;
+
+  &::before {
+    content: "* ";
+    color: $brand-color;
+  }
+}
+
+.contest__pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba($color: $brand-color, $alpha: 0.1);
+
+  &--succsess,
+  &--failure {
+    display: block;
+  }
+}
+
+.contest__pop-up-wraper {
+  position: fixed;
+  top: 30vh;
+  left: calc(50vw - 160px);
+  z-index: 10;
+
+  width: 320px;
+}
+
 @media (max-width: $mobile-only) {
   .contest__os {
     order: 2;
@@ -59,6 +108,10 @@
 
   .contest__submit {
     order: 4;
+  }
+
+  .contest__achievements {
+    background-color: #f2f2f2;
   }
 }
 

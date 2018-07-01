@@ -1,0 +1,39 @@
+.form-button {
+  display: block;
+  padding: 16.5px 10px;
+  overflow-wrap: break-word;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #2aab6d;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease-in,
+    background-color 0.2s ease-out,
+    opacity 0.2s linear;
+
+  &:disabled {
+    background-color: #e5e5e5;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: 2px solid $brand-color;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #1c9b5e;
+  }
+}

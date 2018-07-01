@@ -1,49 +1,42 @@
-.full-name {
-  padding-bottom: 45px;
-  margin: 0;
-
-  border: none;
-}
-
-.full-name__list {
+.emotions {
   width: 100%;
   max-width: 360px;
-  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 50px;
   margin: 0 auto;
-
-  font-weight: 400;
-  line-height: 30px;
-  list-style: none;
 }
 
-.full-name__item {
-  margin-bottom: 20px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.full-name__label {
-  padding-left: 23px;
-  padding-bottom: 8px;
+.emotions__label {
+  display: block;
+  padding-bottom: 12px;
+  width: 100%;
 
   font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: $brand-color;
 }
 
-.full-name__input {
+.emotions__textarea {
   display: block;
+  padding: 20px;
   width: 100%;
-  height: 59px;
-  padding-left: 23px;
+  max-width: 360px;
+  margin: 0 auto;
 
   font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
   color: $minor-color;
 
+  background-color: #ffffff;
   border: 2px solid #e5e5e5;
   outline: none;
+
+  resize: none;
+  appearance: none;
 
   &:disabled {
     opacity: 0.5;

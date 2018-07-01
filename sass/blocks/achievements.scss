@@ -1,15 +1,15 @@
-.os {
+.achievements {
   position: relative;
 
-  padding: 110px 20px 45px;
+  padding: 115px 20px 45px;
   margin: 0;
 
   border: none;
 }
 
-.os__title {
+.achievements__title {
   position: absolute;
-  top: 35px;
+  top: 40px;
   left: 50px;
   right: 50px;
 
@@ -21,7 +21,7 @@
   color: $brand-color;
 }
 
-.os__list {
+.achievements__list {
   width: 100%;
   max-width: 360px;
   padding: 0;
@@ -30,15 +30,15 @@
   list-style: none;
 }
 
-.os__item {
-  margin-bottom: 36px;
+.achievements__item {
+  margin-bottom: 43px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.os__label {
+.achievements__label {
   position: relative;
 
   display: block;
@@ -66,7 +66,6 @@
 
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
-    border-radius: 50%;
 
     transition:
       border-color 0.3s,
@@ -74,23 +73,18 @@
   }
 }
 
-.os__radio {
+.achievements__checkbox {
   appearance: none;
 }
 
-.os__radio:checked + .os__label::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 10;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: $brand-color;
+.achievements__checkbox:checked + .achievements__label::before {
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 21.7px 16px;
 }
 
-.os__radio:disabled + .os__label {
+.achievements__checkbox:disabled + .achievements__label {
   color: rgba($color: $minor-color, $alpha: 0.3);
 
   cursor: not-allowed;
@@ -100,8 +94,8 @@
   }
 }
 
-.os__radio:focus + .os__label,
-.os__radio:active:not(:disabled) + .os__label {
+.achievements__checkbox:focus + .achievements__label,
+.achievements__checkbox:active:not(:disabled) + .achievements__label {
   &::before {
     border-color: $brand-color;
     box-shadow:
@@ -110,6 +104,6 @@
   }
 }
 
-.os__radio:not(:disabled):not(:active):not(:focus) + .os__label:hover::before {
+.achievements__checkbox:not(:disabled):not(:active):not(:focus) + .achievements__label:hover::before {
   border-color: $minor-color;
 }
