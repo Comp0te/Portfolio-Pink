@@ -6,6 +6,10 @@
   background-position: center top;
   background-size: 659px auto;
   background-color: #1d2631;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-download-mobile-2x.jpg");
+  }
 }
 
 .contest__heading {
@@ -112,6 +116,46 @@
 
   .contest__achievements {
     background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contest__intro {
+    margin-top: -110px;
+
+    background-image: url("../img/bg-download-tablet-1x.jpg");
+    background-size: 1200px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-tablet-2x.jpg");
+    }
+  }
+
+  .contest__heading {
+    width: 80%;
+    padding-top: 190px;
+    padding-bottom: 90px;
+    margin: 0 auto;
+
+    font-size: 50px;
+  }
+
+  .contest__about {
+    width: 90%;
+    padding-top: 95px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+
+    font-size: 18px;
+  }
+
+  .contest__about-request {
+    display: block;
+  }
+
+  .contest__form {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 

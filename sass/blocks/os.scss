@@ -113,3 +113,28 @@
 .os__radio:not(:disabled):not(:active):not(:focus) + .os__label:hover::before {
   border-color: $minor-color;
 }
+
+@media (min-width: $tablet-width) {
+  .os {
+    padding: 55px 60px;
+    margin: 0 20px;
+    margin-bottom: 55px;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  .os__title {
+    top: -15px;
+    left: calc(50% - 185px);
+    right: calc(50% - 185px);
+    z-index: 2;
+
+    line-height: 30px;
+
+    background-color: #ffffff;
+  }
+
+  .os__list {
+    max-width: 100%;
+  }
+}
