@@ -1,7 +1,4 @@
 .full-name {
-  padding-bottom: 45px;
-  margin: 0;
-
   border: none;
 }
 
@@ -64,10 +61,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .full-name {
-    padding-bottom: 55px;
-  }
-
   .full-name__list {
     max-width: 100%;
   }

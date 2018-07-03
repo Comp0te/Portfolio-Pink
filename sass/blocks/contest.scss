@@ -1,5 +1,12 @@
-.contest__intro {
+.contest {
   margin-top: -66px;
+  margin-bottom: 57px;
+}
+
+.contest__intro {
+  padding-top: 102px;
+  padding-bottom: 55px;
+  margin-bottom: 50px;
 
   background-image: url("../img/bg-download-mobile-1x.jpg");
   background-repeat: no-repeat;
@@ -14,8 +21,6 @@
 
 .contest__heading {
   width: 270px;
-  padding-top: 102px;
-  padding-bottom: 39px;
   margin: 0 auto;
 
   font-size: 24px;
@@ -26,9 +31,8 @@
 }
 
 .contest__about {
-  padding-top: 45px;
-  padding-bottom: 45px;
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 38px;
 
   font-size: 14px;
   line-height: 30px;
@@ -46,15 +50,31 @@
   flex-direction: column;
 }
 
+.contest__full-name,
+.contest__contacts {
+  margin: 0;
+  margin-bottom: 43px;
+}
+
+.contest__achievements,
+.contest__os {
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.contest__emotions {
+  margin: 0 auto 48px;
+}
+
 .contest__submit-button {
   width: 100%;
   max-width: 360px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .contest__required-text {
-  margin-top: 30px;
-  margin-bottom: 17px;
+  margin: 0;
 
   font-size: 14px;
   line-height: 30px;
@@ -120,8 +140,15 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contest__intro {
+  .contest {
     margin-top: -110px;
+    margin-bottom: 85px;
+  }
+
+  .contest__intro {
+    padding-top: 190px;
+    padding-bottom: 90px;
+    margin-bottom: 95px;
 
     background-image: url("../img/bg-download-tablet-1x.jpg");
     background-size: 1200px auto;
@@ -133,18 +160,13 @@
 
   .contest__heading {
     width: 80%;
-    padding-top: 190px;
-    padding-bottom: 90px;
-    margin: 0 auto;
 
     font-size: 50px;
   }
 
   .contest__about {
     width: 90%;
-    padding-top: 95px;
-    padding-bottom: 70px;
-    margin: 0 auto;
+    margin-bottom: 70px;
 
     font-size: 18px;
   }
@@ -156,6 +178,44 @@
   .contest__form {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .contest__full-name {
+    margin-bottom: 66px;
+  }
+
+  .contest__os,
+  .contest__contacts,
+  .contest__achievements, {
+    margin: 0 20px 65px;
+  }
+
+  .contest__emotions {
+    margin: 0 20px 67px;
+  }
+
+  .contest__submit {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contest__submit-button {
+    width: calc(50% - 10px);
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .contest__required-text {
+    width: calc(50% - 10px);
+    padding: 16.5px 0;
+
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contest {
+    margin-bottom: 70px;
   }
 }
 

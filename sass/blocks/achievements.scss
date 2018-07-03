@@ -2,7 +2,6 @@
   position: relative;
 
   padding: 115px 20px 45px;
-  margin: 0;
 
   border: none;
 }
@@ -106,4 +105,27 @@
 
 .achievements__checkbox:not(:disabled):not(:active):not(:focus) + .achievements__label:hover::before {
   border-color: $minor-color;
+}
+
+@media (min-width: $tablet-width) {
+  .achievements {
+    padding: 52px 58px;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  .achievements__title {
+    top: -15px;
+    left: calc(50% - 218.5px);
+    right: calc(50% - 218.5px);
+    z-index: 2;
+
+    line-height: 30px;
+
+    background-color: #ffffff;
+  }
+
+  .achievements__list {
+    max-width: 100%;
+  }
 }

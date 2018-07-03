@@ -2,7 +2,6 @@
   position: relative;
 
   padding: 110px 20px 45px;
-  margin: 0;
 
   border: none;
 }
@@ -117,8 +116,6 @@
 @media (min-width: $tablet-width) {
   .os {
     padding: 55px 60px;
-    margin: 0 20px;
-    margin-bottom: 55px;
 
     border: 2px solid #e5e5e5;
   }
