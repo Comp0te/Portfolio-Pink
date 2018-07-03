@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 284px;
-  padding-top: 40px;
-  padding-bottom: 38px;
+  padding-bottom: 40px;
 
   &--off {
     display: none;
@@ -14,6 +12,7 @@
 
 .page-footer__logo-link {
   display: block;
+  margin-bottom: 38px;
 
   fill: $minor-color;
   border-radius: 50%/50%;
@@ -38,6 +37,10 @@
 
 .page-footer__logo-desktop {
   display: none;
+}
+
+.page-footer__social {
+  margin-bottom: 38px;
 }
 
 .page-footer__academy {
@@ -81,9 +84,9 @@
   .page-footer {
     display: flex;
     flex-direction: row;
-    min-height: 127px;
+    align-items: flex-end;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 37px;
   }
 
   .page-footer__logo-link {
@@ -92,20 +95,22 @@
 
   .page-footer__social {
     margin-right: 17px;
+    margin-bottom: 0;
   }
 
   .page-footer__academy {
     padding-top: 9px;
+    margin-bottom: 5px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    min-height: 226px;
+    padding-bottom: 70px;
   }
 
   .page-footer__logo-link {
-    margin-bottom: -9px;
+    margin-bottom: 16px;
   }
 
   .page-footer__logo-tablet {
@@ -118,16 +123,12 @@
 
   .page-footer__social {
     margin-right: -16px;
-    margin-top: 27px;
-  }
-
-  .page-footer__academy {
-    margin-top: 27px;
   }
 
   .page-footer__academy-text {
     font-size: 18px;
     padding-top: 4px;
+    margin-bottom: 8px;
   }
 }
 

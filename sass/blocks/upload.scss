@@ -1,5 +1,6 @@
 .upload {
   padding-bottom: 41px;
+  margin-bottom: 40px;
 
   background-color: #f2f2f2;
 }
@@ -82,6 +83,7 @@
 @media (min-width: $tablet-width) {
   .upload {
     padding-bottom: 51px;
+    margin-bottom: 36px;
   }
 
   .upload__slogan {
@@ -125,6 +127,7 @@
 @media (min-width: $desktop-width) {
   .upload {
     padding-bottom: 54px;
+    margin-bottom: 98px;
   }
 
   .upload__slogan {
