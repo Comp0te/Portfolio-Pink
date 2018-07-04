@@ -63,7 +63,14 @@
 }
 
 .contest__emotions {
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto 48px;
+}
+
+.contest__submit {
+  width: 100%;
+  padding: 0 20px;
 }
 
 .contest__submit-button {
@@ -93,6 +100,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 
   display: none;
   width: 100vw;
@@ -100,8 +108,7 @@
 
   background-color: rgba($color: $brand-color, $alpha: 0.1);
 
-  &--succsess,
-  &--failure {
+  &--on {
     display: block;
   }
 }
@@ -110,7 +117,7 @@
   position: fixed;
   top: 30vh;
   left: calc(50vw - 160px);
-  z-index: 10;
+  z-index: 11;
 
   width: 320px;
 }
@@ -191,6 +198,8 @@
   }
 
   .contest__emotions {
+    width: auto;
+    max-width: 100%;
     margin: 0 20px 67px;
   }
 
@@ -211,11 +220,87 @@
 
     text-align: right;
   }
+
+  .contest__pop-up-wraper {
+    top: 30vh;
+    left: calc(50vw - 230px);
+
+    width: 460px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .contest {
     margin-bottom: 70px;
+  }
+
+  .contest__intro {
+    padding-bottom: 110px;
+    margin-bottom: 98px;
+
+    background-image: url("../img/bg-download-desktop-1x.jpg");
+    background-size: 2560px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-desktop-2x.jpg");
+    }
+  }
+
+  .contest__heading {
+    width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .contest__about {
+    width: 800px;
+    margin-bottom: 80px;
+  }
+
+  .contest__about-request {
+    display: inline;
+  }
+
+  .contest__form {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 960px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .contest__full-name {
+    width: 435px;
+    margin-bottom: 65px;
+  }
+
+  .contest__os {
+    width: 435px;
+    margin: 0;
+    margin-bottom: 65px;
+  }
+
+  .contest__contacts,
+  .contest__achievements,
+  .contest__emotions {
+    width: 940px;
+    margin: 0;
+    margin-bottom: 65px;
+  }
+
+  .contest__submit {
+    padding: 0;
+  }
+
+  .contest__submit-button {
+    width: 300px;
+  }
+
+  .contest__pop-up-wraper {
+    top: 30vh;
+    left: calc(50vw - 390px);
+
+    width: 780px;
   }
 }
 

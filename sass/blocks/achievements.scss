@@ -128,4 +128,34 @@
   .achievements__list {
     max-width: 100%;
   }
+
+  .achievements__label {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .achievements {
+    padding-bottom: 36px;
+    padding-left: 18px;
+  }
+
+  .achievements__list {
+    display: flex;
+    flex: 1 1;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    max-height: 180px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+  }
+
+  .achievements__item {
+    margin-left: 40px;
+
+    &:nth-child(2n) {
+      margin-bottom: 0;
+    }
+  }
 }

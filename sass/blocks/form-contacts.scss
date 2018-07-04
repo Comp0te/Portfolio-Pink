@@ -144,3 +144,19 @@
     padding-right: 60px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form-contacts {
+    padding: 42px 58px 15px;
+  }
+
+  .form-contacts__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-contacts__item {
+    width: 375px;
+    margin-bottom: 0;
+  }
+}

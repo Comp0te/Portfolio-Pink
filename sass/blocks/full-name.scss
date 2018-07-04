@@ -1,4 +1,6 @@
 .full-name {
+  padding: 0 20px;
+
   border: none;
 }
 
@@ -67,7 +69,6 @@
 
   .full-name__item {
     display: flex;
-    flex: 1 1 auto;
     margin-bottom: 55px;
 
     &:last-child {
@@ -82,7 +83,24 @@
   .full-name__input {
     display: block;
     width: 100%;
-    height: 59px;
+    height: 63px;
     padding-left: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .full-name {
+    padding: 0;
+  }
+
+  .full-name__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .full-name__item {
+    margin-bottom: 0;
   }
 }

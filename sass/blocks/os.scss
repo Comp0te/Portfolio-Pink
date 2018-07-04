@@ -135,3 +135,9 @@
     max-width: 100%;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .os {
+    padding: 55px 74px;
+  }
+}
