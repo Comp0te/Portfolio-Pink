@@ -222,7 +222,6 @@
   }
 
   .contest__pop-up-wraper {
-    top: 30vh;
     left: calc(50vw - 230px);
 
     width: 460px;
@@ -297,10 +296,11 @@
   }
 
   .contest__pop-up-wraper {
-    top: 30vh;
-    left: calc(50vw - 390px);
+    &--success {
+      left: calc(50vw - 390px);
 
-    width: 780px;
+      width: 780px;
+    }
   }
 }
 

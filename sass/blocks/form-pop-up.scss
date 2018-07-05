@@ -1,7 +1,5 @@
-
 .form-pop-up {
   padding-top: 40px;
-  padding-bottom: 50px;
 
   background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba($color: #000101, $alpha: 0.15);
@@ -9,7 +7,8 @@
 
 .form-pop-up__title {
   display: block;
-  margin-bottom: 32px;
+  padding: 0 20px;
+  margin-bottom: 30px;
 
   font-size: 18px;
   line-height: 24px;
@@ -19,8 +18,9 @@
 }
 
 .form-pop-up__text {
+  padding: 0 20px;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   font-size: 14px;
   line-height: 24px;
@@ -30,12 +30,52 @@
 }
 
 .form-pop-up__wraper {
-  padding-top: 50px;
+  padding-bottom: 50px;
 
-  background-color: #f2f2f2;
+  &--success {
+    padding-top: 50px;
+
+    background-color: #f2f2f2;
+  }
 }
 
 .form-pop-up__button {
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .form-pop-up__title {
+    padding: 0 120px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .form-pop-up__text {
+    padding: 0 70px;
+    margin-bottom: 37px;
+
+    font-size: 18px;
+  }
+
+  .form-pop-up__button {
+    width: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-pop-up__text {
+    padding: 0 80px;
+
+    &--success {
+      padding: 0 200px;
+    }
+  }
+
+  .form-pop-up__button {
+    &--success {
+      width: 460px;
+    }
+  }
 }
