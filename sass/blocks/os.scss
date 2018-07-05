@@ -1,14 +1,14 @@
 .os {
   position: relative;
 
-  padding: 110px 20px 45px;
+  padding: 109px 20px 43px;
 
   border: none;
 }
 
 .os__title {
   position: absolute;
-  top: 35px;
+  top: 38px;
   left: 50px;
   right: 50px;
 
@@ -115,7 +115,7 @@
 
 @media (min-width: $tablet-width) {
   .os {
-    padding: 55px 60px;
+    padding: 53px 58px;
 
     border: 2px solid #e5e5e5;
   }
@@ -134,10 +134,18 @@
   .os__list {
     max-width: 100%;
   }
+
+  .os__label {
+    padding-left: 59px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .os {
-    padding: 55px 74px;
+    padding: 55px 74px 53px;
+  }
+
+  .os__item {
+    margin-bottom: 35px;
   }
 }

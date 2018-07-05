@@ -1,14 +1,14 @@
 .achievements {
   position: relative;
 
-  padding: 115px 20px 45px;
+  padding: 113px 20px 42px;
 
   border: none;
 }
 
 .achievements__title {
   position: absolute;
-  top: 40px;
+  top: 38px;
   left: 50px;
   right: 50px;
 
@@ -109,13 +109,13 @@
 
 @media (min-width: $tablet-width) {
   .achievements {
-    padding: 52px 58px;
+    padding: 52px 58px 48px;
 
     border: 2px solid #e5e5e5;
   }
 
   .achievements__title {
-    top: -15px;
+    top: -16px;
     left: calc(50% - 218.5px);
     right: calc(50% - 218.5px);
     z-index: 2;
@@ -136,7 +136,7 @@
 
 @media (min-width: $desktop-width) {
   .achievements {
-    padding-bottom: 36px;
+    padding-bottom: 35px;
     padding-left: 18px;
   }
 

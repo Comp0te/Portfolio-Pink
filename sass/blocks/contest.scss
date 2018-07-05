@@ -1,16 +1,16 @@
 .contest {
   margin-top: -66px;
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
 
 .contest__intro {
-  padding-top: 102px;
+  padding-top: 97px;
   padding-bottom: 55px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 
   background-image: url("../img/bg-download-mobile-1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 19px;
   background-size: 659px auto;
   background-color: #1d2631;
 
@@ -32,7 +32,7 @@
 
 .contest__about {
   margin: 0 auto;
-  margin-bottom: 38px;
+  margin-bottom: 33px;
 
   font-size: 14px;
   line-height: 30px;
@@ -50,17 +50,26 @@
   flex-direction: column;
 }
 
-.contest__full-name,
-.contest__contacts {
+.contest__full-name {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
-.contest__achievements,
+.contest__contacts {
+  margin: 0;
+  margin-bottom: 42px;
+}
+
 .contest__os {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 31px;
 }
+
+.contest__achievements {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
 
 .contest__emotions {
   width: 100%;
@@ -77,7 +86,7 @@
   width: 100%;
   max-width: 360px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .contest__required-text {
@@ -94,6 +103,11 @@
     content: "* ";
     color: $brand-color;
   }
+
+}
+
+.contest__required-extension {
+  display: none;
 }
 
 .contest__pop-up {
@@ -153,12 +167,13 @@
   }
 
   .contest__intro {
-    padding-top: 190px;
-    padding-bottom: 90px;
-    margin-bottom: 95px;
+    padding-top: 177px;
+    padding-bottom: 80px;
+    margin-bottom: 92px;
 
     background-image: url("../img/bg-download-tablet-1x.jpg");
     background-size: 1200px auto;
+    background-position: center top -3px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-download-tablet-2x.jpg");
@@ -173,7 +188,7 @@
 
   .contest__about {
     width: 90%;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
 
     font-size: 18px;
   }
@@ -191,9 +206,12 @@
     margin-bottom: 66px;
   }
 
-  .contest__os,
+  .contest__os {
+    margin: 0 20px 66px;
+  }
+
   .contest__contacts,
-  .contest__achievements, {
+  .contest__achievements {
     margin: 0 20px 65px;
   }
 
@@ -234,8 +252,9 @@
   }
 
   .contest__intro {
-    padding-bottom: 110px;
-    margin-bottom: 98px;
+    padding-top: 171px;
+    padding-bottom: 101px;
+    margin-bottom: 92px;
 
     background-image: url("../img/bg-download-desktop-1x.jpg");
     background-size: 2560px auto;
@@ -253,7 +272,7 @@
 
   .contest__about {
     width: 800px;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
 
   .contest__about-request {
@@ -293,6 +312,10 @@
 
   .contest__submit-button {
     width: 300px;
+  }
+
+  .contest__required-extension {
+    display: inline;
   }
 
   .contest__pop-up-wraper {
