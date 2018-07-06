@@ -50,34 +50,46 @@
   flex-direction: column;
 }
 
+@supports (display: grid) {
+  .contest__form {
+    display: grid;
+  }
+}
+
 .contest__full-name {
+  grid-area: full-name;
   margin: 0;
   margin-bottom: 40px;
 }
 
 .contest__contacts {
+  grid-area: contacts;
   margin: 0;
   margin-bottom: 42px;
 }
 
 .contest__os {
+  grid-area: os;
   margin: 0;
   margin-bottom: 31px;
 }
 
 .contest__achievements {
+  grid-area: achievements;
   margin: 0;
   margin-bottom: 32px;
 }
 
 
 .contest__emotions {
+  grid-area: emotions;
   width: 100%;
   max-width: 400px;
   margin: 0 auto 48px;
 }
 
 .contest__submit {
+  grid-area: submit;
   width: 100%;
   padding: 0 20px;
 }
@@ -103,7 +115,6 @@
     content: "* ";
     color: $brand-color;
   }
-
 }
 
 .contest__required-extension {
@@ -137,26 +148,40 @@
 }
 
 @media (max-width: $mobile-only) {
-  .contest__os {
-    order: 2;
-
-    background-color: #f2f2f2;
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: minmax(280px, 1fr);
+      grid-template-areas:
+        "full-name"
+        "achievements"
+        "contacts"
+        "os"
+        "emotions"
+        "submit";
+    }
   }
 
-  .contest__contacts {
-    order: 1;
-  }
-
-  .contest__emotions {
-    order: 3;
-  }
-
-  .contest__submit {
-    order: 4;
-  }
-
+  .contest__os,
   .contest__achievements {
     background-color: #f2f2f2;
+  }
+
+  @supports not (display: grid) {
+    .contest__os {
+      order: 2;
+    }
+
+    .contest__contacts {
+      order: 1;
+    }
+
+    .contest__emotions {
+      order: 3;
+    }
+
+    .contest__submit {
+      order: 4;
+    }
   }
 }
 
@@ -200,6 +225,20 @@
   .contest__form {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+      grid-column-gap: 20px;
+      grid-template-areas:
+        "full-name full-name"
+        "os os"
+        "contacts contacts"
+        "achievements achievements"
+        "emotions emotions"
+        "submit submit";
+    }
   }
 
   .contest__full-name {
@@ -280,11 +319,29 @@
   }
 
   .contest__form {
-    flex-flow: row wrap;
-    justify-content: space-between;
     width: 960px;
     max-width: 100%;
     padding: 0 10px;
+  }
+
+  @supports not (display:grid) {
+    .contest__form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: repeat(2, 435px);
+      grid-column-gap: 70px;
+      grid-template-areas:
+        "full-name os"
+        "contacts contacts"
+        "achievements achievements"
+        "emotions emotions"
+        "submit submit";
+    }
   }
 
   .contest__full-name {
