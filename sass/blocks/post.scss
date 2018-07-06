@@ -16,6 +16,19 @@
   }
 }
 
+.post__link-photo {
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px 0 $brand-color;
+  }
+
+  &:active {
+    transform: scale(0.95, 0.95);
+  }
+}
+
 .post__wraper-author {
   padding: 0 18px;
   padding-top: 17px;
