@@ -135,27 +135,55 @@
 }
 
 @media (min-width: $desktop-width) {
-  .achievements {
-    padding-bottom: 35px;
-    padding-left: 18px;
-  }
+  @supports (display: grid) {
+    .achievements {
+      padding-bottom: 55px;
+    }
 
-  .achievements__list {
-    display: flex;
-    flex: 1 1;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    max-height: 180px;
-    padding-bottom: 20px;
-    overflow-x: auto;
-  }
+    .achievements__list {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) minmax(245px, 1fr) minmax(210px, 1fr);
+      grid-template-rows: minmax(39px, 1fr) minmax(39px, 1fr);
+      grid-column-gap: 53px;
+      grid-row-gap: 43px;
+    }
 
-  .achievements__item {
-    margin-left: 40px;
-
-    &:nth-child(2n) {
+    .achievements__item {
       margin-bottom: 0;
+      /*в угоду макету чекбоксам изменен порядок, ибо если сделать grid-auto-flow: column, то при добавлении новых чекбоксов они вылезут за границу родительсткого блока, вместо того, чтоб создать новую строку*/
+      &:nth-child(-2n + 5) {
+        order: -2;
+      }
+
+      &:nth-child(-2n + 6) {
+        order: -1;
+      }
+    }
+  }
+
+  @supports not (display: grid) {
+    .achievements {
+      padding-left: 18px;
+      padding-bottom: 35px;
+    }
+
+    .achievements__list {
+      display: flex;
+      flex: 1 1;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      max-height: 180px;
+      padding-bottom: 20px;
+      overflow-x: auto;
+    }
+
+    .achievements__item {
+      margin-left: 40px;
+
+      &:nth-child(2n) {
+        margin-bottom: 0;
+      }
     }
   }
 }

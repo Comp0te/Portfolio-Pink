@@ -148,6 +148,11 @@
 }
 
 @media (max-width: $mobile-only) {
+  .contest__os,
+  .contest__achievements {
+    background-color: #f2f2f2;
+  }
+
   @supports (display: grid) {
     .contest__form {
       grid-template-columns: minmax(280px, 1fr);
@@ -159,11 +164,6 @@
         "emotions"
         "submit";
     }
-  }
-
-  .contest__os,
-  .contest__achievements {
-    background-color: #f2f2f2;
   }
 
   @supports not (display: grid) {
@@ -324,17 +324,18 @@
     padding: 0 10px;
   }
 
-  @supports not (display:grid) {
-    .contest__form {
-      flex-flow: row wrap;
-      justify-content: space-between;
-    }
+  .contest__full-name,
+  .contest__os,
+  .contest__contacts,
+  .contest__achievements,
+  .contest__emotions {
+    margin: 0;
   }
 
   @supports (display: grid) {
     .contest__form {
       grid-template-columns: repeat(2, 435px);
-      grid-column-gap: 70px;
+      grid-gap: 65px 70px;
       grid-template-areas:
         "full-name os"
         "contacts contacts"
@@ -344,23 +345,28 @@
     }
   }
 
-  .contest__full-name {
-    width: 435px;
-    margin-bottom: 65px;
-  }
+  @supports not (display:grid) {
+    .contest__form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
 
-  .contest__os {
-    width: 435px;
-    margin: 0;
-    margin-bottom: 65px;
-  }
+    .contest__full-name {
+      width: 435px;
+      margin-bottom: 65px;
+    }
 
-  .contest__contacts,
-  .contest__achievements,
-  .contest__emotions {
-    width: 940px;
-    margin: 0;
-    margin-bottom: 65px;
+    .contest__os {
+      width: 435px;
+      margin-bottom: 65px;
+    }
+
+    .contest__contacts,
+    .contest__achievements,
+    .contest__emotions {
+      width: 940px;
+      margin-bottom: 65px;
+    }
   }
 
   .contest__submit {
