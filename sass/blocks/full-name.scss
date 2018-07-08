@@ -1,6 +1,4 @@
 .full-name {
-  padding: 0 20px;
-
   border: none;
 }
 
@@ -89,10 +87,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .full-name {
-    padding: 0;
-  }
-
   .full-name__list {
     padding-top: 6px;
     display: flex;

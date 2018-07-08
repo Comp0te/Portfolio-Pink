@@ -1,8 +1,6 @@
 .form-contacts {
   position: relative;
 
-  padding: 0 20px;
-
   border: none;
 }
 
@@ -73,8 +71,6 @@
 
 @media (min-width: $tablet-width) {
   .form-contacts {
-    padding: 45px 58px 25px;
-
     border: 2px solid #e5e5e5;
   }
 
@@ -148,10 +144,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .form-contacts {
-    padding: 42px 58px 13px;
-  }
-
   .form-contacts__list {
     display: flex;
     justify-content: space-between;

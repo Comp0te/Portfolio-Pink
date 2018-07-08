@@ -1,8 +1,6 @@
 .os {
   position: relative;
 
-  padding: 109px 20px 43px;
-
   border: none;
 }
 
@@ -115,8 +113,6 @@
 
 @media (min-width: $tablet-width) {
   .os {
-    padding: 53px 58px;
-
     border: 2px solid #e5e5e5;
   }
 
@@ -141,10 +137,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .os {
-    padding: 55px 74px 53px;
-  }
-
   .os__item {
     margin-bottom: 35px;
   }

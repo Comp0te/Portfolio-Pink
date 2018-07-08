@@ -2,11 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 74.43%;
-  max-width: 300px;
-  padding: 0;
-  padding-right: 10px;
-  margin: 0 auto;
 
   list-style: none;
 }
@@ -44,10 +39,6 @@
   .tools {
     flex-direction: column;
     justify-content: space-between;
-    width: 25%;
-    min-height: 215px;
-    margin: 0;
-    padding: 10px 23px 21px;
   }
 
   .tools__item {
@@ -64,11 +55,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .tools {
-    width: 47px;
-    margin-right: 47px;
-  }
-
   .tools__item {
     transform: none;
   }

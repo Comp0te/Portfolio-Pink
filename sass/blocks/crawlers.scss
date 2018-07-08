@@ -1,8 +1,4 @@
 .crawlers {
-  min-height: 70px;
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 }
 
@@ -64,11 +60,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .crawlers {
-    width: 75%;
-    padding-left: 5px;
-  }
-
   .crawlers__item {
     display: block;
 
@@ -97,11 +88,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .crawlers {
-    width: 318px;
-    padding-left: 0;
-  }
-
   .crawlers__item {
     &::after {
       left: -95px;

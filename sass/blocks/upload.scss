@@ -29,6 +29,20 @@
   text-align: center;
 }
 
+.upload__tools {
+  width: 74.43%;
+  max-width: 300px;
+  padding: 0;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.upload__crawlers {
+  min-height: 70px;
+  margin: 0;
+  padding: 0;
+}
+
 .upload__submit {
   width: 100%;
   max-width: 300px;
@@ -111,6 +125,18 @@
     width: 48.3871%;
   }
 
+  .upload__tools {
+    width: 25%;
+    min-height: 215px;
+    margin: 0;
+    padding: 10px 23px 21px;
+  }
+
+  .upload__crawlers {
+    width: 75%;
+    padding-left: 5px;
+  }
+
   .upload__submit {
     width: 86.667%;
     margin-top: 64px;
@@ -144,6 +170,16 @@
     width: 412px;
     margin-right: 60px;
     padding-bottom: 3px;
+  }
+
+  .upload__tools {
+    width: 47px;
+    margin-right: 47px;
+  }
+
+  .upload__crawlers {
+    width: 318px;
+    padding-left: 0;
   }
 
   .upload__submit {

@@ -1,8 +1,6 @@
 .achievements {
   position: relative;
 
-  padding: 113px 20px 42px;
-
   border: none;
 }
 
@@ -109,8 +107,6 @@
 
 @media (min-width: $tablet-width) {
   .achievements {
-    padding: 52px 58px 48px;
-
     border: 2px solid #e5e5e5;
   }
 
@@ -135,11 +131,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .achievements {
-    padding-bottom: 35px;
-    padding-left: 18px;
-  }
-
   .achievements__list {
     display: flex;
     flex: 1 1;

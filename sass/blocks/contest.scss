@@ -51,21 +51,25 @@
 }
 
 .contest__full-name {
+  padding: 0 20px;
   margin: 0;
   margin-bottom: 40px;
 }
 
 .contest__contacts {
+  padding: 0 20px;
   margin: 0;
   margin-bottom: 42px;
 }
 
 .contest__os {
+  padding: 109px 20px 43px;
   margin: 0;
   margin-bottom: 31px;
 }
 
 .contest__achievements {
+  padding: 113px 20px 42px;
   margin: 0;
   margin-bottom: 32px;
 }
@@ -74,6 +78,7 @@
 .contest__emotions {
   width: 100%;
   max-width: 400px;
+  padding: 0 20px;
   margin: 0 auto 48px;
 }
 
@@ -207,17 +212,25 @@
   }
 
   .contest__os {
+    padding: 53px 58px;
     margin: 0 20px 66px;
   }
 
-  .contest__contacts,
+  .contest__contacts {
+    padding: 45px 58px 25px;
+    margin: 0 20px 65px;
+  }
+
   .contest__achievements {
+    padding: 52px 58px 48px;
     margin: 0 20px 65px;
   }
 
   .contest__emotions {
     width: auto;
     max-width: 100%;
+    padding: 45px 58px 51px;
+    padding-top: 0;
     margin: 0 20px 67px;
   }
 
@@ -289,19 +302,35 @@
 
   .contest__full-name {
     width: 435px;
+    padding: 0;
     margin-bottom: 65px;
   }
 
   .contest__os {
     width: 435px;
+    padding: 55px 74px 53px;
     margin: 0;
     margin-bottom: 65px;
   }
 
-  .contest__contacts,
-  .contest__achievements,
+  .contest__contacts {
+    width: 940px;
+    padding: 42px 58px 13px;
+    margin: 0;
+    margin-bottom: 65px;
+  }
+
+  .contest__achievements {
+    width: 940px;
+    padding-bottom: 35px;
+    padding-left: 18px;
+    margin: 0;
+    margin-bottom: 65px;
+  }
+
   .contest__emotions {
     width: 940px;
+    padding-bottom: 43px;
     margin: 0;
     margin-bottom: 65px;
   }
