@@ -50,25 +50,35 @@
   flex-direction: column;
 }
 
+@supports (display: grid) {
+  .contest__form {
+    display: grid;
+  }
+}
+
 .contest__full-name {
+  grid-area: full-name;
   padding: 0 20px;
   margin: 0;
   margin-bottom: 40px;
 }
 
 .contest__contacts {
+  grid-area: contacts;
   padding: 0 20px;
   margin: 0;
   margin-bottom: 42px;
 }
 
 .contest__os {
+  grid-area: os;
   padding: 109px 20px 43px;
   margin: 0;
   margin-bottom: 31px;
 }
 
 .contest__achievements {
+  grid-area: achievements;
   padding: 113px 20px 42px;
   margin: 0;
   margin-bottom: 32px;
@@ -76,6 +86,7 @@
 
 
 .contest__emotions {
+  grid-area: emotions;
   width: 100%;
   max-width: 400px;
   padding: 0 20px;
@@ -83,6 +94,7 @@
 }
 
 .contest__submit {
+  grid-area: submit;
   width: 100%;
   padding: 0 20px;
 }
@@ -108,7 +120,6 @@
     content: "* ";
     color: $brand-color;
   }
-
 }
 
 .contest__required-extension {
@@ -142,26 +153,40 @@
 }
 
 @media (max-width: $mobile-only) {
-  .contest__os {
-    order: 2;
-
-    background-color: #f2f2f2;
-  }
-
-  .contest__contacts {
-    order: 1;
-  }
-
-  .contest__emotions {
-    order: 3;
-  }
-
-  .contest__submit {
-    order: 4;
-  }
-
+  .contest__os,
   .contest__achievements {
     background-color: #f2f2f2;
+  }
+
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: minmax(280px, 1fr);
+      grid-template-areas:
+        "full-name"
+        "achievements"
+        "contacts"
+        "os"
+        "emotions"
+        "submit";
+    }
+  }
+
+  @supports not (display: grid) {
+    .contest__os {
+      order: 2;
+    }
+
+    .contest__contacts {
+      order: 1;
+    }
+
+    .contest__emotions {
+      order: 3;
+    }
+
+    .contest__submit {
+      order: 4;
+    }
   }
 }
 
@@ -205,6 +230,20 @@
   .contest__form {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+      grid-column-gap: 20px;
+      grid-template-areas:
+        "full-name full-name"
+        "os os"
+        "contacts contacts"
+        "achievements achievements"
+        "emotions emotions"
+        "submit submit";
+    }
   }
 
   .contest__full-name {
@@ -293,46 +332,72 @@
   }
 
   .contest__form {
-    flex-flow: row wrap;
-    justify-content: space-between;
     width: 960px;
     max-width: 100%;
     padding: 0 10px;
   }
 
   .contest__full-name {
-    width: 435px;
     padding: 0;
-    margin-bottom: 65px;
+    margin: 0;
   }
 
   .contest__os {
-    width: 435px;
     padding: 55px 74px 53px;
     margin: 0;
-    margin-bottom: 65px;
   }
 
   .contest__contacts {
-    width: 940px;
     padding: 42px 58px 13px;
     margin: 0;
-    margin-bottom: 65px;
   }
 
   .contest__achievements {
-    width: 940px;
     padding-bottom: 35px;
     padding-left: 18px;
     margin: 0;
-    margin-bottom: 65px;
   }
 
   .contest__emotions {
-    width: 940px;
     padding-bottom: 43px;
     margin: 0;
-    margin-bottom: 65px;
+  }
+
+  @supports (display: grid) {
+    .contest__form {
+      grid-template-columns: repeat(2, 435px);
+      grid-gap: 65px 70px;
+      grid-template-areas:
+        "full-name os"
+        "contacts contacts"
+        "achievements achievements"
+        "emotions emotions"
+        "submit submit";
+    }
+  }
+
+  @supports not (display:grid) {
+    .contest__form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .contest__full-name {
+      width: 435px;
+      margin-bottom: 65px;
+    }
+
+    .contest__os {
+      width: 435px;
+      margin-bottom: 65px;
+    }
+
+    .contest__contacts,
+    .contest__achievements,
+    .contest__emotions {
+      width: 940px;
+      margin-bottom: 65px;
+    }
   }
 
   .contest__submit {

@@ -2,7 +2,6 @@
   color: $minor-color;
   line-height: 24px;
   font-size: 14px;
-  /*text-align: center;*/
 }
 
 .post__wraper-photo {
@@ -16,7 +15,12 @@
   }
 }
 
+.post__picture {
+  display: inline-block;
+}
+
 .post__link-photo {
+  display: inline-block;
   outline: 0;
 
   &:hover,
@@ -176,9 +180,13 @@
   }
 
   .post__wraper-photo {
-    overflow: hidden;
+    &--panorama {
+      overflow: hidden;
+    }
+  }
 
-    &--panorama .post__photo {
+  .post__photo {
+    &--panorama {
       max-width: none;
     }
   }
