@@ -19,6 +19,9 @@ const htmlmin = require("gulp-htmlmin");
 const del = require("del");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
+const webpack = require("webpack-stream");
+const named = require('vinyl-named');
+const path = require('path');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
 
@@ -95,6 +98,65 @@ gulp.task("sprite", function() {
   .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task("webpack", function(callback) {
+  let options = {
+    watch:   isDevelopment,
+    devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
+    resolve: {
+      extensions: [".ts", ".tsx", ".js"]
+    },
+    module:  {
+      loaders: [{
+        test: /\.tsx?$/,
+        include: path.join(__dirname, "ts"),
+        loader: "ts-loader"
+      }]
+    },
+    plugins: [
+      new webpack.NoErrorsPlugin()
+    ]
+  };
+
+  if (!isDevelopment) {
+    options.plugins.push(new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        unsafe: true
+      }
+    }));
+  };
+
+  let firstBuildReady = false;
+
+  function done(err, stats) {
+    firstBuildReady = true;
+
+    if(err) {
+      return;
+    }
+
+    gulplog[stats.hasErrors() ? "error" : "info"](stats.toString({
+      colors: true
+    }));
+  }
+
+  return gulp.src("ts/*.ts")
+    .pipe(plumber({
+      errorHandler: notify.onError({
+        title: "webpack",
+        message: "Error: <%= error.message %>"
+      })
+    }))
+    .pipe(named())
+    .pipe(webpack(options, null, done))
+    .pipe(gulp.dest("build/"))
+    .on("data", function() {
+      if (firstBuildReady) {
+        callback();
+      }
+    });
+});
+
 gulp.task("watch", function() {
   gulp.watch("sass/**/*.scss", gulp.series("style"));
   gulp.watch(["*.html", "htmltemplates/*.html"], gulp.series("html"));
@@ -109,7 +171,7 @@ gulp.task("watch", function() {
   });
 });
 
-gulp.task ("build", gulp.series("clean", gulp.parallel("assets", "style", "html", "sprite")));
+gulp.task ("build", gulp.series("clean", gulp.parallel("assets", "style", "html", "sprite", "webpack")));
 
 gulp.task ("dev", gulp.series("build", "watch"));
 
