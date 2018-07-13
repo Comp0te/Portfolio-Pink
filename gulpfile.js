@@ -19,9 +19,10 @@ const htmlmin = require("gulp-htmlmin");
 const del = require("del");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
-const webpack = require("webpack-stream");
-const named = require('vinyl-named');
-const path = require('path');
+const path = require("path");
+const gulputil = require("gulp-util");
+const webpack = require("webpack");
+const webpackConfig = require("./webpack.config");
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
 
@@ -38,7 +39,7 @@ gulp.task("assets", function() {
     since: gulp.lastRun("assets"),
     base: "."
   })
-  .pipe(gulp.dest("build"))
+  .pipe(gulp.dest("build/"))
   .pipe(browserSync.reload({stream: true}));
 });
 
@@ -98,63 +99,33 @@ gulp.task("sprite", function() {
   .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task("webpack", function(callback) {
-  let options = {
-    watch:   isDevelopment,
-    devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
-    resolve: {
-      extensions: [".ts", ".tsx", ".js"]
-    },
-    module:  {
-      loaders: [{
-        test: /\.tsx?$/,
-        include: path.join(__dirname, "ts"),
-        loader: "ts-loader"
-      }]
-    },
-    plugins: [
-      new webpack.NoErrorsPlugin()
-    ]
+gulp.task("webpack", (done) => {
+  const statsLog = {
+    colors: true,
+    reasons: true
   };
 
-  if (!isDevelopment) {
-    options.plugins.push(new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        unsafe: true
-      }
-    }));
-  };
+  webpack(webpackConfig, onComplete);
 
-  let firstBuildReady = false;
-
-  function done(err, stats) {
-    firstBuildReady = true;
-
-    if(err) {
-      return;
+  function onComplete(error, stats) {
+    if (error) {
+      onError(error);
+    } else if (stats.hasErrors()) {
+      onError(stats.toString(statsLog));
+    } else {
+      onSuccess(stats.toString(statsLog));
     }
-
-    gulplog[stats.hasErrors() ? "error" : "info"](stats.toString({
-      colors: true
-    }));
   }
 
-  return gulp.src("ts/*.ts")
-    .pipe(plumber({
-      errorHandler: notify.onError({
-        title: "webpack",
-        message: "Error: <%= error.message %>"
-      })
-    }))
-    .pipe(named())
-    .pipe(webpack(options, null, done))
-    .pipe(gulp.dest("build/"))
-    .on("data", function() {
-      if (firstBuildReady) {
-        callback();
-      }
-    });
+  function onError(error) {
+    let formatedError = new gulputil.PluginError("webpack", error);
+    done(formatedError);
+  }
+
+  function onSuccess(detailInfo) {
+    gulputil.log("[webpack]", detailInfo);
+    done();
+  }
 });
 
 gulp.task("watch", function() {
@@ -188,7 +159,7 @@ gulp.task("image", function() {
       ]
     })
   ]))
-  .pipe(gulp.dest("img"));
+  .pipe(gulp.dest("img/"));
 });
 
 gulp.task("webp", function() {
@@ -197,7 +168,7 @@ gulp.task("webp", function() {
   .pipe(webp({
     quality: 90
   }))
-  .pipe(gulp.dest("img"));
+  .pipe(gulp.dest("img/"));
 });
 
 gulp.task("validate", function() {
