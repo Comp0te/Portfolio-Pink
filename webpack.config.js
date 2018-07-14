@@ -33,7 +33,7 @@ module.exports = {
     ]
   },
 
-  devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
+  devtool: isDevelopment ? 'cheap-module-inline-source-map' : false,
 
   mode: "none",
 
