@@ -30,14 +30,17 @@
     "posthtml-include": "^1.1.0",
     "stylelint": "^9.3.0",
     "ts-loader": "^4.4.2",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
     "typescript": "^2.9.2",
     "webpack": "^4.16.0"
   },
   "scripts": {
     "htmlhint": "htmlhint build/*.html",
     "stylelint": "stylelint sass/**/*.scss --syntax scss",
-    "test": "yarn run htmlhint && gulp validate && yarn run stylelint",
-    "build": "gulp build",
+    "tslint": "tslint -t verbose --force ts/**/*.ts",
+    "test": "yarn run htmlhint && gulp validate && yarn run stylelint && yarn run tslint",
+    "production": "env NODE_ENV=production gulp build",
     "start": "gulp dev"
   },
   "browserslist": [

@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
+    "module": "commonjs",
     "target": "es5",
     "allowJs": true,
     "downlevelIteration": true,
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": [
+    "ts"
+  ]
 }
