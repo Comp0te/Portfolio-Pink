@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  z-index: 2;
 
   background-color: rgba(0, 0, 0, 0.3);
 
@@ -11,7 +12,7 @@
 .page-header__logo-link {
   display: block;
   width: 75px;
-  padding: 21px 0 26px 20px;
+  padding: 21px 0 22px 20px;
 
   line-height: 0;
 
@@ -31,6 +32,10 @@
   }
 }
 
+.page-header--menu-open .page-header__logo-link {
+  padding-bottom: 26px;
+}
+
 .page-header__logo-tablet,
 .page-header__logo-desktop {
   display: none;
@@ -45,6 +50,10 @@
     width: 170px;
     padding-top: 27px;
     padding-left: 20px;
+    padding-bottom: 43px;
+  }
+
+  .page-header--menu-open .page-header__logo-link {
     padding-bottom: 45px;
   }
 
