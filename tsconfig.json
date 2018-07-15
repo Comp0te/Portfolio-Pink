@@ -5,7 +5,7 @@
     "allowJs": true,
     "downlevelIteration": true,
     "sourceMap": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
