@@ -20,11 +20,11 @@
 
   transition: fill 0.2s ease, box-shadow 0.2s ease-out;
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 
-  &:hover:not(:active),
+  &[href]:hover:not(:active),
   &:focus:not(:active) {
     fill: $brand-color;
     box-shadow:
