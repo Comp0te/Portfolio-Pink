@@ -133,6 +133,7 @@ gulp.task("watch", function() {
   gulp.watch(["*.html", "htmltemplates/*.html"], gulp.series("html"));
   gulp.watch(["fonts/**/*", "img/*"], gulp.series("assets"));
   gulp.watch("img/svg-sprite/*", gulp.series("sprite"));
+
   browserSync.init({
     server: "build",
     ui: false,
@@ -140,6 +141,8 @@ gulp.task("watch", function() {
     open: true,
     cors: true
   });
+
+  browserSync.watch("build/js/*.*").on("change", browserSync.reload);
 });
 
 gulp.task ("build", gulp.series("clean", gulp.parallel("assets", "style", "html", "sprite", "webpack")));
