@@ -7,9 +7,6 @@
   "jsRules": {},
   "rules": {
     "no-constant-condition": true,
-    "max-line-length": {
-      "options": [80]
-    }
   },
   "rulesDirectory": []
 }
