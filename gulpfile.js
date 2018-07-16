@@ -55,7 +55,7 @@ gulp.task("style", function() {
   .pipe(gulpif(isDevelopment, sourcemaps.init()))
   .pipe(sass())
   .pipe(postcss([
-    autoprefixer()
+    autoprefixer({grid: true})
   ]))
   .pipe(gulpif(isDevelopment, gulp.dest("build/css")))
   .pipe(postcss([
@@ -157,8 +157,9 @@ gulp.task("image", function() {
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.svgo({
       plugins: [
-        {removeViewBox: true},
-        {cleanupIDs: false}
+        {removeViewBox: false},
+        {cleanupIDs: false},
+        {removeDimensions: false}
       ]
     })
   ]))
