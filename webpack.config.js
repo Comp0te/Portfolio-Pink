@@ -43,7 +43,8 @@ module.exports = {
         commons: {
           name: 'commons',
           chunks: 'initial',
-          minChunks: 3
+          minChunks: 2,
+          minSize: 10
         }
       }
     },
