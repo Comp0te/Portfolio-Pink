@@ -2,16 +2,14 @@
 
 import PageHeaderMenu from "./page-header-menu";
 
-export const headerMenu = new PageHeaderMenu(
-  document.querySelector(".page-header"),
-  document.querySelector(".main-navigation__toggle"),
-  document.querySelector(".main-navigation"),
-  document.querySelector(".main-navigation__list"),
-  document.querySelectorAll(".main-navigation__link")
-);
+const options = {
+  mainNav: document.querySelector(".main-navigation"),
+  menuLinks: document.querySelectorAll(".main-navigation__link"),
+  pageHeader: document.querySelector(".page-header"),
+  toggleButton: document.querySelector(".main-navigation__toggle"),
+};
 
-headerMenu.addEventToggleButton = "click";
-headerMenu.toggleMenu()();
+export const headerMenu = new PageHeaderMenu(options);
 
 export enum Page {
   Index = 0,

@@ -1,13 +1,13 @@
-"use strict"
+"use strict";
 
-import {headerMenu, Page} from "./modules/page-header";
+import "picturefill";
+import "picturefill/dist/plugins/mutation/pf.mutation.min";
 import * as svg4everybody from "svg4everybody";
-import 'picturefill';
-import 'picturefill/dist/plugins/mutation/pf.mutation.min';
-
-headerMenu.menuItemActive = Page.Photo;
+import {headerMenu, Page} from "./modules/page-header";
 
 svg4everybody({
   nosvg: true,
-  polyfill: true
+  polyfill: true,
 });
+
+headerMenu.menuItemActive = Page.Photo;

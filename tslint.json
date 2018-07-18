@@ -6,7 +6,7 @@
   ],
   "jsRules": {},
   "rules": {
-    "no-constant-condition": true,
+    "no-constant-condition": true
   },
   "rulesDirectory": []
 }
