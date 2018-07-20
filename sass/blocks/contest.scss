@@ -19,6 +19,14 @@
   }
 }
 
+.webp .contest__intro {
+  background-image: url("../img/bg-download-mobile-1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-download-mobile-2x.webp");
+  }
+}
+
 .contest__heading {
   width: 270px;
   margin: 0 auto;
@@ -210,6 +218,14 @@
     }
   }
 
+  .webp .contest__intro {
+    background-image: url("../img/bg-download-tablet-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-tablet-2x.webp");
+    }
+  }
+
   .contest__heading {
     width: 80%;
 
@@ -313,6 +329,14 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-download-desktop-2x.jpg");
+    }
+  }
+
+  .webp .contest__intro {
+    background-image: url("../img/bg-download-desktop-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-desktop-2x.webp");
     }
   }
 

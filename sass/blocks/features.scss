@@ -36,6 +36,14 @@
   }
 }
 
+.webp .features__wraper {
+  background-image: url("../img/features-mobile-1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/features-mobile-2x.webp");
+  }
+}
+
 .features__list {
   margin: 0;
   display: flex;
@@ -94,6 +102,14 @@
     }
   }
 
+  .webp .features__wraper {
+    background-image: url("../img/features-tablet-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/features-tablet-2x.webp");
+    }
+  }
+
   .features__list {
     width: 53.0303%;
     margin-left: 46.9797%;
@@ -130,6 +146,14 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/features-desktop-2x.png");
+    }
+  }
+
+  .webp .features__wraper {
+    background-image: url("../img/features-desktop-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/features-desktop-2x.webp");
     }
   }
 

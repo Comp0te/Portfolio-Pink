@@ -12,6 +12,14 @@
   }
 }
 
+.webp .map {
+  background-image: url("../img/map-fallback-mobile-1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-fallback-mobile-2x.webp");
+  }
+}
+
 .map__iframe {
   width: 100%;
   height: 100%;
@@ -30,6 +38,14 @@
       background-image: url("../img/map-fallback-tablet-2x.jpg");
     }
   }
+
+  .webp .map {
+    background-image: url("../img/map-fallback-tablet-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-fallback-tablet-2x.webp");
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -41,6 +57,14 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-fallback-desktop-2x.jpg");
+    }
+  }
+
+  .webp .map {
+    background-image: url("../img/map-fallback-desktop-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-fallback-desktop-2x.webp");
     }
   }
 }

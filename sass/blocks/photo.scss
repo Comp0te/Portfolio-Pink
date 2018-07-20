@@ -17,6 +17,14 @@
   }
 }
 
+.webp .photo__wraper-heading {
+  background-image: url("../img/bg-download-mobile-1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-download-mobile-2x.webp");
+  }
+}
+
 .photo__heading {
   width: 180px;
   margin: 0 auto;
@@ -122,6 +130,14 @@
     }
   }
 
+  .webp .photo__wraper-heading {
+    background-image: url("../img/bg-download-tablet-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-tablet-2x.webp");
+    }
+  }
+
   .photo__heading {
     width: 360px;
 
@@ -186,6 +202,14 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-download-desktop-2x.jpg");
+    }
+  }
+
+  .webp .photo__wraper-heading {
+    background-image: url("../img/bg-download-desktop-1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-download-desktop-2x.webp");
     }
   }
 
