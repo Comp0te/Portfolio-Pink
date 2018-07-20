@@ -8,9 +8,9 @@
   "devDependencies": {
     "@types/picturefill": "^3.0.0",
     "@types/svg4everybody": "^2.1.0",
-    "autoprefixer": "^8.4.1",
+    "autoprefixer": "^9.0.0",
     "browser-sync": "^2.24.4",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.0.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-htmlmin": "^4.0.0",
@@ -28,6 +28,7 @@
     "gulp-w3cjs": "^1.3.0",
     "gulp-webp": "^3.0.0",
     "htmlhint": "^0.9.13",
+    "modernizr": "^3.6.0",
     "path": "^0.12.7",
     "picturefill": "^3.0.2",
     "posthtml-include": "^1.1.0",
@@ -44,8 +45,9 @@
     "stylelint": "stylelint sass/**/*.scss --syntax scss",
     "tslint": "tslint -t verbose --force ts/**/*.ts",
     "test": "yarn run htmlhint && gulp validate && yarn run stylelint && yarn run tslint",
-    "production": "env NODE_ENV=production gulp build",
-    "start": "gulp dev"
+    "modernizr": "modernizr -d ./build/js -c modernizr-config.json",
+    "production": "gulp clean && env NODE_ENV=production gulp build && yarn run modernizr",
+    "start": "gulp clean && yarn run modernizr && gulp dev"
   },
   "browserslist": [
     "last 2 versions",
