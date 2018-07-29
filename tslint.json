@@ -6,7 +6,8 @@
   ],
   "jsRules": {},
   "rules": {
-    "no-constant-condition": true
+    "no-constant-condition": true,
+    "object-literal-sort-keys": false
   },
   "rulesDirectory": []
 }
