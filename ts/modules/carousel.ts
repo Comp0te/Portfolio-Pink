@@ -2,17 +2,25 @@
 
 export default class Carousel {
   public slides: any[];
-  public bullets: any[];
-  public arrows: any[];
   public slidesActiveStateSelector: string;
+  public bullets: any[];
   public bulletsActiveStateSelector: string;
+  public arrowLeft;
+  public arrowRight;
+  private currentSlide: number;
 
   public constructor(options) {
     this.slides = options.slides;
-    options.bullets ? this.bullets = [...options.bullets] : this.bullets = null;
-    options.arrows ? this.arrows = [...options.arrows] : this.arrows = null;
     this.slidesActiveStateSelector = options.slidesActiveStateSelector || null;
+    options.bullets ? this.bullets = [...options.bullets] : this.bullets = null;
     this.bulletsActiveStateSelector = options.bulletsActiveStateSelector || null;
+    if (options.arrows) {
+      this.arrowLeft = options.arrows.left;
+      this.arrowRight = options.arrows.right;
+    } else {
+      this.arrowLeft = null;
+      this.arrowRight = null;
+    }
 
     if (this.bullets !== null) {
       this.bullets.forEach((elem, index) => {
@@ -26,23 +34,60 @@ export default class Carousel {
             LeftArrow = 37,
             RightArrow = 39,
           }
-          let currentIndex = index;
 
           if (evt.keyCode === Key.LeftArrow) {
-            currentIndex--;
-            this.activeSlide(currentIndex);
-            this.activeBullet(currentIndex);
-            this.focusBullet(currentIndex);
+            if (this.currentSlide > 0) {
+              this.currentSlide--;
+              this.activeSlide(this.currentSlide);
+              this.activeBullet(this.currentSlide);
+              this.focusBullet(this.currentSlide);
+            }
           }
 
           if (evt.keyCode === Key.RightArrow) {
-            currentIndex++;
-            this.activeSlide(currentIndex);
-            this.activeBullet(currentIndex);
-            this.focusBullet(currentIndex);
+            if (this.currentSlide < this.activeSlide.length + 1) {
+              this.currentSlide++;
+              this.activeSlide(this.currentSlide);
+              this.activeBullet(this.currentSlide);
+              this.focusBullet(this.currentSlide);
+            }
           }
         }, false);
       });
+    }
+
+    if (this.arrowLeft !== null && this.arrowRight !== null) {
+      this.arrowLeft.addEventListener("click", () => {
+        if (this.currentSlide >= 1) {
+          this.arrowRight.removeAttribute("disabled", "");
+          this.currentSlide--;
+          this.activeSlide(this.currentSlide);
+
+          if (this.bullets !== null) {
+            this.activeBullet(this.currentSlide);
+          }
+        }
+
+        if (this.currentSlide === 0) {
+          this.arrowLeft.setAttribute("disabled", "");
+        }
+      }, false);
+
+      this.arrowRight.addEventListener("click", () => {
+        if (this.currentSlide < this.slides.length - 1) {
+          this.arrowLeft.removeAttribute("disabled", "");
+          this.currentSlide++;
+          this.activeSlide(this.currentSlide);
+
+          if (this.bullets !== null) {
+            this.activeBullet(this.currentSlide);
+          }
+        }
+
+        if (this.currentSlide === this.slides.length - 1) {
+          this.arrowRight.setAttribute("disabled", "");
+        }
+      }, false);
     }
   }
 
@@ -52,16 +97,8 @@ export default class Carousel {
         item.classList.remove(this.slidesActiveStateSelector);
       });
       this.slides[index].classList.add(this.slidesActiveStateSelector);
+      this.currentSlide = index;
     }
-
-    // if (elem === 0) {
-    //   this.prevSlide = null;
-    // } else if (elem === this.slides.length - 1) {
-    //   this.nextSlide = null;
-    // } else {
-    //   this.prevSlide = elem - 1;
-    //   this.nextSlide = elem + 1;
-    // }
   }
 
   public activeBullet(index: number) {
@@ -80,14 +117,4 @@ export default class Carousel {
       this.bullets[elem].focus();
     }
   }
-
-  // public get activeSlide(): number {
-  //   return 0;
-  // }
-
-  // private set prevSlide(elem) {
-  // }
-
-  // private set nextSlide(elem) {
-  // }
 }
