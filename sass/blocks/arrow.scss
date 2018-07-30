@@ -10,14 +10,20 @@
   opacity: 0.3;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
   &:active {
     opacity: 0.1;
   }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: default;
+  }
+
+  &:focus:not(:active),
+  &:hover:not(:disabled):not(:active) {
+    opacity: 0.6;
+  }
+
 
   &--left {
     border-left-width: 2px;
