@@ -22,25 +22,27 @@ export default class Carousel {
       this.arrowRight = null;
     }
 
+    enum Key {
+      LeftArrow = 37,
+      RightArrow = 39,
+    }
+
     if (this.bullets !== null) {
       this.bullets.forEach((elem, index) => {
-        elem.addEventListener("click", () => {
+        const onClickBullet = () => {
           this.activeSlide(index);
           this.activeBullet(index);
-        }, false);
+          this.disableArrows();
+        };
 
-        elem.addEventListener("keydown", (evt) => {
-          enum Key {
-            LeftArrow = 37,
-            RightArrow = 39,
-          }
-
+        const onKeyDownBullet = (evt) => {
           if (evt.keyCode === Key.LeftArrow) {
             if (this.currentSlide > 0) {
               this.currentSlide--;
               this.activeSlide(this.currentSlide);
               this.activeBullet(this.currentSlide);
               this.focusBullet(this.currentSlide);
+              this.disableArrows();
             }
           }
 
@@ -50,14 +52,18 @@ export default class Carousel {
               this.activeSlide(this.currentSlide);
               this.activeBullet(this.currentSlide);
               this.focusBullet(this.currentSlide);
+              this.disableArrows();
             }
           }
-        }, false);
+        };
+
+        elem.addEventListener("click", onClickBullet, false);
+        elem.addEventListener("keydown", onKeyDownBullet, false);
       });
     }
 
     if (this.arrowLeft !== null && this.arrowRight !== null) {
-      this.arrowLeft.addEventListener("click", () => {
+      const onClickLeftArrow = () => {
         if (this.currentSlide >= 1) {
           this.arrowRight.removeAttribute("disabled", "");
           this.currentSlide--;
@@ -71,9 +77,9 @@ export default class Carousel {
         if (this.currentSlide === 0) {
           this.arrowLeft.setAttribute("disabled", "");
         }
-      }, false);
+      };
 
-      this.arrowRight.addEventListener("click", () => {
+      const onClickRightArrow = () => {
         if (this.currentSlide < this.slides.length - 1) {
           this.arrowLeft.removeAttribute("disabled", "");
           this.currentSlide++;
@@ -87,7 +93,10 @@ export default class Carousel {
         if (this.currentSlide === this.slides.length - 1) {
           this.arrowRight.setAttribute("disabled", "");
         }
-      }, false);
+      };
+
+      this.arrowLeft.addEventListener("click", onClickLeftArrow, false);
+      this.arrowRight.addEventListener("click", onClickRightArrow, false);
     }
   }
 
@@ -115,6 +124,21 @@ export default class Carousel {
   private focusBullet(elem) {
     if (elem >= 0 && elem < this.bullets.length) {
       this.bullets[elem].focus();
+    }
+  }
+
+  private disableArrows() {
+    if (this.arrowLeft !== null && this.arrowRight !== null) {
+      this.arrowRight.removeAttribute("disabled", "");
+      this.arrowLeft.removeAttribute("disabled", "");
+
+      if (this.currentSlide === 0) {
+        this.arrowLeft.setAttribute("disabled", "");
+      }
+
+      if (this.currentSlide === this.slides.length - 1) {
+        this.arrowRight.setAttribute("disabled", "");
+      }
     }
   }
 }
