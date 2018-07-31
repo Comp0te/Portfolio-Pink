@@ -1,5 +1,3 @@
-"use strict";
-
 import Carousel from "./carousel";
 
 const options = {

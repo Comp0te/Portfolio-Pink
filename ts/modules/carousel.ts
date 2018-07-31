@@ -1,5 +1,3 @@
-"use strict";
-
 export default class Carousel {
   public slides: any[];
   public slidesActiveStateSelector: string;
@@ -7,7 +5,7 @@ export default class Carousel {
   public bulletsActiveStateSelector: string;
   public arrowLeft;
   public arrowRight;
-  private currentSlide: number;
+  protected currentSlide: number;
 
   public constructor(options) {
     this.slides = options.slides;
@@ -65,7 +63,7 @@ export default class Carousel {
     if (this.arrowLeft !== null && this.arrowRight !== null) {
       const onClickLeftArrow = () => {
         if (this.currentSlide >= 1) {
-          this.arrowRight.removeAttribute("disabled", "");
+          this.arrowRight.removeAttribute("disabled");
           this.currentSlide--;
           this.activeSlide(this.currentSlide);
 
@@ -81,7 +79,7 @@ export default class Carousel {
 
       const onClickRightArrow = () => {
         if (this.currentSlide < this.slides.length - 1) {
-          this.arrowLeft.removeAttribute("disabled", "");
+          this.arrowLeft.removeAttribute("disabled");
           this.currentSlide++;
           this.activeSlide(this.currentSlide);
 
@@ -129,8 +127,8 @@ export default class Carousel {
 
   private disableArrows() {
     if (this.arrowLeft !== null && this.arrowRight !== null) {
-      this.arrowRight.removeAttribute("disabled", "");
-      this.arrowLeft.removeAttribute("disabled", "");
+      this.arrowRight.removeAttribute("disabled");
+      this.arrowLeft.removeAttribute("disabled");
 
       if (this.currentSlide === 0) {
         this.arrowLeft.setAttribute("disabled", "");
