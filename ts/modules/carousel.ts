@@ -8,7 +8,7 @@ export default class Carousel {
   protected currentSlide: number;
 
   public constructor(options) {
-    this.slides = options.slides;
+    this.slides = [...options.slides];
     this.slidesActiveStateSelector = options.slidesActiveStateSelector || null;
     options.bullets ? this.bullets = [...options.bullets] : this.bullets = null;
     this.bulletsActiveStateSelector = options.bulletsActiveStateSelector || null;
@@ -119,13 +119,7 @@ export default class Carousel {
     }
   }
 
-  private focusBullet(elem) {
-    if (elem >= 0 && elem < this.bullets.length) {
-      this.bullets[elem].focus();
-    }
-  }
-
-  private disableArrows() {
+  public disableArrows() {
     if (this.arrowLeft !== null && this.arrowRight !== null) {
       this.arrowRight.removeAttribute("disabled");
       this.arrowLeft.removeAttribute("disabled");
@@ -137,6 +131,12 @@ export default class Carousel {
       if (this.currentSlide === this.slides.length - 1) {
         this.arrowRight.setAttribute("disabled", "");
       }
+    }
+  }
+
+  private focusBullet(elem) {
+    if (elem >= 0 && elem < this.bullets.length) {
+      this.bullets[elem].focus();
     }
   }
 }
