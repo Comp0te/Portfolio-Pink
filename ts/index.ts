@@ -18,6 +18,7 @@ footerLogo.removeAttribute("href");
 
 reviewCarousel.activeSlide(0);
 reviewCarousel.activeBullet(0);
+reviewCarousel.disableArrows();
 
 priceCarousel.activeSlide(1);
 priceCarousel.activeBullet(1);
