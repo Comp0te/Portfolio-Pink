@@ -12,7 +12,8 @@
 
 .review__item {
   display: none;
-  height: 254px;
+  height: 224px;
+  margin-bottom: 30px;
 
   font-size: 18px;
   line-height: 30px;
@@ -23,13 +24,41 @@
   &--active {
     display: flex;
     flex-direction: column;
+    perspective: 500px;
+
+    animation: carousel 0.8s ease-in;
+
+    @keyframes carousel {
+      0% {
+        opacity: 0.7;
+
+        transform: rotateY(90deg);
+      }
+
+      60% {
+        transform: rotateY(-10deg);
+      }
+
+      80% {
+        opacity: 1;
+
+        transform: rotateY(10deg);
+      }
+
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+
+  &--touch {
+    box-shadow: 2px 2px 10px rgba($color: $brand-color, $alpha: 0.3);
   }
 }
 
 .review__content {
   order: 2;
   margin: 0;
-  margin-bottom: 30px;
   overflow: auto;
 
   font-size: 14px;
@@ -89,7 +118,6 @@
 
   .review__about-author {
     display: block;
-    margin-bottom: 30px;
 
     font-size: 14px;
   }
@@ -113,6 +141,7 @@
 
   .review__item {
     height: 207px;
+    margin-bottom: 0;
   }
 
   .review__content {
