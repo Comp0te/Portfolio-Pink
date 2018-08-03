@@ -1,7 +1,7 @@
 import * as svg4everybody from "svg4everybody";
 import {headerMenu, Page} from "./modules/page-header";
-import priceCarousel from "./modules/price-carousel";
-import reviewCarousel from "./modules/review-carousel";
+import "./modules/price-carousel";
+import "./modules/review-carousel";
 
 svg4everybody({
   nosvg: true,
@@ -15,10 +15,3 @@ const footerLogo = document.querySelector(".page-footer__logo-link");
 
 headerLogo.removeAttribute("href");
 footerLogo.removeAttribute("href");
-
-reviewCarousel.activeSlide(0);
-reviewCarousel.activeBullet(0);
-reviewCarousel.disableArrows();
-
-priceCarousel.activeSlide(1);
-priceCarousel.activeBullet(1);
