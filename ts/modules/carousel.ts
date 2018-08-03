@@ -5,7 +5,17 @@ export default class Carousel {
   public bulletsActiveStateSelector: string;
   public arrowLeft;
   public arrowRight;
+  public touchStateSelector: string;
   protected currentSlide: number;
+  protected onClickBullet;
+  protected onKeyDownBullet;
+  protected onClickLeftArrow;
+  protected onClickRightArrow;
+  protected onTouchStart;
+  protected onTouchMove;
+  protected onTouchEnd;
+  protected initTouchPositionX: number;
+  protected distanсeMoveTouch: number;
 
   public constructor(options) {
     this.slides = [...options.slides];
@@ -19,6 +29,10 @@ export default class Carousel {
       this.arrowLeft = null;
       this.arrowRight = null;
     }
+    this.touchStateSelector = options.touchStateSelector || null;
+    this.currentSlide = 0;
+    this.initTouchPositionX = 0;
+    this.distanсeMoveTouch = 0;
 
     enum Key {
       LeftArrow = 37,
@@ -27,13 +41,13 @@ export default class Carousel {
 
     if (this.bullets !== null) {
       this.bullets.forEach((elem, index) => {
-        const onClickBullet = () => {
+        this.onClickBullet = () => {
           this.activeSlide(index);
           this.activeBullet(index);
           this.disableArrows();
         };
 
-        const onKeyDownBullet = (evt) => {
+        this.onKeyDownBullet = (evt) => {
           if (evt.keyCode === Key.LeftArrow) {
             if (this.currentSlide > 0) {
               this.currentSlide--;
@@ -55,47 +69,61 @@ export default class Carousel {
           }
         };
 
-        elem.addEventListener("click", onClickBullet, false);
-        elem.addEventListener("keydown", onKeyDownBullet, false);
+        elem.addEventListener("click", this.onClickBullet, false);
+        elem.addEventListener("keydown", this.onKeyDownBullet, false);
       });
     }
 
     if (this.arrowLeft !== null && this.arrowRight !== null) {
-      const onClickLeftArrow = () => {
-        if (this.currentSlide >= 1) {
-          this.arrowRight.removeAttribute("disabled");
-          this.currentSlide--;
-          this.activeSlide(this.currentSlide);
-
-          if (this.bullets !== null) {
-            this.activeBullet(this.currentSlide);
-          }
-        }
-
-        if (this.currentSlide === 0) {
-          this.arrowLeft.setAttribute("disabled", "");
-        }
+      this.onClickLeftArrow = () => {
+        this.toLeftSlide();
       };
 
-      const onClickRightArrow = () => {
-        if (this.currentSlide < this.slides.length - 1) {
-          this.arrowLeft.removeAttribute("disabled");
-          this.currentSlide++;
-          this.activeSlide(this.currentSlide);
-
-          if (this.bullets !== null) {
-            this.activeBullet(this.currentSlide);
-          }
-        }
-
-        if (this.currentSlide === this.slides.length - 1) {
-          this.arrowRight.setAttribute("disabled", "");
-        }
+      this.onClickRightArrow = () => {
+        this.toRightSlide();
       };
 
-      this.arrowLeft.addEventListener("click", onClickLeftArrow, false);
-      this.arrowRight.addEventListener("click", onClickRightArrow, false);
+      this.arrowLeft.addEventListener("click", this.onClickLeftArrow, false);
+      this.arrowRight.addEventListener("click", this.onClickRightArrow, false);
     }
+
+    this.onTouchStart = (evt) => {
+      if (evt.changedTouches.length > 1) {
+        return;
+      }
+
+      this.initTouchPositionX = evt.changedTouches[0].clientX;
+      this.slides[this.currentSlide].classList.add(this.touchStateSelector);
+    };
+
+    this.onTouchMove = (evt) => {
+      const touch = evt.changedTouches[0];
+      this.distanсeMoveTouch = this.initTouchPositionX - touch.clientX;
+
+      if (this.distanсeMoveTouch > 20 && this.distanсeMoveTouch < 40 ||
+          this.distanсeMoveTouch < -20 && this.distanсeMoveTouch > -40) {
+            this.slides[this.currentSlide].style.transform = `translateX(${-this.distanсeMoveTouch}px)`;
+      }
+    };
+
+    this.onTouchEnd = () => {
+      this.slides[this.currentSlide].classList.remove(this.touchStateSelector);
+      this.slides[this.currentSlide].style.transform = "";
+
+      if (this.distanсeMoveTouch >= 30) {
+        this.toRightSlide();
+      }
+
+      if (this.distanсeMoveTouch <= -30) {
+        this.toLeftSlide();
+      }
+    };
+
+    this.slides.forEach((elem) => {
+      elem.addEventListener("touchstart", this.onTouchStart, false);
+      elem.addEventListener("touchmove", this.onTouchMove, false);
+      elem.addEventListener("touchend", this.onTouchEnd, false);
+    });
   }
 
   public activeSlide(index: number) {
@@ -132,6 +160,32 @@ export default class Carousel {
         this.arrowRight.setAttribute("disabled", "");
       }
     }
+  }
+
+  public toRightSlide() {
+    if (this.currentSlide < this.slides.length - 1) {
+      this.currentSlide++;
+      this.activeSlide(this.currentSlide);
+
+      if (this.bullets !== null) {
+        this.activeBullet(this.currentSlide);
+      }
+    }
+
+    this.disableArrows();
+  }
+
+  public toLeftSlide() {
+    if (this.currentSlide >= 1) {
+      this.currentSlide--;
+      this.activeSlide(this.currentSlide);
+
+      if (this.bullets !== null) {
+        this.activeBullet(this.currentSlide);
+      }
+    }
+
+    this.disableArrows();
   }
 
   private focusBullet(elem) {

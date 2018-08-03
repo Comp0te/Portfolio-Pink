@@ -9,8 +9,11 @@ const options = {
     left: document.querySelector(".review__arrow--left"),
     right: document.querySelector(".review__arrow--right"),
   },
+  touchStateSelector: "review__item--touch",
 };
 
 const reviewCarousel = new Carousel(options);
+
+reviewCarousel.disableArrows();
 
 export default reviewCarousel;
