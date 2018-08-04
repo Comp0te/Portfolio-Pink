@@ -1,6 +1,7 @@
 import * as svg4everybody from "svg4everybody";
-import {headerMenu, Page} from "./modules/page-header";
-import "./modules/price-carousel";
+import {Page, ScreenWidth} from "./modules/enums";
+import headerMenu from "./modules/page-header";
+import priceCarousel from "./modules/price-carousel";
 import "./modules/review-carousel";
 
 svg4everybody({
@@ -15,3 +16,18 @@ const footerLogo = document.querySelector(".page-footer__logo-link");
 
 headerLogo.removeAttribute("href");
 footerLogo.removeAttribute("href");
+
+const pageFooter = document.querySelector(".page-footer");
+const onChangeScreenWidth = () => {
+  if (window.innerWidth < ScreenWidth.Tablet) {
+    priceCarousel.addTouchEvents(priceCarousel.table);
+    pageFooter.classList.add("page-footer--off");
+  } else {
+    priceCarousel.removeTouchEvents(priceCarousel.table);
+    pageFooter.classList.remove("page-footer--off");
+  }
+};
+
+onChangeScreenWidth();
+
+window.addEventListener("resize", onChangeScreenWidth, false);
