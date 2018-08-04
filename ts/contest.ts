@@ -1,7 +1,6 @@
-"use strict";
-
 import * as svg4everybody from "svg4everybody";
-import {headerMenu, Page} from "./modules/page-header";
+import {Page} from "./modules/enums";
+import headerMenu from "./modules/page-header";
 
 headerMenu.menuItemActive = Page.Contest;
 
