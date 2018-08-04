@@ -1,18 +1,17 @@
-"use strict";
-
 export default class PageHeaderMenu {
   public pageHeader;
   public mainNav;
   public toggleButton;
-  public menuItems;
+  public menuLinks: any[];
+  protected onClickToggleButton;
 
   public constructor(options) {
     this.pageHeader = options.pageHeader;
     this.mainNav = options.mainNav;
     this.toggleButton = options.toggleButton;
-    this.menuItems = options.menuLinks;
+    this.menuLinks = [...options.menuLinks];
 
-    const onClickToggleButton = (evt) => {
+    this.onClickToggleButton = (evt) => {
       let target = evt.target;
 
       while (target !== evt.currentTarget) {
@@ -25,12 +24,9 @@ export default class PageHeaderMenu {
       }
     };
 
-    this.pageHeader.addEventListener("click", onClickToggleButton, false);
-
-    if (this.mainNav.classList.contains("main-navigation--nojs")) {
-      this.mainNav.classList.remove("main-navigation--nojs");
-      this.toggleMenu();
-    }
+    this.pageHeader.addEventListener("click", this.onClickToggleButton, false);
+    this.mainNav.classList.remove("main-navigation--nojs");
+    this.toggleMenu();
   }
 
   public toggleMenu() {
@@ -39,7 +35,7 @@ export default class PageHeaderMenu {
   }
 
   public set menuItemActive(elem: number) {
-    this.menuItems[elem].classList.toggle("main-navigation__link--active");
-    this.menuItems[elem].removeAttribute("href");
+    this.menuLinks[elem].classList.toggle("main-navigation__link--active");
+    this.menuLinks[elem].removeAttribute("href");
   }
 }

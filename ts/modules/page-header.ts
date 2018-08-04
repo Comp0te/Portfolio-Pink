@@ -1,5 +1,3 @@
-"use strict";
-
 import PageHeaderMenu from "./page-header-menu";
 
 const options = {
@@ -9,11 +7,6 @@ const options = {
   toggleButton: document.querySelector(".main-navigation__toggle"),
 };
 
-export const headerMenu = new PageHeaderMenu(options);
+const headerMenu = new PageHeaderMenu(options);
 
-export enum Page {
-  Index = 0,
-  Photo = 1,
-  Contest = 2,
-  Htmlacademy = 3,
-}
+export default headerMenu;
