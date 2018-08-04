@@ -18,9 +18,11 @@ In the process of creating the site, I used the following technologies, tools, e
 	- `Flexbox` and progressive enhancement to `Grid`, etc.
 	- Pixel perfect.
 - **JavaScript:**
-	- ES2015.
 	- TypeScript.
-	- To be continued.
+	- ES2015.
+  - Object-oriented programming.
+  - Carousel: mouse, keyboard and touch controls.
+  - To be continued.
 - **Graphics:**
 	- Retina 2x, SVG sprite `use` with external source.
 	- Progressive enhancement to WebP.
