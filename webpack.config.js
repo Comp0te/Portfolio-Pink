@@ -1,7 +1,6 @@
 "use strict";
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
-const path = require("path");
 
 module.exports = {
   context: __dirname + "/ts/",
