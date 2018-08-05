@@ -1,13 +1,11 @@
 {
   "name": "pink",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "author": "Compote <simbiatoff@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@types/picturefill": "^3.0.0",
-    "@types/svg4everybody": "^2.1.0",
     "autoprefixer": "^9.0.0",
     "browser-sync": "^2.24.4",
     "cssnano": "^4.0.3",
@@ -30,10 +28,8 @@
     "htmlhint": "^0.9.13",
     "modernizr": "^3.6.0",
     "path": "^0.12.7",
-    "picturefill": "^3.0.2",
     "posthtml-include": "^1.1.0",
     "stylelint": "^9.3.0",
-    "svg4everybody": "^2.1.9",
     "ts-loader": "^4.4.2",
     "tslint": "^5.10.0",
     "tslint-eslint-rules": "^5.3.1",
@@ -44,7 +40,7 @@
     "htmlhint": "htmlhint build/*.html",
     "stylelint": "stylelint sass/**/*.scss --syntax scss",
     "tslint": "tslint -t verbose --force ts/**/*.ts",
-    "test": "yarn run htmlhint && gulp validate && yarn run stylelint && yarn run tslint",
+    "test": "yarn run htmlhint && gulp validateW3C && yarn run stylelint && yarn run tslint",
     "modernizr": "modernizr -d ./build/js -c modernizr-config.json",
     "production": "gulp clean && env NODE_ENV=production gulp build && yarn run modernizr",
     "start": "gulp clean && yarn run modernizr && gulp dev"
@@ -52,10 +48,9 @@
   "browserslist": [
     "last 2 versions",
     "Firefox ESR",
-    "not ie 10",
-    "not ie_mob 10",
-    "not bb 10",
-    "not bb 7",
-    "> 0.5%"
+    "> 0.5%",
+    "not IE 11",
+    "not ie_mob 11",
+    "not dead"
   ]
 }

@@ -19,7 +19,6 @@ const htmlmin = require("gulp-htmlmin");
 const del = require("del");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
-const path = require("path");
 const gulputil = require("gulp-util");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
@@ -55,7 +54,7 @@ gulp.task("style", function() {
   .pipe(gulpif(isDevelopment, sourcemaps.init()))
   .pipe(sass())
   .pipe(postcss([
-    autoprefixer({grid: true})
+    autoprefixer()
   ]))
   .pipe(gulpif(isDevelopment, gulp.dest("build/css")))
   .pipe(postcss([
@@ -151,7 +150,7 @@ gulp.task ("dev", gulp.series("build", "watch"));
 
 gulp.task("image", function() {
   return gulp
-  .src("img/**/*.{jpg,png,svg}")
+  .src("img/**/*.{jpg,jpeg,png,svg}")
   .pipe(imagemin([
     imagemin.jpegtran({progressive: true}),
     imagemin.optipng({optimizationLevel: 5}),
@@ -168,7 +167,7 @@ gulp.task("image", function() {
 
 gulp.task("webpJpg", function() {
   return gulp
-  .src("img/**/*.{jpg, jpeg}")
+  .src("img/**/*.{jpg,jpeg}")
   .pipe(webp({
     quality: 75
   }))
@@ -186,7 +185,7 @@ gulp.task("webpPng", function() {
 
 gulp.task("webp", gulp.parallel("webpJpg", "webpPng"));
 
-gulp.task("validate", function() {
+gulp.task("validateW3C", function() {
   return gulp
   .src("build/*.html")
   .pipe(w3c())

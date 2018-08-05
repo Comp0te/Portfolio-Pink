@@ -1,13 +1,7 @@
-import * as svg4everybody from "svg4everybody";
 import {Page, ScreenWidth} from "./modules/enums";
 import headerMenu from "./modules/page-header";
 import priceCarousel from "./modules/price-carousel";
 import "./modules/review-carousel";
-
-svg4everybody({
-  nosvg: true,
-  polyfill: true,
-});
 
 headerMenu.menuItemActive = Page.Index;
 
