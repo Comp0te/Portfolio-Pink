@@ -29,7 +29,6 @@ In the process of creating the site, I used the following technologies, tools, e
   - Optimized, responsive, lazy download.
 - **Cross-browser support:**
 	- The last 2 versions of the main browsers.
-	- Internet Explorer 11.
 - **Tools:**
 	- Package manager: Yarn.
 	- Task runner: Gulp 4.
