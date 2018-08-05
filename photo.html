@@ -283,6 +283,37 @@
     </section>
   </main>
   <include src="htmltemplates/page-footer.html"></include>
+
+  <template class="post-template">
+    <li class="photo__item">
+      <article class="post">
+        <div class="post__wraper-photo" role="presentation">
+          <a href="#" class="post__link-photo">
+            <picture class="post__picture">
+              <source class="post-template__webp-desktop" type="image/webp" media="(min-width: 960px)" srcset="">
+              <source class="post-template__webp-tablet" type="image/webp" media="(min-width: 660px)" srcset="">
+              <source class="post-template__webp-mobile" type="image/webp" srcset="">
+              <source class="post-template__desktop" media="(min-width: 960px)" srcset="">
+              <source class="post-template__tablet" media="(min-width: 660px)" srcset="">
+              <img class="post__photo post-template__mobile" src="#" alt="Фотография пользователя">
+            </picture>
+          </a>
+        </div>
+        <div class="post__wraper-author" aria-label="Автор и дата поста">
+          <b class="post__author"></b>
+          <time datetime="" class="post__time"></time>
+        </div>
+        <p class="post__content" aria-label="Комментарий пользователя"></p>
+        <div class="post__wraper-like">
+          <button class="post__button" type="button">
+            <span class="visually-hidden">Мне нравится</span>
+          </button>
+          <span class="post__like">Нравится: 0</span>
+        </div>
+      </article>
+    </li>
+  </template>
+
   <script src="js/commons.js"></script>
   <script src="js/photo.js"></script>
 </body>
