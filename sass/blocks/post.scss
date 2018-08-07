@@ -21,7 +21,10 @@
 
 .post__link-photo {
   display: inline-block;
+
   outline: 0;
+
+  pointer-events: none;
 
   &:hover,
   &:focus {
