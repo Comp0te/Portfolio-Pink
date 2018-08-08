@@ -38,8 +38,8 @@
   },
   "scripts": {
     "htmlhint": "htmlhint build/*.html",
-    "stylelint": "stylelint sass/**/*.scss --syntax scss",
-    "tslint": "tslint -t verbose --force ts/**/*.ts",
+    "stylelint": "stylelint sass/**/*.scss --syntax scss && echo Stylelint passed successfully",
+    "tslint": "tslint -t verbose ts/**/*.ts && echo Tslint passed successfully",
     "test": "yarn run htmlhint && gulp validateW3C && yarn run stylelint && yarn run tslint",
     "modernizr": "modernizr -d ./build/js -c modernizr-config.json",
     "production": "gulp clean && env NODE_ENV=production gulp build && yarn run modernizr",
