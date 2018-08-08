@@ -7,6 +7,9 @@ module.exports = () => {
   return () => {
     return gulp.src("build/*.html")
     .pipe(w3c())
-    .pipe(w3c.reporter());
+    .pipe(w3c.reporter())
+    .on("finish", () => {
+      console.log("W3C validation succeeded")
+    });
   };
 };
