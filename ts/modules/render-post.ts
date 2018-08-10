@@ -1,24 +1,22 @@
 import generatePost from "./generate-post";
 
+let alreadyRendered = 0;
+
 const renderPost = (postAmountRender: number,
                     dataPosts: any[],
                     postParent) => {
-  let alreadyRendered = 0;
   const fragment = document.createDocumentFragment();
-
-  return () => {
-    const isAllRender = (i: number): boolean => {
+  const isAllRender = (i: number): boolean => {
       return i < postAmountRender + alreadyRendered && i < dataPosts.length;
     };
 
-    for (let i = alreadyRendered; isAllRender(i); i++) {
+  for (let i = alreadyRendered; isAllRender(i); i++) {
       const post = generatePost(dataPosts[i]);
       fragment.appendChild(post);
     }
 
-    alreadyRendered += postAmountRender;
-    postParent.appendChild(fragment);
-  };
+  alreadyRendered += postAmountRender;
+  postParent.appendChild(fragment);
 };
 
 export default renderPost;
