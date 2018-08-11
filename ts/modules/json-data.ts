@@ -133,4 +133,32 @@ const jsonPosts = `[
   }
 ]`;
 
-export default jsonPosts;
+const jsonPanorama = `[
+  {
+    "postId": 0,
+    "imgSrc": {
+      "mobile": "img/panorama-mobile-1x.jpg",
+      "mobile2x": "img/panorama-mobile-2x.jpg 2x",
+      "tablet": "img/panorama-tablet-1x.jpg 1x",
+      "tablet2x": "img/panorama-tablet-2x.jpg 2x",
+      "desktop": "img/panorama-desktop-1x.jpg 1x",
+      "desktop2x": "img/panorama-desktop-2x.jpg 2x",
+      "mobileWebp": "img/panorama-mobile-1x.webp 1x",
+      "mobileWebp2x": "img/panorama-mobile-2x.webp 2x",
+      "tabletWebp": "img/panorama-tablet-1x.webp 1x",
+      "tabletWebp2x": "img/panorama-tablet-2x.webp 2x",
+      "desktopWebp": "img/panorama-desktop-1x.webp 1x",
+      "desktopWebp2x": "img/panorama-desktop-2x.webp 2x",
+      "fullSize": null
+    },
+    "authorName": "Анна",
+    "postDate": "2018-07-07",
+    "postContent": [
+      "Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе",
+      " задавайте свои вопросы!"
+    ],
+    "likeAmount": 215
+  }
+]`;
+
+export {jsonPosts, jsonPanorama};
