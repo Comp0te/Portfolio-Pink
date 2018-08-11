@@ -2,6 +2,8 @@
 
 The design was created by the [HTML Academy](https://htmlacademy.ru), coded by me.
 
+[Portfolio-Pink on the GitHub Pages](https://comp0te.github.io/Portfolio-Pink/)
+
 In the process of creating the site, I used the following technologies, tools, etc:
 
 - **HTML5:**
@@ -19,7 +21,7 @@ In the process of creating the site, I used the following technologies, tools, e
 	- Pixel perfect.
 - **JavaScript:**
 	- TypeScript.
-	- ES2015.
+	- ES2015, Fetch API.
   - Object-oriented programming.
   - Carousel: mouse, keyboard and touch controls.
   - To be continued.
@@ -38,6 +40,6 @@ In the process of creating the site, I used the following technologies, tools, e
 		- HTMLHint.
 		- Stylelint.
 		- TSLint.
-	- Git and GitHub.
+	- Git, GitHub, Travis CI.
 	- Basic terminal usage.
 	- Visual Studio Code, Chrome DevTools, Adobe Photoshop.
