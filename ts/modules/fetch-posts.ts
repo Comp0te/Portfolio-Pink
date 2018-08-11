@@ -1,7 +1,7 @@
 import jsonPosts from "./json-posts";
 
 const getPostData = () => {
-  return fetch("/pink/posts/", {
+  return fetch("/server/posts/", {
     method: "GET",
     mode: "same-origin",
     headers: {
@@ -13,11 +13,15 @@ const getPostData = () => {
         return response.json();
       } else {
         return JSON.parse(jsonPosts); // Due to lack of back end.
-        // throw new Error("Network response failed");
+        // throw new Error("ошибка загрузки информации");
       }
     })
     .catch((error) => {
-      alert(`Возникла ошибка ${error.message} при загрузке фотографий, попробуйте перезагрузить страницу`);
+      const errorContainer: any = document.querySelector(".photo__list");
+
+      errorContainer.style.textAlign = "center";
+      errorContainer.style.fontSize = "24px";
+      errorContainer.textContent = `1) Возникла ${error.message} с сервера, попробуйте перезагрузить страницу`;
     });
 };
 
