@@ -9,5 +9,5 @@ try {
   window.addEventListener("testPassive", null, opts);
   window.removeEventListener("testPassive", null, opts);
 } catch (e) {
-  isNaN(e);
+  //
 }
