@@ -1,4 +1,5 @@
 import Carousel from "./carousel";
+import {supportsPassiveListener} from "./polifils";
 
 export default class CarouselOfTable extends Carousel {
   public tableCells: any[];
@@ -57,14 +58,14 @@ export default class CarouselOfTable extends Carousel {
   }
 
   public addTouchEvents(elem) {
-    elem.addEventListener("touchstart", this.onTouchStart, false);
-    elem.addEventListener("touchmove", this.onTouchMove, false);
+    elem.addEventListener("touchstart", this.onTouchStart, supportsPassiveListener ? {passive: true} : false);
+    elem.addEventListener("touchmove", this.onTouchMove, supportsPassiveListener ? {passive: true} : false);
     elem.addEventListener("touchend", this.onTouchEnd, false);
   }
 
   public removeTouchEvents(elem) {
-    elem.removeEventListener("touchstart", this.onTouchStart, false);
-    elem.removeEventListener("touchmove", this.onTouchMove, false);
+    elem.removeEventListener("touchstart", this.onTouchStart, supportsPassiveListener ? {passive: true} : false);
+    elem.removeEventListener("touchmove", this.onTouchMove, supportsPassiveListener ? {passive: true} : false);
     elem.removeEventListener("touchend", this.onTouchEnd, false);
   }
 }

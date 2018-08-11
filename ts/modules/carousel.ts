@@ -1,3 +1,5 @@
+import {supportsPassiveListener} from "./polifils";
+
 export default class Carousel {
   public slides: any[];
   public slidesActiveStateSelector: string;
@@ -120,8 +122,8 @@ export default class Carousel {
     };
 
     this.slides.forEach((elem) => {
-      elem.addEventListener("touchstart", this.onTouchStart, false);
-      elem.addEventListener("touchmove", this.onTouchMove, false);
+      elem.addEventListener("touchstart", this.onTouchStart, supportsPassiveListener ? {passive: true} : false);
+      elem.addEventListener("touchmove", this.onTouchMove, supportsPassiveListener ? {passive: true} : false);
       elem.addEventListener("touchend", this.onTouchEnd, false);
     });
   }
