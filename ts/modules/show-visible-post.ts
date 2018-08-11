@@ -1,7 +1,9 @@
 import {ScreenWidth} from "./enums";
 import renderPost from "./render-post";
 
-export default function showVisiblePost(dataPosts: any[], postParent) {
+export default function showVisiblePost(dataPosts: any[],
+                                        postParent,
+                                        isPanorama = false) {
   const windowHeight: number = document.documentElement.clientHeight;
   const isPostVisible = (elem): boolean  => {
     const coords = elem.getBoundingClientRect();
@@ -14,12 +16,16 @@ export default function showVisiblePost(dataPosts: any[], postParent) {
   };
 
   if (isPostVisible(postParent)) {
-    if (window.innerWidth < ScreenWidth.Tablet) {
-      renderPost(1, dataPosts, postParent);
-    } else if (window.innerWidth < ScreenWidth.Desktop) {
-      renderPost(2, dataPosts, postParent);
-    } else if (window.innerWidth >= ScreenWidth.Desktop) {
-      renderPost(3, dataPosts, postParent);
+    if (!isPanorama) {
+      if (window.innerWidth < ScreenWidth.Tablet) {
+        renderPost(1, dataPosts, postParent, isPanorama);
+      } else if (window.innerWidth < ScreenWidth.Desktop) {
+        renderPost(2, dataPosts, postParent, isPanorama);
+      } else if (window.innerWidth >= ScreenWidth.Desktop) {
+        renderPost(3, dataPosts, postParent, isPanorama);
+      }
+    } else {
+      renderPost(1, dataPosts, postParent, isPanorama);
     }
   }
 }
