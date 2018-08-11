@@ -1,24 +1,19 @@
-import getPostData from "./fetch-posts";
-import showVisiblePost from "./show-visible-post";
+import {jsonPosts} from "./json-data";
+import launchPost from "./launch-post";
 
 const postParent = document.querySelector(".photo__list");
-let dataPosts = [];
-const promisePost: Promise<any> = new Promise((resolve, reject) => {
-  resolve(getPostData());
-  reject(() => {
-    throw new Error("ошибка");
-  });
-});
+const urlFetch = "/server/posts/";
+const optionsFetch = {
+  method: "GET",
+  mode: "same-origin",
+  headers: {
+    "Content-Type": "application/json; charset=utf-8",
+  },
+};
+const dataPost = launchPost(urlFetch,
+                            optionsFetch,
+                            postParent,
+                            jsonPosts,
+                            false);
 
-promisePost.then((data) => {
-  dataPosts = data;
-  const onChangeScreenWidth = () => {
-    showVisiblePost(dataPosts, postParent);
-  };
-
-  showVisiblePost(dataPosts, postParent);
-  window.addEventListener("scroll", onChangeScreenWidth, false);
-})
-.catch((err) => {
-  postParent.textContent += `\n2) ${err.name} - ${err.message}`;
-});
+export default dataPost;
