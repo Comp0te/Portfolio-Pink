@@ -1,4 +1,4 @@
-export default function generatePost(data) {
+export default function generatePost(data, isPanorama = false) {
   const template: any = document.querySelector(".post-template");
   const clone = document.importNode(template.content, true);
   const postImg = {
@@ -49,5 +49,23 @@ export default function generatePost(data) {
   postDate.datetime = data.postDate;
   postContent.textContent = data.postContent;
   postLike.textContent = `Нравится: ${data.likeAmount}`;
+
+  if (isPanorama) {
+    const fragment = document.createDocumentFragment();
+    const wraperphoto = clone.querySelector(".post__wraper-photo");
+    const wraperAuthor = clone.querySelector(".post__wraper-author");
+    const wraperlike = clone.querySelector(".post__wraper-like");
+
+    wraperphoto.classList.add("post__wraper-photo--panorama");
+    wraperAuthor.classList.add("post__wraper-author--panorama");
+    postContent.classList.add("post__content--panorama");
+    wraperlike.classList.add("post__wraper-like--panorama");
+    fragment.appendChild(wraperphoto);
+    fragment.appendChild(wraperAuthor);
+    fragment.appendChild(postContent);
+    fragment.appendChild(wraperlike);
+    return fragment;
+  }
+
   return clone;
 }
