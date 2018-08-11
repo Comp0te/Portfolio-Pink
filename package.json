@@ -5,6 +5,7 @@
   "author": "Compote <simbiatoff@gmail.com>",
   "license": "MIT",
   "private": true,
+  "homepage": "https://comp0te.github.io/pink/",
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "browser-sync": "^2.24.4",
@@ -42,7 +43,7 @@
     "tslint": "tslint -t verbose ts/**/*.ts && echo Tslint passed successfully",
     "test": "yarn run htmlhint && gulp validateW3C && yarn run stylelint && yarn run tslint",
     "modernizr": "modernizr -d ./build/js -c modernizr-config.json",
-    "production": "gulp clean && env NODE_ENV=production gulp build && yarn run modernizr",
+    "build": "gulp clean && env NODE_ENV=production gulp build && yarn run modernizr",
     "start": "gulp clean && yarn run modernizr && gulp dev"
   },
   "browserslist": [
