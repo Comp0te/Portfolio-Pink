@@ -5,7 +5,7 @@
   "author": "Compote <simbiatoff@gmail.com>",
   "license": "MIT",
   "private": true,
-  "homepage": "https://comp0te.github.io/pink/",
+  "homepage": "https://comp0te.github.io/Portfolio-Pink/",
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "browser-sync": "^2.24.4",
