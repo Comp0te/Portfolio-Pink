@@ -17,7 +17,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Левон",
-    "postDate": "2018-07-07",
+    "postDate": "2018-01-08",
     "postContent": "Вчера он на луну летал, сегодня в руки к нам попал.",
     "likeAmount": 356
   },
@@ -39,7 +39,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Антон",
-    "postDate": "2018-07-07",
+    "postDate": "2017-01-07",
     "postContent": "Соседи будут рады!",
     "likeAmount": 666
   },
@@ -61,7 +61,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Борис",
-    "postDate": "2018-07-07",
+    "postDate": "2016-02-04",
     "postContent": "Здесь могла быть ваша цитата о высоком и вечном.",
     "likeAmount": 215
   },
@@ -83,7 +83,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Сергей",
-    "postDate": "2018-07-07",
+    "postDate": "2018-07-07T18:40",
     "postContent": "Самая кубанская в мире!",
     "likeAmount": 4
   },
@@ -105,7 +105,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Максим",
-    "postDate": "2018-07-07",
+    "postDate": "2018-08-12",
     "postContent": "Где снег-то?",
     "likeAmount": 150
   },
@@ -127,7 +127,7 @@ const jsonPosts = `[
       "fullSize": null
     },
     "authorName": "Надежда",
-    "postDate": "2018-07-07",
+    "postDate": "2018-08-12T13:32",
     "postContent": "Всем GM и взаимные лайки!",
     "likeAmount": 2560
   }
