@@ -135,7 +135,7 @@ const jsonPosts = `[
 
 const jsonPanorama = `[
   {
-    "postId": 0,
+    "postId": "panorama",
     "imgSrc": {
       "mobile": "img/panorama-mobile-1x.jpg",
       "mobile2x": "img/panorama-mobile-2x.jpg 2x",
