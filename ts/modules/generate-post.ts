@@ -15,6 +15,7 @@ export default function generatePost(data, isPanorama = false) {
   const postAuthor = clone.querySelector(".post__author");
   const postDate = clone.querySelector(".post__time");
   const postContent = clone.querySelector(".post__content");
+  const postButtonLike = clone.querySelector(".post__button");
   const postLike = clone.querySelector(".post__like");
   const setSrcImg = (source) => {
     if (data.imgSrc[source]) {
@@ -52,6 +53,10 @@ export default function generatePost(data, isPanorama = false) {
   postLike.textContent = `Нравится: ${data.likeAmount}`;
   postDate.textContent = getTimePassed(data.postDate);
   postDate.setAttribute("datetime", data.postDate);
+
+  if (localStorage.getItem(`isPost${data.postId}liked`)) {
+    postButtonLike.classList.add("post__button--liked");
+  }
 
   if (isPanorama) {
     const fragment = document.createDocumentFragment();
