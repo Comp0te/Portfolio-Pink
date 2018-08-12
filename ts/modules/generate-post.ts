@@ -1,3 +1,5 @@
+import getTimePassed from "./get-time-passed";
+
 export default function generatePost(data, isPanorama = false) {
   const template: any = document.querySelector(".post-template");
   const clone = document.importNode(template.content, true);
@@ -46,9 +48,10 @@ export default function generatePost(data, isPanorama = false) {
   }
 
   postAuthor.textContent = data.authorName;
-  postDate.datetime = data.postDate;
   postContent.textContent = data.postContent;
   postLike.textContent = `Нравится: ${data.likeAmount}`;
+  postDate.textContent = getTimePassed(data.postDate);
+  postDate.setAttribute("datetime", data.postDate);
 
   if (isPanorama) {
     const fragment = document.createDocumentFragment();
