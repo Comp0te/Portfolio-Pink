@@ -1,5 +1,3 @@
-
-
 export default function likePost(likeButton,
                                  likeCount,
                                  dataFromServer,
@@ -9,7 +7,6 @@ export default function likePost(likeButton,
     postId: null,
     likeAmount: "",
   };
-  const fetchDelay = 1000;
   const url = isPanorama ? `/server/panorama/` :
     `/server/posts/${dataFromServer.postId}`;
 
