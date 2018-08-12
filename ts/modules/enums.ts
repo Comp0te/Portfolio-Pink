@@ -11,4 +11,11 @@ enum ScreenWidth {
   Desktop = 960,
 }
 
-export {Page, ScreenWidth};
+enum SecondIn {
+  Min = 60,
+  Hour = 3600,
+  Day = 86400,
+  Year = 31536000,
+}
+
+export {Page, ScreenWidth, SecondIn};
