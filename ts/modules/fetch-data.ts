@@ -10,14 +10,15 @@ export default function getData(url: string,
     .then((response) => {
       if (response.ok) {
         return response.json();
-      } else {
+      } else if (response.status === 404) {
         return JSON.parse(dataWithoutServer); // Due to lack of back end.
-        // throw new Error("ошибка загрузки информации");
+      } else {
+        throw new Error("ошибка загрузки информации");
       }
     })
     .catch((error) => {
       errorContainer.style.textAlign = "center";
       errorContainer.style.fontSize = "24px";
-      errorContainer.textContent = `1) Возникла ${error.message} с сервера, попробуйте перезагрузить страницу`;
+      errorContainer.textContent = `Возникла ${error.message} с сервера, попробуйте перезагрузить страницу! `;
     });
 }

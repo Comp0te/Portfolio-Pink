@@ -20,7 +20,7 @@ export default function launchPost(url: string,
     window.addEventListener("scroll", onChangeScreenWidth, false);
     return data;
   })
-    .catch((err) => {
-      parent.textContent += `\n2) ${err.name} - ${err.message}`;
+    .catch(() => {
+      parent.textContent += isPanorama ? `Панорама дня недоступна` : `Фотографии пользователей недоступны`;
     });
 }
