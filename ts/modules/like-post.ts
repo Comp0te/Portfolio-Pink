@@ -1,35 +1,76 @@
+const likePlus = {};
+const likeMinus = {};
+
 export default function likePost(likeButton,
                                  likeCount,
                                  dataFromServer,
                                  isPanorama = false) {
-  const isAlreadyLiked = !!localStorage.getItem(`isPost${dataFromServer.postId}liked`);
+  const id = dataFromServer.postId;
+  let likeAmount = dataFromServer.likeAmount;
+  const isAlreadyLiked = !!localStorage.getItem(`isPost${id}liked`);
+  const fetchDelay = 1000;
+  const url = isPanorama ? `/server/panorama/` : `/server/posts/${id}`;
   const dataToSend = {
     postId: null,
     likeAmount: "",
   };
-  const url = isPanorama ? `/server/panorama/` :
-    `/server/posts/${dataFromServer.postId}`;
 
   if (isAlreadyLiked) {
-    dataToSend.postId = dataFromServer.postId;
+    dataToSend.postId = id;
     dataToSend.likeAmount = "-1";
     likeButton.classList.toggle("post__button--liked");
-    dataFromServer.likeAmount--;
-    localStorage.removeItem(`isPost${dataFromServer.postId}liked`);
-    sendLike(url, dataToSend);
+    likeAmount--;
+    localStorage.removeItem(`isPost${id}liked`);
+
+    if (likePlus[`${id}`]) {
+      clearTimeout(likePlus[`${id}`].timer);
+    } else {
+      Object.defineProperty(likePlus, `${id}`, {
+        value: {},
+        writable: true,
+        enumerable: true,
+        configurable: true,
+      });
+    }
+
+    if (!likePlus[`${id}`].isClicked) {
+      likeMinus[`${id}`] = {
+        timer: setTimeout(sendLike, fetchDelay, url, dataToSend, id),
+        isClicked: true,
+      };
+    }
   } else {
-    dataToSend.postId = dataFromServer.postId;
+    dataToSend.postId = id;
     dataToSend.likeAmount = "+1";
     likeButton.classList.toggle("post__button--liked");
-    dataFromServer.likeAmount++;
-    localStorage.setItem(`isPost${dataFromServer.postId}liked`, `true`);
-    sendLike(url, dataToSend);
+    likeAmount++;
+    localStorage.setItem(`isPost${id}liked`, `true`);
+
+    if (likeMinus[`${id}`]) {
+      clearTimeout(likeMinus[`${id}`].timer);
+    } else {
+      Object.defineProperty(likeMinus, `${id}`, {
+        value: {},
+        writable: true,
+        enumerable: true,
+        configurable: true,
+      });
+    }
+
+    if (!likeMinus[`${id}`].isClicked) {
+      likePlus[`${id}`] = {
+        timer: setTimeout(sendLike, fetchDelay, url, dataToSend, id),
+        isClicked: true,
+      };
+    }
   }
 
-  likeCount.textContent = `Нравится: ${dataFromServer.likeAmount}`;
+  likeCount.textContent = `Нравится: ${likeAmount}`;
 }
 
-function sendLike(url, data) {
+function sendLike(url, data, resetСountingСlick) {
+  delete likePlus[`${resetСountingСlick}`];
+  delete likeMinus[`${resetСountingСlick}`];
   return fetch(url, {
     method: "PUT",
     mode: "same-origin",
