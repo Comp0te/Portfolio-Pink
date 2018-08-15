@@ -47,50 +47,36 @@
           <input class="upload__source-photo visually-hidden" type="file" name="user-photo" id="user-photo" tabindex="-1">
         </div>
         <div class="upload__wraper">
-          <ul class="upload__tools tools">
-            <li class="tools__item" role="presentation">
-              <button class="upload__crop-btn upload__crop--active tools__button" type="button" disabled>
-                <span class="visually-hidden" id="aria-crop">Обрезать фотографию</span>
+          <ul class="upload__tools tools" aria-label="Обработать фотографию">
+            <li class="tools__item" aria-labelledby="crop">
+              <label class="tools__label" for="crop">
+                <span class="visually-hidden">Обрезать</span>
                 <svg class="tools__icon" width="44" height="44" role="presentation">
                   <title>Обрезать фотографию</title>
                   <use xlink:href="img/sprite.svg#crop"></use>
                 </svg>
-              </button>
+              </label>
+              <input class="tools__slider tools__slider--active slider" type="range" name="crop" id="crop" min="0" max="100" step="1" value="80">
             </li>
-            <li class="tools__item" role="presentation">
-              <button class="upload__fill-btn tools__button" type="button">
-                <span class="visually-hidden" id="aria-fill">Залить фотографию розовым</span>
+            <li class="tools__item" aria-labelledby="fill">
+              <label class="tools__label" for="fill">
+                <span class="visually-hidden">Залить розовым</span>
                 <svg class="tools__icon" width="48" height="44" role="presentation">
                   <title>Залить фотографию розовым</title>
                   <use xlink:href="img/sprite.svg#fill"></use>
                 </svg>
-              </button>
+              </label>
+              <input class="tools__slider slider" type="range" name="fill" id="fill" min="0" max="100" step="1" value="10">
             </li>
-            <li class="tools__item" role="presentation">
-              <button class="upload__contrast-btn tools__button" type="button">
-                <span class="visually-hidden" id="aria-contrast">Задать фотографии контраст</span>
+            <li class="tools__item" aria-labelledby="contrast">
+              <label class="tools__label" for="contrast">
+                <span class="visually-hidden">Задать контраст</span>
                 <svg class="tools__icon" width="32" height="32" role="presentation">
                   <title>Задать фотографии контраст</title>
                   <use xlink:href="img/sprite.svg#contrast"></use>
                 </svg>
-              </button>
-            </li>
-          </ul>
-          <ul class="upload__crawlers crawlers">
-            <li class="crawlers__item crawlers__item--active" role="presentation">
-              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-crop">
-                <div class="crawlers__crop crawlers__toggle" draggable="true" tabindex="0"></div>
-              </div>
-            </li>
-            <li class="crawlers__item" role="presentation">
-              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-fill">
-                <div class="crawlers__fill crawlers__toggle" draggable="true" tabindex="0"></div>
-              </div>
-            </li>
-            <li class="crawlers__item" role="presentation">
-              <div class="crawlers__scale" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="aria-contrast">
-                <div class="crawlers__contrast crawlers__toggle" draggable="true" tabindex="0"></div>
-              </div>
+              </label>
+              <input class="tools__slider slider" type="range" name="contrast" id="contrast" min="0" max="100" step="1" value="50">
             </li>
           </ul>
           <button class="upload__submit button" type="submit">Запостить</button>
