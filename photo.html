@@ -48,8 +48,8 @@
         </div>
         <div class="upload__wraper">
           <ul class="upload__tools tools" aria-label="Обработать фотографию">
-            <li class="tools__item" aria-labelledby="crop">
-              <label class="tools__label" for="crop">
+            <li class="tools__item tools__item--active" aria-labelledby="crop">
+              <label class="tools__label tools__label--crop tools__label--active" for="crop">
                 <span class="visually-hidden">Обрезать</span>
                 <svg class="tools__icon" width="44" height="44" role="presentation">
                   <title>Обрезать фотографию</title>
@@ -59,7 +59,7 @@
               <input class="tools__slider tools__slider--active slider" type="range" name="crop" id="crop" min="0" max="100" step="1" value="80">
             </li>
             <li class="tools__item" aria-labelledby="fill">
-              <label class="tools__label" for="fill">
+              <label class="tools__label tools__label--fill" for="fill">
                 <span class="visually-hidden">Залить розовым</span>
                 <svg class="tools__icon" width="48" height="44" role="presentation">
                   <title>Залить фотографию розовым</title>
@@ -69,7 +69,7 @@
               <input class="tools__slider slider" type="range" name="fill" id="fill" min="0" max="100" step="1" value="10">
             </li>
             <li class="tools__item" aria-labelledby="contrast">
-              <label class="tools__label" for="contrast">
+              <label class="tools__label tools__label--contrast" for="contrast">
                 <span class="visually-hidden">Задать контраст</span>
                 <svg class="tools__icon" width="32" height="32" role="presentation">
                   <title>Задать фотографии контраст</title>

@@ -1,20 +1,62 @@
 .tools {
+  position: relative;
+
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 
   list-style: none;
 }
 
-.tools__icon {
-  fill: $minor-color;
+.tools__item {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  padding-top: 48px;
+  padding-bottom: 70px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -38px;
+    right: -38px;
+
+    height: 1px;
+    overflow: hidden;
+
+    background-color: rgba($color: $minor-color, $alpha: 0.1);
+  }
+
+  &--active {
+    position: relative;
+  }
 }
 
-.tools__button {
-  padding: 0;
+.tools__slider {
+  display: none;
+  padding: 6px 0;
 
-  background-color: transparent;
-  border: none;
+  &--active {
+    position: absolute;
+    left: 0;
+    bottom: 29px;
+
+    display: block;
+  }
+}
+
+.tools__label {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  height: 44px;
+
+  fill: $minor-color;
   outline: none;
   cursor: pointer;
 
@@ -25,14 +67,27 @@
     opacity: 0.5;
   }
 
-  &:disabled {
-    opacity: 1;
-    cursor: default;
-
-    .tools__icon {
-      fill: $brand-color;
-    }
+  &--crop {
+    left: 6.6667%;
   }
+
+  &--fill {
+    left: 39.16667%;
+  }
+
+  &--contrast {
+    left: 75.8333%;
+  }
+
+  &--active {
+    fill: $brand-color;
+    opacity: 1;
+  }
+}
+
+.tools__icon {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -42,11 +97,55 @@
   }
 
   .tools__item {
-    transform: scale(0.5, 0.5);
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 71px;
+    padding: 0;
+
+    &::after {
+      right: -18px;
+      left: 0;
+    }
   }
+
 
   .tools__icon {
     fill: $brand-color;
+  }
+
+  .tools__label {
+    position: static;
+
+    width: 32px;
+
+    opacity: 1;
+
+    &--crop {
+      padding-right: 6px;
+    }
+
+    &--fill {
+      padding-top: 6px;
+    }
+
+    &--contrast {
+      padding: 0 6px;
+    }
+  }
+
+  .tools__slider {
+    position: static;
+
+    display: block;
+    margin-left: 25px;
+
+    &--active {
+      position: static;
+    }
   }
 
   .tools__button {
@@ -56,7 +155,31 @@
 
 @media (min-width: $desktop-width) {
   .tools__item {
-    transform: none;
+    &::after {
+      right: -30px;
+    }
+  }
+
+  .tools__slider {
+    margin-left: 45px;
+    max-width: 288px;
+  }
+
+  .tools__label {
+    width: 51px;
+
+    &--crop {
+      padding-right: 4px;
+    }
+
+    &--fill {
+      padding-top: 8px;
+    }
+
+    &--contrast {
+      padding-left: 8px;
+      padding-right: 9px;
+    }
   }
 }
 
