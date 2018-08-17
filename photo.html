@@ -41,6 +41,8 @@
             <source type="image/webp" srcset="img/photo-upload-1x.webp 1x, img/photo-upload-2x.webp 2x">
             <img class="upload__photo" src="img/photo-upload-1x.jpg" srcset="img/photo-upload-2x.jpg 2x" alt="Зимняя заснеженная дорога">
           </picture>
+          <div class="upload__wraper-layer upload__wraper-layer--pink"></div>
+          <div class="upload__wraper-layer upload__wraper-layer--grey"></div>
           <label for="user-photo">
             <span class="visually-hidden">Нажмите сюда, чтобы выбрать фотографию</span>
           </label>
@@ -56,7 +58,7 @@
                   <use xlink:href="img/sprite.svg#crop"></use>
                 </svg>
               </label>
-              <input class="tools__slider tools__slider--active slider" type="range" name="crop" id="crop" min="0" max="100" step="1" value="80">
+              <input class="tools__slider tools__slider--active slider" type="range" name="crop" id="crop" min="0" max="100" step="1" value="0">
             </li>
             <li class="tools__item" aria-labelledby="fill">
               <label class="tools__label tools__label--fill" for="fill">
@@ -66,7 +68,7 @@
                   <use xlink:href="img/sprite.svg#fill"></use>
                 </svg>
               </label>
-              <input class="tools__slider slider" type="range" name="fill" id="fill" min="0" max="100" step="1" value="10">
+              <input class="tools__slider slider" type="range" name="fill" id="fill" min="0" max="0.5" step="0.01" value="0">
             </li>
             <li class="tools__item" aria-labelledby="contrast">
               <label class="tools__label tools__label--contrast" for="contrast">
@@ -76,7 +78,7 @@
                   <use xlink:href="img/sprite.svg#contrast"></use>
                 </svg>
               </label>
-              <input class="tools__slider slider" type="range" name="contrast" id="contrast" min="0" max="100" step="1" value="50">
+              <input class="tools__slider slider" type="range" name="contrast" id="contrast" min="0" max="0.5" step="0.01" value="0">
             </li>
           </ul>
           <button class="upload__submit button" type="submit">Запостить</button>
