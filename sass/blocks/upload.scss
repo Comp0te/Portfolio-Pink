@@ -24,9 +24,43 @@
 }
 
 .upload__wraper-photo {
-  padding-bottom: 42px;
+  position: relative;
+
+  height: 400px;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  overflow: hidden;
 
   text-align: center;
+}
+
+.upload__wraper-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  height: 400px;
+  width: 280px;
+
+  &--pink {
+    background-color: $brand-color;
+    opacity: 0;
+  }
+
+  &--grey {
+    background-color: #808080;
+    opacity: 0;
+  }
+}
+
+.upload__photo {
+  position: relative;
+  z-index: 10;
+
+  max-height: 100%;
+  max-width: none;
 }
 
 .upload__tools {
@@ -106,9 +140,9 @@
   }
 
   .upload__wraper-photo {
-    width: 48.3871%;
-    padding-top: 15px;
     padding-bottom: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .upload__wraper {
@@ -122,7 +156,8 @@
     width: 100%;
     max-width: 346px;
     margin: 0;
-    padding-right: 30px;
+    padding-right: 18px;
+    padding-left: 28px;
     margin-bottom: 68px;
   }
 
@@ -152,20 +187,20 @@
   }
 
   .upload__wraper-photo {
-    width: 300px;
     margin-left: 80px;
   }
 
   .upload__wraper {
     width: 412px;
     margin-right: 60px;
-    padding-bottom: 3px;
   }
 
   .upload__tools {
     width: 100%;
     max-width: 100%;
     margin-bottom: 145px;
+    padding-left: 0;
+    padding-right: 30px;
   }
 
   .upload__submit {
