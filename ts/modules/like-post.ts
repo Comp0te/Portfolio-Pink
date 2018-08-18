@@ -6,7 +6,6 @@ export default function likePost(likeButton,
                                  dataFromServer,
                                  isPanorama = false) {
   const id = dataFromServer.postId;
-  let likeAmount = dataFromServer.likeAmount;
   const isAlreadyLiked = !!localStorage.getItem(`isPost${id}liked`);
   const fetchDelay = 1000;
   const url = isPanorama ? `/server/panorama/` : `/server/posts/${id}`;
@@ -19,7 +18,7 @@ export default function likePost(likeButton,
     dataToSend.postId = id;
     dataToSend.likeAmount = "-1";
     likeButton.classList.toggle("post__button--liked");
-    likeAmount--;
+    dataFromServer.likeAmount--;
     localStorage.removeItem(`isPost${id}liked`);
 
     if (likePlus[`${id}`]) {
@@ -43,7 +42,7 @@ export default function likePost(likeButton,
     dataToSend.postId = id;
     dataToSend.likeAmount = "+1";
     likeButton.classList.toggle("post__button--liked");
-    likeAmount++;
+    dataFromServer.likeAmount++;
     localStorage.setItem(`isPost${id}liked`, `true`);
 
     if (likeMinus[`${id}`]) {
@@ -65,7 +64,7 @@ export default function likePost(likeButton,
     }
   }
 
-  likeCount.textContent = `Нравится: ${likeAmount}`;
+  likeCount.textContent = `Нравится: ${dataFromServer.likeAmount}`;
 }
 
 function sendLike(url, data, resetСountingСlick) {
