@@ -140,6 +140,10 @@
     padding-left: 88px;
   }
 
+  .main-navigation--open .main-navigation__list {
+    flex-flow: row wrap;
+  }
+
   .main-navigation__item {
     margin-left: 80px;
     padding: 43px 0 43px 0;
