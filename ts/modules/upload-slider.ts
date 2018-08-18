@@ -3,6 +3,7 @@ const photo = document.querySelector(".upload__photo");
 const wraperPhoto = document.querySelector(".upload__wraper-photo");
 const wraperLayerPink: any = document.querySelector(".upload__wraper-layer--pink");
 const wraperLayerGrey: any = document.querySelector(".upload__wraper-layer--grey");
+const pickFileLabel: any = document.querySelector(".upload__source-label");
 const imgTuning = {
   crop: 0,
   pink: 0,
@@ -15,6 +16,7 @@ sliderCrop.addEventListener("input", () => {
   wraperPhoto.scrollLeft = scrollAmount * sliderCrop.value / 100;
   wraperLayerPink.style.left = `${wraperPhoto.scrollLeft}px`;
   wraperLayerGrey.style.left = `${wraperPhoto.scrollLeft}px`;
+  pickFileLabel.style.left = `${wraperPhoto.scrollLeft + 80}px`;
   imgTuning.crop = wraperPhoto.scrollLeft;
 }, false);
 
