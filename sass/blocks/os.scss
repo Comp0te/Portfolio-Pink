@@ -15,7 +15,7 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  color: $brand-color;
+  color: darken($brand-color, 1);
 }
 
 .os__list {
