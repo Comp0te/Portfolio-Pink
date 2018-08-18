@@ -6,7 +6,6 @@ enum Page {
 }
 
 enum ScreenWidth {
-  Mobile = 320,
   Tablet = 660,
   Desktop = 960,
 }
@@ -18,4 +17,12 @@ enum SecondIn {
   Year = 31536000,
 }
 
-export {Page, ScreenWidth, SecondIn};
+enum Key {
+  LeftArrow = 37,
+  RightArrow = 39,
+  Enter = 13,
+  Space = 32,
+  Esc = 27,
+}
+
+export {Page, ScreenWidth, SecondIn, Key};
