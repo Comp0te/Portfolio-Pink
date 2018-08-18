@@ -33,6 +33,10 @@
   overflow: hidden;
 
   text-align: center;
+
+  &--drag-over {
+    box-shadow: 0 0 5px 0 $brand-color;
+  }
 }
 
 .upload__wraper-layer {
@@ -63,6 +67,33 @@
   max-width: none;
 }
 
+.upload__source-label {
+  position: absolute;
+  bottom: 5px;
+  left: 80px;
+  z-index: 20;
+
+  display: block;
+  width: 120px;
+
+  color: #f3f3f3;
+
+  background-color: rgba($minor-color, 0.2);
+  border-radius: 18px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($minor-color, 0.9);
+    color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .upload__tools {
   width: 85.71%;
   max-width: 300px;
@@ -77,19 +108,23 @@
   margin: 0 auto;
   margin-bottom: 12px;
 
-  color: $brand-color;
-
+  color: darken($brand-color, 1);
   border-color: $brand-color;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
     color: #ffffff;
 
     background-color: $brand-color;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     color: rgba($color: #ffffff, $alpha: 0.3);
 
     transition-duration: 0s;
@@ -105,14 +140,20 @@
 
   border-color: $minor-color;
   outline: none;
-  opacity: 0.1;
 
-  &:hover,
-  &:focus {
-    opacity: 0.3;
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
   }
 
-  &:active {
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    color: #ffffff;
+
+    background-color: $minor-color;
+  }
+
+  &:active:not(:disabled) {
     color: rgba($color: #ffffff, $alpha: 0.3);
 
     background-color: $minor-color;
