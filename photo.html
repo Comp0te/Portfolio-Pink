@@ -38,15 +38,13 @@
       <form class="upload__form container" action="#" method="POST" enctype="multipart/form-data">
         <div class="upload__wraper-photo" aria-label="Выбрать фотографию для загрузки">
           <picture>
-            <source type="image/webp" srcset="img/photo-upload-1x.webp 1x, img/photo-upload-2x.webp 2x">
-            <img class="upload__photo" src="img/photo-upload-1x.jpg" srcset="img/photo-upload-2x.jpg 2x" alt="Зимняя заснеженная дорога">
+            <source class="upload__photo-webp" type="image/webp" srcset="img/photo-upload-1x.webp 1x, img/photo-upload-2x.webp 2x">
+            <img class="upload__photo" src="img/photo-upload-1x.jpg" srcset="img/photo-upload-2x.jpg 2x" alt="Фотография для поста">
           </picture>
           <div class="upload__wraper-layer upload__wraper-layer--pink"></div>
           <div class="upload__wraper-layer upload__wraper-layer--grey"></div>
-          <label for="user-photo">
-            <span class="visually-hidden">Нажмите сюда, чтобы выбрать фотографию</span>
-          </label>
-          <input class="upload__source-photo visually-hidden" type="file" name="user-photo" id="user-photo" tabindex="-1">
+          <label class="upload__source-label" for="pick-photo" tabindex="0">Выбрать фотографию</label>
+          <input class="upload__source-input visually-hidden" type="file" accept="image/*" name="user-photo" id="pick-photo" tabindex="-1">
         </div>
         <div class="upload__wraper">
           <ul class="upload__tools tools" aria-label="Обработать фотографию">
@@ -82,7 +80,7 @@
             </li>
           </ul>
           <button class="upload__submit button" type="submit">Запостить</button>
-          <button class="upload__reset button" type="reset">Отмена</button>
+          <button class="upload__reset button" type="reset" disabled>Отмена</button>
         </div>
       </form>
     </section>
