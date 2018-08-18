@@ -1,3 +1,4 @@
+import {Key} from "./enums";
 import {supportsPassiveListener} from "./polifils";
 
 export default class Carousel {
@@ -35,11 +36,6 @@ export default class Carousel {
     this.currentSlide = 0;
     this.initTouchPositionX = 0;
     this.distanсeMoveTouch = 0;
-
-    enum Key {
-      LeftArrow = 37,
-      RightArrow = 39,
-    }
 
     if (this.bullets !== null) {
       this.bullets.forEach((elem, index) => {
