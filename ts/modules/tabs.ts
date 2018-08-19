@@ -18,7 +18,7 @@ export default class Tab {
     this.tabContentActiveState = options.tabContentActiveState;
     this.tabContainers = options.tabContainers;
     this.tabContainerActiveState = options.tabContainerActiveState;
-    this.listenerEventElem = options.listenerEventElem;
+    this.listenerEventElem = options.listenerEventElem || null;
     this.onClickTab = (evt) => {
       let target = evt.target;
 
@@ -75,13 +75,17 @@ export default class Tab {
   }
 
   public addTabEvent() {
-    this.listenerEventElem.addEventListener("click", this.onClickTab, false);
-    this.listenerEventElem.addEventListener("keydown", this.onKeyDownTab, false);
+    if (this.listenerEventElem) {
+      this.listenerEventElem.addEventListener("click", this.onClickTab, false);
+      this.listenerEventElem.addEventListener("keydown", this.onKeyDownTab, false);
+    }
   }
 
   public removeTabEvent() {
-    this.listenerEventElem.removeEventListener("click", this.onClickTab, false);
-    this.listenerEventElem.removeEventListener("keydown", this.onKeyDownTab, false);
+    if (this.listenerEventElem) {
+      this.listenerEventElem.removeEventListener("click", this.onClickTab, false);
+      this.listenerEventElem.removeEventListener("keydown", this.onKeyDownTab, false);
+    }
   }
 
   public addTabindexToTab() {
