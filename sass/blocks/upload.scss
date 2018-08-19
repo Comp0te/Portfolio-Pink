@@ -37,6 +37,10 @@
   &--drag-over {
     box-shadow: 0 0 5px 0 $brand-color;
   }
+
+  &--off {
+    display: none;
+  }
 }
 
 .upload__wraper-layer {
@@ -94,6 +98,12 @@
   }
 }
 
+.upload__wraper {
+  &--off {
+    display: none;
+  }
+}
+
 .upload__tools {
   width: 85.71%;
   max-width: 300px;
@@ -107,58 +117,47 @@
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 12px;
-
-  color: darken($brand-color, 1);
-  border-color: $brand-color;
-  outline: none;
-
-  &:disabled {
-    opacity: 0.2;
-    cursor: default;
-  }
-
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
-    color: #ffffff;
-
-    background-color: $brand-color;
-  }
-
-  &:active:not(:disabled) {
-    color: rgba($color: #ffffff, $alpha: 0.3);
-
-    transition-duration: 0s;
-  }
 }
 
 .upload__reset {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+}
 
-  color: $minor-color;
+.upload__wraper-comment {
+  display: none;
+  width: 100%;
 
-  border-color: $minor-color;
-  outline: none;
-
-  &:disabled {
-    opacity: 0.2;
-    cursor: default;
+  &--on {
+    display: block;
   }
+}
 
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
-    color: #ffffff;
+.upload__pop-up {
+  position: fixed;
+  top: 40vh;
+  left: 5vw;
+  z-index: 100;
 
-    background-color: $minor-color;
+  display: none;
+  width: 90vw;
+  padding-bottom: 20px;
+
+  background-image: radial-gradient(ellipse at top, rgba($brand-color, 0.2), rgba($minor-color, 0.2));
+
+  &--on {
+    display: block;
   }
+}
 
-  &:active:not(:disabled) {
-    color: rgba($color: #ffffff, $alpha: 0.3);
+.upload__dialog-image,
+.upload__dialog-comment,
+.upload__dialog-success {
+  display: none;
 
-    background-color: $minor-color;
-
-    transition-duration: 0s;
+  &--on {
+    display: block;
   }
 }
 
@@ -191,6 +190,10 @@
     flex-flow: row wrap;
     align-content: flex-end;
     width: 48.3871%;
+
+    &--off {
+      display: none;
+    }
   }
 
   .upload__tools {
