@@ -11,6 +11,8 @@
 @import "blocks/container.scss";
 @import "blocks/tools.scss";
 @import "blocks/slider.scss";
+@import "blocks/text-input";
+@import "blocks/textarea";
 /*main block style*/
 @import "blocks/page-header.scss";
 @import "blocks/main-navigation.scss";
@@ -26,6 +28,7 @@
 @import "blocks/photo.scss";
 @import "blocks/post.scss";
 @import "blocks/upload.scss";
+@import "blocks/comment.scss";
 @import "blocks/contest.scss";
 @import "blocks/full-name.scss";
 @import "blocks/os.scss";
