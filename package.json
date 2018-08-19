@@ -38,7 +38,7 @@
     "webpack": "^4.16.0"
   },
   "scripts": {
-    "htmlhint": "htmlhint build/*.html",
+    "htmlhint": "gulp html && htmlhint build/*.html",
     "stylelint": "stylelint sass/**/*.scss --syntax scss && echo Stylelint passed successfully",
     "tslint": "tslint -t verbose ts/**/*.ts && echo Tslint passed successfully",
     "test": "yarn run htmlhint && gulp validateW3C && yarn run stylelint && yarn run tslint",
