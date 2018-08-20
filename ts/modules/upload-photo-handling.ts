@@ -1,14 +1,17 @@
+import {pickPhotoError} from "./upload-dialog";
+
 const [sliderCrop, sliderPink, sliderGrey]: any = [...document.querySelectorAll(".tools__slider")];
 const previewPhoto: any = document.querySelector(".upload__photo");
 const defaultPhotoSrc = previewPhoto.src;
 const wraperPhoto = document.querySelector(".upload__wraper-photo");
+const wraperSlider = document.querySelector(".upload__wraper");
+const wraperComment = document.querySelector(".upload__wraper-comment");
 const wraperLayerPink: any = document.querySelector(".upload__wraper-layer--pink");
 const wraperLayerGrey: any = document.querySelector(".upload__wraper-layer--grey");
 const inputFileElem: any = document.querySelector("#pick-photo");
 const pickFileLabel: any = document.querySelector(".upload__source-label");
 const buttonReset: any = document.querySelector(".upload__reset");
 const buttonNext: any = document.querySelector(".upload__submit");
-// const form = document.querySelector(".upload__form");
 const photoData = {
   crop: 0,
   pink: 0,
@@ -97,6 +100,21 @@ function onDrop(evt) {
   wraperPhoto.classList.remove("upload__wraper-photo--drag-over");
 }
 
+function onClickButtonNext() {
+  if (!photoData.pickedFile) {
+    pickPhotoError.showDialog();
+    return;
+  }
+
+  toggleFormState();
+}
+
+function toggleFormState() {
+  wraperPhoto.classList.toggle("upload__wraper-photo--off");
+  wraperSlider.classList.toggle("upload__wraper--off");
+  wraperComment.classList.toggle("upload__wraper-comment--on");
+}
+
 function renderPickedFile(file) {
   const previewPhotoWebp = document.querySelector(".upload__photo-webp");
   const urlPhoto = window.URL.createObjectURL(file);
@@ -118,11 +136,4 @@ function resetSliders() {
   onGreySliderMove();
 }
 
-function onClickButtonNext() {
-
-  if (!photoData.pickedFile) {
-    inputFileElem.reportValidity();
-  }
-}
-
-export default photoData;
+export {photoData, toggleFormState};
