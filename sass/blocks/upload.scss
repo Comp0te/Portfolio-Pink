@@ -34,6 +34,8 @@
 
   text-align: center;
 
+  animation: toogle-form-state 0.7s ease forwards;
+
   &--drag-over {
     box-shadow: 0 0 5px 0 $brand-color;
   }
@@ -99,6 +101,8 @@
 }
 
 .upload__wraper {
+  animation: toogle-form-state 0.7s ease;
+
   &--off {
     display: none;
   }
@@ -131,12 +135,13 @@
 
   &--on {
     display: block;
+    animation: toogle-form-state 0.7s ease;
   }
 }
 
 .upload__pop-up {
   position: fixed;
-  top: 40vh;
+  top: 30vh;
   left: 5vw;
   z-index: 100;
 
@@ -151,13 +156,13 @@
   }
 }
 
-.upload__dialog-image,
-.upload__dialog-comment,
-.upload__dialog-success {
-  display: none;
+@keyframes toogle-form-state {
+  0% {
+    transform: rotateX(-70deg);
+  }
 
-  &--on {
-    display: block;
+  100% {
+    transform: rotateX(0);
   }
 }
 
