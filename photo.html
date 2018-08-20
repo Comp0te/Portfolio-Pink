@@ -44,7 +44,7 @@
           <div class="upload__wraper-layer upload__wraper-layer--pink"></div>
           <div class="upload__wraper-layer upload__wraper-layer--grey"></div>
           <label class="upload__source-label" for="pick-photo" tabindex="0">Выбрать фотографию</label>
-          <input class="upload__source-input visually-hidden" type="file" accept="image/*" name="user-photo" id="pick-photo" tabindex="-1">
+          <input class="upload__source-input visually-hidden" type="file" accept="image/*" name="user-photo" id="pick-photo" tabindex="-1" required>
         </div>
         <div class="upload__wraper">
           <ul class="upload__tools tools" aria-label="Обработать фотографию">
@@ -79,10 +79,28 @@
               <input class="tools__slider slider" type="range" name="contrast" id="contrast" min="0" max="0.5" step="0.01" value="0">
             </li>
           </ul>
-          <button class="upload__submit button" type="submit">Запостить</button>
-          <button class="upload__reset button" type="reset" disabled>Отмена</button>
+          <button class="upload__submit button button--submit" type="button">Далее</button>
+          <button class="upload__reset button button--reset" type="reset" disabled>Отмена</button>
+        </div>
+        <div class="upload__wraper-comment comment">
+          <div class="comment__author">
+            <label class="comment__name-label" for="name">Ваше имя:</label>
+            <input class="comment__name-input text-input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name" id="name" minlength="2" required>
+          </div>
+          <div class="comment__container" role="presentation">
+            <label class="comment__label" for="comment">Комментарий к Вашей фоторграфии</label>
+            <textarea class="comment__textarea textarea" name="comment" id="comment" cols="25" rows="5" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях *"></textarea>
+          </div>
+          <p class="comment__required">* &#8212; обязательные для заполнения поля</p>
+          <button class="comment__submit button button--submit" type="submit">Запостить</button>
+          <button class="comment__reset button button--reset" type="button">К выбору фото</button>
         </div>
       </form>
+      <div class="upload__pop-up form-pop-up" role="dialog" aria-labelledby="aria-dialog-title" aria-describedby="aria-dialog-message">
+        <strong class="form-pop-up__title" id="aria-dialog-title">Вы не выбрали фотографию!</strong>
+        <p class="form-pop-up__text" id="aria-dialog-message">Для того, чтобы выбрать фотографию, нажмите на кнопку "Выбрать фотографию" или перетащите фотографию на картинку заснеженной дороги.</p>
+        <button class="form-pop-up__button button button--submit" type="button">Ок</button>
+      </div>
     </section>
   </main>
   <include src="htmltemplates/page-footer.html"></include>
