@@ -3,14 +3,12 @@ import Dialog from "./dialog";
 const options = {
 dialogContainer: document.querySelector(".upload__pop-up"),
 dialogContainerShowState: "upload__pop-up--on",
-dialogTitleElem: document.querySelector(".form-pop-up__title"),
-dialogTitle: null,
-dialogMessageElem: document.querySelector(".form-pop-up__text"),
-dialogMessage: null,
-dialogButton: document.querySelector(".form-pop-up__button"),
+titleElemSelector: ".form-pop-up__title",
+messageElemSelector: ".form-pop-up__text",
+buttonSelector: ".form-pop-up__button",
 };
 
-const pickPhotoError = new Dialog(options);
+const pickPhotoError = new Dialog(options, true);
 const fillFieldsError = new Dialog(options);
 
 fillFieldsError.newTitle = "Вы не заполнили обязательные поля!";
