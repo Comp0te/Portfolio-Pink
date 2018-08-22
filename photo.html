@@ -35,7 +35,7 @@
       <h2 class="visually-hidden">Обработать фотографию и выложить</h2>
       <p class="upload__slogan">Затмите их всех!
         <br>Выкладывайте все, что накопилось в телефоне!</p>
-      <form class="upload__form container" action="#" method="POST" enctype="multipart/form-data">
+      <form class="upload__form container" action="#" method="POST" enctype="multipart/form-data" novalidate>
         <div class="upload__wraper-photo" aria-label="Выбрать фотографию для загрузки">
           <picture>
             <source class="upload__photo-webp" type="image/webp" srcset="img/photo-upload-1x.webp 1x, img/photo-upload-2x.webp 2x">
@@ -85,22 +85,17 @@
         <div class="upload__wraper-comment comment">
           <div class="comment__author">
             <label class="comment__name-label" for="name">Ваше имя:</label>
-            <input class="comment__name-input text-input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name" id="name" minlength="2" required>
+            <input class="comment__name-input text-input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name" id="name" required>
           </div>
           <div class="comment__container" role="presentation">
             <label class="comment__label" for="comment">Комментарий к Вашей фоторграфии</label>
-            <textarea class="comment__textarea textarea" name="comment" id="comment" cols="25" rows="5" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях *"></textarea>
+            <textarea class="comment__textarea textarea" name="comment" id="comment" cols="25" rows="5" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях *" required></textarea>
           </div>
           <p class="comment__required">* &#8212; обязательные для заполнения поля</p>
           <button class="comment__submit button button--submit" type="submit">Запостить</button>
           <button class="comment__reset button button--reset" type="button">К выбору фото</button>
         </div>
       </form>
-      <div class="upload__pop-up form-pop-up" role="dialog" aria-labelledby="aria-dialog-title" aria-describedby="aria-dialog-message">
-        <strong class="form-pop-up__title" id="aria-dialog-title">Вы не выбрали фотографию!</strong>
-        <p class="form-pop-up__text" id="aria-dialog-message">Для того, чтобы выбрать фотографию, нажмите на кнопку "Выбрать фотографию" или перетащите фотографию на картинку заснеженной дороги.</p>
-        <button class="form-pop-up__button button button--submit" type="button">Ок</button>
-      </div>
     </section>
   </main>
   <include src="htmltemplates/page-footer.html"></include>
@@ -134,6 +129,11 @@
       </article>
     </li>
   </template>
+  <div class="upload__pop-up form-pop-up" role="dialog" aria-labelledby="aria-dialog-title" aria-describedby="aria-dialog-message">
+    <strong class="form-pop-up__title" id="aria-dialog-title">Вы не выбрали фотографию!</strong>
+    <p class="form-pop-up__text" id="aria-dialog-message">Для того, чтобы выбрать фотографию, нажмите на кнопку "Выбрать фотографию" или перетащите фотографию на картинку заснеженной дороги.</p>
+    <button class="form-pop-up__button button button--submit" type="button">Ок</button>
+  </div>
 
   <script src="js/commons.js"></script>
   <script src="js/photo.js"></script>
