@@ -139,4 +139,4 @@ function resetSliders() {
   onGreySliderMove();
 }
 
-export {photoData, toggleFormState, isFormStatePhoto};
+export {photoData, toggleFormState, onClickResetButton, isFormStatePhoto};
