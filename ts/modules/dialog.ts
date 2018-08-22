@@ -1,24 +1,38 @@
 import {Key} from "./enums";
 
+interface OptionsDialog {
+  dialogContainer: any;
+  dialogContainerShowState: string;
+  titleElemSelector: string;
+  messageElemSelector: string;
+  buttonSelector: string;
+}
+
 export default class Dialog {
   public dialogContainer;
   public dialogContainerShowState: string;
   public dialogTitleElem;
-  public dialogTitle: string;
   public dialogMessageElem;
-  public dialogMessage: string;
   public dialogButton;
+  public cloneDialog;
+  public dialog;
   protected onClickDialogButton;
   protected onKeyDownEscDialog;
 
-  public constructor(options) {
+  public constructor(options: OptionsDialog, isDialogFromMarkup = false) {
     this.dialogContainer = options.dialogContainer;
+
+    if (isDialogFromMarkup) {
+      this.dialog = this.dialogContainer;
+    } else {
+      this.cloneDialog = this.dialogContainer.cloneNode(true);
+      this.dialog = document.body.appendChild(this.cloneDialog);
+    }
+
     this.dialogContainerShowState = options.dialogContainerShowState;
-    this.dialogTitleElem = options.dialogTitleElem;
-    this.dialogTitle = options.dialogTitle || null;
-    this.dialogMessageElem = options.dialogMessageElem;
-    this.dialogMessage = options.dialogMessage || null;
-    this.dialogButton = options.dialogButton;
+    this.dialogTitleElem = this.dialog.querySelector(options.titleElemSelector);
+    this.dialogMessageElem = this.dialog.querySelector(options.messageElemSelector);
+    this.dialogButton = this.dialog.querySelector(options.buttonSelector);
 
     this.onClickDialogButton = () => {
       this.hideDialog();
@@ -30,33 +44,25 @@ export default class Dialog {
       }
     };
 
-    if (this.dialogTitle) {
-      this.dialogTitleElem.textContent = this.dialogTitle;
-    }
-
-    if (this.dialogMessage) {
-      this.dialogMessageElem.textContent = this.dialogTitleElem;
-    }
-
     this.dialogButton.addEventListener("click", this.onClickDialogButton, false);
   }
 
   public showDialog() {
-    this.dialogContainer.classList.add(this.dialogContainerShowState);
+    this.dialog.classList.add(this.dialogContainerShowState);
     this.dialogButton.focus();
     document.addEventListener("keydown", this.onKeyDownEscDialog, false);
   }
 
   public hideDialog() {
-    this.dialogContainer.classList.remove(this.dialogContainerShowState);
+    this.dialog.classList.remove(this.dialogContainerShowState);
     document.removeEventListener("keydown", this.onKeyDownEscDialog, false);
   }
 
   public set newTitle(text: string) {
-    this.dialogTitle = text;
+    this.dialogTitleElem.textContent = text;
   }
 
   public set newMessage(text: string) {
-    this.dialogMessage = text;
+    this.dialogMessageElem.textContent = text;
   }
 }
