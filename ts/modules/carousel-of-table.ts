@@ -1,4 +1,4 @@
-import Carousel from "./carousel";
+import {Carousel, OptionsCarousel} from "./carousel";
 import {supportsPassiveListener} from "./polifils";
 
 export default class CarouselOfTable extends Carousel {
@@ -8,7 +8,7 @@ export default class CarouselOfTable extends Carousel {
   protected onTouchMove;
   protected onTouchEnd;
 
-  public constructor(options, table, tableCells) {
+  public constructor(options: OptionsCarousel, table, tableCells) {
     super(options);
     this.table = table;
     this.tableCells = [...tableCells];

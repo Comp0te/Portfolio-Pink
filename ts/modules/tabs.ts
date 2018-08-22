@@ -1,5 +1,14 @@
 import { Key } from "./enums";
 
+interface OptionsTab {
+  tabs: any;
+  tabActiveState: string;
+  tabContents: any;
+  tabContentActiveState: string;
+  tabContainers: any;
+  tabContainerActiveState: string;
+  listenerEventElem: any;
+}
 export default class Tab {
   public tabs: any[];
   public tabActiveState: string;
@@ -11,7 +20,7 @@ export default class Tab {
   protected onClickTab;
   protected onKeyDownTab;
 
-  public constructor(options) {
+  public constructor(options: OptionsTab) {
     this.tabs = options.tabs;
     this.tabActiveState = options.tabActiveState;
     this.tabContents = options.tabContents;

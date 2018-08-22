@@ -1,3 +1,10 @@
+interface OptionsPageHeaderMenu {
+  mainNav: any;
+  menuLinks: any;
+  pageHeader: any;
+  toggleButton: any;
+}
+
 export default class PageHeaderMenu {
   public pageHeader;
   public mainNav;
@@ -5,7 +12,7 @@ export default class PageHeaderMenu {
   public menuLinks: any[];
   protected onClickToggleButton;
 
-  public constructor(options) {
+  public constructor(options: OptionsPageHeaderMenu) {
     this.pageHeader = options.pageHeader;
     this.mainNav = options.mainNav;
     this.toggleButton = options.toggleButton;

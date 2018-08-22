@@ -1,7 +1,18 @@
 import {Key} from "./enums";
 import {supportsPassiveListener} from "./polifils";
 
-export default class Carousel {
+interface OptionsCarousel {
+  slides: any;
+  slidesActiveStateSelector: string;
+  bullets?: any;
+  bulletsActiveStateSelector: string;
+  arrows?: {
+    left: any;
+    right: any;
+  };
+  touchStateSelector?: string;
+}
+class Carousel {
   public slides: any[];
   public slidesActiveStateSelector: string;
   public bullets: any[];
@@ -20,7 +31,7 @@ export default class Carousel {
   protected initTouchPositionX: number;
   protected distanсeMoveTouch: number;
 
-  public constructor(options) {
+  public constructor(options: OptionsCarousel) {
     this.slides = [...options.slides];
     this.slidesActiveStateSelector = options.slidesActiveStateSelector || null;
     options.bullets ? this.bullets = [...options.bullets] : this.bullets = null;
@@ -192,3 +203,5 @@ export default class Carousel {
     }
   }
 }
+
+export {Carousel, OptionsCarousel};
