@@ -12,6 +12,7 @@ const inputFileElem: any = document.querySelector("#pick-photo");
 const pickFileLabel: any = document.querySelector(".upload__source-label");
 const buttonReset: any = document.querySelector(".upload__reset");
 const buttonNext: any = document.querySelector(".upload__submit");
+let isFormStatePhoto = true;
 const photoData = {
   crop: 0,
   pink: 0,
@@ -57,6 +58,7 @@ function onClickResetButton() {
   resetSliders();
   previewPhoto.src = defaultPhotoSrc;
   buttonReset.setAttribute("disabled", "");
+  photoData.pickedFile = null;
 }
 
 function onPickFile() {
@@ -113,6 +115,7 @@ function toggleFormState() {
   wraperPhoto.classList.toggle("upload__wraper-photo--off");
   wraperSlider.classList.toggle("upload__wraper--off");
   wraperComment.classList.toggle("upload__wraper-comment--on");
+  isFormStatePhoto = !isFormStatePhoto;
 }
 
 function renderPickedFile(file) {
@@ -136,4 +139,4 @@ function resetSliders() {
   onGreySliderMove();
 }
 
-export {photoData, toggleFormState};
+export {photoData, toggleFormState, isFormStatePhoto};
