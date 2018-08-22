@@ -14,9 +14,6 @@ const fillFieldsError = new Dialog(options);
 fillFieldsError.newTitle = "Вы не заполнили обязательные поля!";
 fillFieldsError.newMessage = "Пожалуйста, заполните все поля, отмеченные *";
 
-const uploadSuccess = new Dialog(options);
+const uploadResponse = new Dialog(options);
 
-uploadSuccess.newTitle = "Ваш пост успешно отправлен!";
-uploadSuccess.newMessage = "В ближайшее время Ваш пост будет опубликован.";
-
-export {pickPhotoError, fillFieldsError, uploadSuccess};
+export {pickPhotoError, fillFieldsError, uploadResponse};
