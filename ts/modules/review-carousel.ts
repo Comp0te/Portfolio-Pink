@@ -1,4 +1,4 @@
-import Carousel from "./carousel";
+import {Carousel} from "./carousel";
 
 const options = {
   slides: document.querySelectorAll(".review__item"),

@@ -1,4 +1,4 @@
-import getData from "./fetch-data";
+import getData from "./get-data-post";
 import showVisiblePost from "./show-visible-post";
 
 export default function launchPost(url: string,
