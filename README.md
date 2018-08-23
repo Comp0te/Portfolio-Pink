@@ -21,12 +21,27 @@ In the process of creating the site, I used the following technologies, tools, e
 	- Pixel perfect.
 - **JavaScript:**
 	- TypeScript.
-	- ES2015, Fetch API.
+	- ES2015, Promise, Fetch API, REST.
   - Object-oriented programming.
-  - Carousel: mouse, keyboard and touch controls.
+  - Page functionality:
+    - Index.html:
+      - Carousel: mouse, keyboard and touch controls.
+        - Carousel of comments users.
+        - Carousel of table columns in mobile view.
+      - Google Maps JavaScript API (will soon be implemented).
+    - Photo.html:
+      - Generation of posts using a `<template>` after `GET` request to the server.
+      - Lazy display of posts.
+      - Estimating posts with an optimized number of `PUT` requests to the server.
+      - Select a file with Drag'n'Drop, preview selected file.
+      - Crop and fill sliders for uploaded file.
+      - Tabs of sliders in mobile view.
+      - Form validation.
+    - Contest.html
+      - Form validation (will soon be implemented).
   - To be continued.
 - **Graphics:**
-	- Retina 2x, SVG sprite `use` with external source.
+	- Retina 2x, SVG sprite `<use>` with external source.
 	- Progressive enhancement to WebP.
   - Optimized, responsive, lazy download.
 - **Cross-browser support:**
