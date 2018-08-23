@@ -1,4 +1,4 @@
-import {pickPhotoError} from "./upload-dialog";
+import {showPickPhotoError} from "./upload-dialog";
 
 const [sliderCrop, sliderPink, sliderGrey]: any = [...document.querySelectorAll(".tools__slider")];
 const previewPhoto: any = document.querySelector(".upload__photo");
@@ -104,7 +104,7 @@ function onDrop(evt) {
 
 function onClickButtonNext() {
   if (!photoData.pickedFile) {
-    pickPhotoError.showDialog();
+    showPickPhotoError();
     return;
   }
 

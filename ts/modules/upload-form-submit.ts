@@ -1,5 +1,5 @@
 import postUploadForm from "./post-upload-form";
-import {fillFieldsError} from "./upload-dialog";
+import {showfillFieldsError} from "./upload-dialog";
 import {isFormStatePhoto, onClickResetButton, photoData, toggleFormState} from "./upload-photo-handling";
 
 const buttonBack = document.querySelector(".comment__reset");
@@ -20,7 +20,7 @@ function onSubmit(evt) {
   if (!isFormStatePhoto) {
     if (commetAuthorElem.validity.valueMissing ||
       commentMessageElem.validity.valueMissing) {
-      fillFieldsError.showDialog();
+      showfillFieldsError();
       return;
     } else {
       getCommentData();

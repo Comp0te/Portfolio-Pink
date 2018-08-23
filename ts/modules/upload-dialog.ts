@@ -1,19 +1,33 @@
 import Dialog from "./dialog";
 
 const options = {
-dialogContainer: document.querySelector(".upload__pop-up"),
-dialogContainerShowState: "upload__pop-up--on",
-titleElemSelector: ".form-pop-up__title",
-messageElemSelector: ".form-pop-up__text",
-buttonSelector: ".form-pop-up__button",
+  dialogContainer: document.querySelector(".upload__pop-up"),
+  dialogContainerShowState: "upload__pop-up--on",
+  titleElemSelector: ".form-pop-up__title",
+  messageElemSelector: ".form-pop-up__text",
+  buttonSelector: ".form-pop-up__button",
 };
 
-const pickPhotoError = new Dialog(options, true);
-const fillFieldsError = new Dialog(options);
+const uploadDialog = new Dialog(options, true);
 
-fillFieldsError.newTitle = "Вы не заполнили обязательные поля!";
-fillFieldsError.newMessage = "Пожалуйста, заполните все поля, отмеченные *";
+function showPickPhotoError() {
+  uploadDialog.newTitle = "Вы не выбрали фотографию!";
+  uploadDialog.newMessage = `Для того, чтобы выбрать фотографию, нажмите на
+  кнопку "Выбрать фотографию" или перетащите фотографию на картинку заснеженной дороги.`;
+  uploadDialog.showDialog();
+}
 
-const uploadResponse = new Dialog(options);
+function showfillFieldsError() {
+  uploadDialog.newTitle = "Вы не заполнили обязательные поля!";
+  uploadDialog.newMessage = "Пожалуйста, заполните все поля, отмеченные *";
+  uploadDialog.showDialog();
+}
 
-export {pickPhotoError, fillFieldsError, uploadResponse};
+function showUploadResponse(title = "Ваш пост успешно отправлен!",
+                            message = "В ближайшее время Ваш пост будет опубликован.") {
+  uploadDialog.newTitle = title;
+  uploadDialog.newMessage = message;
+  uploadDialog.showDialog();
+}
+
+export {showPickPhotoError, showfillFieldsError, showUploadResponse};

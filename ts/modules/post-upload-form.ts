@@ -1,4 +1,4 @@
-import {uploadResponse} from "./upload-dialog";
+import {showUploadResponse} from "./upload-dialog";
 
 export default function postUploadForm(formData) {
   return fetch("/server/post/", {
@@ -8,18 +8,14 @@ export default function postUploadForm(formData) {
   })
     .then((response) => {
       if (response.ok) {
-        uploadResponse.newTitle = "Ваш пост успешно отправлен!";
-        uploadResponse.newMessage = "В ближайшее время Ваш пост будет опубликован.";
-        uploadResponse.showDialog();
+        showUploadResponse();
         return true;
       } else {
-        throw new Error("При загрузке информации на сервер произошла ошибка");
+        throw new Error("При загрузке информации на сервер произошла ошибка.");
       }
     })
     .catch((error) => {
-      uploadResponse.newTitle = error.name;
-      uploadResponse.newMessage = error.message;
-      uploadResponse.showDialog();
+      showUploadResponse(error.name, error.message);
       return false;
     });
 }
