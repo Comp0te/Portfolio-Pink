@@ -5,14 +5,13 @@ export default function showVisiblePost(dataPosts: any[],
                                         postParent,
                                         isPanorama = false) {
   const windowHeight: number = document.documentElement.clientHeight;
+
   const isPostVisible = (elem): boolean  => {
     const coords = elem.getBoundingClientRect();
-    const topVisible: boolean = coords.top > -windowHeight * 0.5 &&
-      coords.top < windowHeight * 1.5;
-    const bottomVisible: boolean = coords.bottom > 0 &&
-      coords.bottom < windowHeight;
+    const bottomVisible: boolean = coords.bottom > -windowHeight * 0.5 &&
+      coords.bottom < windowHeight * 1.5;
 
-    return topVisible || bottomVisible;
+    return bottomVisible;
   };
 
   if (isPostVisible(postParent)) {
