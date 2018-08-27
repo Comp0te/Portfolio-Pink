@@ -29,7 +29,7 @@
 
     &:disabled {
       opacity: 0.2;
-      cursor: default;
+      cursor: not-allowed;
     }
 
     &:hover:not(:disabled),
