@@ -1,6 +1,11 @@
 import {Carousel, OptionsCarousel} from "./carousel";
 import {supportsPassiveListener} from "./polifils";
 
+interface OptionsCarouselOfTable extends OptionsCarousel {
+  table: any;
+  tableCells: any;
+}
+
 export default class CarouselOfTable extends Carousel {
   public tableCells: any[];
   public table;
@@ -8,10 +13,10 @@ export default class CarouselOfTable extends Carousel {
   protected onTouchMove;
   protected onTouchEnd;
 
-  public constructor(options: OptionsCarousel, table, tableCells) {
+  public constructor(options: OptionsCarouselOfTable) {
     super(options);
-    this.table = table;
-    this.tableCells = [...tableCells];
+    this.table = options.table;
+    this.tableCells = [...options.tableCells];
 
     this.slides.forEach((elem) => {
       this.removeTouchEvents(elem);

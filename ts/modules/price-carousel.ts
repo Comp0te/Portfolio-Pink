@@ -6,10 +6,10 @@ const options = {
   bullets: document.querySelectorAll(".price__toggle"),
   bulletsActiveStateSelector: "bullets__btn--active",
   touchStateSelector: "price__colhead--touch",
+  table: document.querySelector(".price__table"),
+  tableCells: document.querySelectorAll(".price__cell"),
 };
-const table = document.querySelector(".price__table");
-const tableCells = document.querySelectorAll(".price__cell");
-const priceCarousel = new CarouselOfTable(options, table, tableCells);
+const priceCarousel = new CarouselOfTable(options);
 
 priceCarousel.activeSlide(1);
 priceCarousel.activeBullet(1);
