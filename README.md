@@ -24,6 +24,7 @@ In the process of creating the site, I used the following technologies, tools, e
 	- ES2015, Promise, Fetch API, REST.
   - Object-oriented programming.
   - Page functionality:
+    - Menu on the mobile and tablet views.
     - Index.html:
       - Carousel: mouse, keyboard and touch controls.
         - Carousel of comments users.
@@ -38,7 +39,7 @@ In the process of creating the site, I used the following technologies, tools, e
       - Tabs of sliders in mobile view.
       - Form validation.
     - Contest.html
-      - Form validation (will soon be implemented).
+      - Form validation.
   - To be continued.
 - **Graphics:**
 	- Retina 2x, SVG sprite `<use>` with external source.
