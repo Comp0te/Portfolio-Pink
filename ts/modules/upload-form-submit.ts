@@ -4,6 +4,7 @@ import {isFormStatePhoto, onClickResetButton, photoData, toggleFormState} from "
 
 const buttonBack = document.querySelector(".comment__reset");
 const uploadForm: any = document.querySelector(".upload__form");
+const submitButton = document.querySelector(".comment__submit");
 const commetAuthorElem: any = document.querySelector(".comment__name-input");
 const commentMessageElem: any = document.querySelector(".comment__textarea");
 const commentData = {
@@ -23,11 +24,16 @@ function onSubmit(evt) {
       showfillFieldsError();
       return;
     } else {
+      submitButton.setAttribute("disabled", "");
       getCommentData();
       postUploadForm(generateFormData(photoData, commentData))
       .then((response) => {
         if (response) {
-        resetForm();
+          resetForm();
+        } else {
+          setTimeout(() => {
+            submitButton.removeAttribute("disabled");
+          }, 5000);
         }
       });
     }
@@ -64,6 +70,7 @@ function generateFormData(photo, comment) {
 function resetForm() {
   commetAuthorElem.value = null;
   commentMessageElem.value = null;
+  submitButton.removeAttribute("disabled");
   toggleFormState();
   onClickResetButton();
 }
