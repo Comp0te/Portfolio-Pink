@@ -49,6 +49,10 @@
     cursor: not-allowed;
   }
 
+  &:invalid {
+    border-color: #ff0000;
+  }
+
   &:hover:not(:disabled) {
     border-color: $minor-color;
   }
