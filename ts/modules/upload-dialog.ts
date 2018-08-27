@@ -1,4 +1,4 @@
-import Dialog from "./dialog";
+import {Dialog} from "./dialog";
 
 const options = {
   dialogContainer: document.querySelector(".upload__pop-up"),
@@ -8,7 +8,7 @@ const options = {
   buttonSelector: ".form-pop-up__button",
 };
 
-const uploadDialog = new Dialog(options, true);
+const uploadDialog = new Dialog(options);
 
 function showPickPhotoError() {
   uploadDialog.newTitle = "Вы не выбрали фотографию!";

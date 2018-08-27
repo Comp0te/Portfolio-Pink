@@ -8,31 +8,21 @@ interface OptionsDialog {
   buttonSelector: string;
 }
 
-export default class Dialog {
+class Dialog {
   public dialogContainer;
   public dialogContainerShowState: string;
   public dialogTitleElem;
   public dialogMessageElem;
   public dialogButton;
-  public cloneDialog;
-  public dialog;
   protected onClickDialogButton;
   protected onKeyDownEscDialog;
 
-  public constructor(options: OptionsDialog, isDialogFromMarkup = false) {
+  public constructor(options: OptionsDialog) {
     this.dialogContainer = options.dialogContainer;
-
-    if (isDialogFromMarkup) {
-      this.dialog = this.dialogContainer;
-    } else {
-      this.cloneDialog = this.dialogContainer.cloneNode(true);
-      this.dialog = document.body.appendChild(this.cloneDialog);
-    }
-
     this.dialogContainerShowState = options.dialogContainerShowState;
-    this.dialogTitleElem = this.dialog.querySelector(options.titleElemSelector);
-    this.dialogMessageElem = this.dialog.querySelector(options.messageElemSelector);
-    this.dialogButton = this.dialog.querySelector(options.buttonSelector);
+    this.dialogTitleElem = this.dialogContainer.querySelector(options.titleElemSelector);
+    this.dialogMessageElem = this.dialogContainer.querySelector(options.messageElemSelector);
+    this.dialogButton = this.dialogContainer.querySelector(options.buttonSelector);
 
     this.onClickDialogButton = () => {
       this.hideDialog();
@@ -48,13 +38,13 @@ export default class Dialog {
   }
 
   public showDialog() {
-    this.dialog.classList.add(this.dialogContainerShowState);
+    this.dialogContainer.classList.add(this.dialogContainerShowState);
     this.dialogButton.focus();
     document.addEventListener("keydown", this.onKeyDownEscDialog, false);
   }
 
   public hideDialog() {
-    this.dialog.classList.remove(this.dialogContainerShowState);
+    this.dialogContainer.classList.remove(this.dialogContainerShowState);
     document.removeEventListener("keydown", this.onKeyDownEscDialog, false);
   }
 
@@ -66,3 +56,5 @@ export default class Dialog {
     this.dialogMessageElem.textContent = text;
   }
 }
+
+export {Dialog, OptionsDialog};
