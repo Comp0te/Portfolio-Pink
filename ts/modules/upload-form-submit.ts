@@ -22,9 +22,15 @@ function onSubmit(evt) {
     if (commetAuthorElem.validity.valueMissing ||
       commentMessageElem.validity.valueMissing) {
       showfillFieldsError();
+
+      commetAuthorElem.classList.add("invalid");
+      commentMessageElem.classList.add("invalid");
       return;
     } else {
       submitButton.setAttribute("disabled", "");
+      commetAuthorElem.classList.remove("invalid");
+      commentMessageElem.classList.remove("invalid");
+
       getCommentData();
       postUploadForm(generateFormData(photoData, commentData))
       .then((response) => {
