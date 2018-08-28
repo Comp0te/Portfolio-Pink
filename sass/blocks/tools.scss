@@ -36,6 +36,7 @@
 
 .tools__slider {
   display: none;
+  min-height: 32px;
   padding: 6px 0;
 
   &--active {
