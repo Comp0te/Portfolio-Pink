@@ -13,9 +13,10 @@ const options = {
 
 const contestDialog = new ModalDialog(options);
 
-function showfillFieldsError() {
-  contestDialog.newTitle = "Что-то пошло не так!";
-  contestDialog.newMessage = "Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить";
+function showValidityError(title = "Что-то пошло не так!",
+                           message = "Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить") {
+  contestDialog.newTitle = title;
+  contestDialog.newMessage = message;
   contestDialog.makeFailDialog();
   contestDialog.showDialog();
 }
@@ -36,4 +37,4 @@ function showUploadResponse(title = "Ваша заявка отправлена"
   contestDialog.showDialog();
 }
 
-export {showfillFieldsError, showUploadResponse};
+export {showValidityError, showUploadResponse};
