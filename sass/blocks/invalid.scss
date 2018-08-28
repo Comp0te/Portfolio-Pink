@@ -1,0 +1,6 @@
+.invalid {
+  &:invalid {
+    border-color: #ff0000;
+    background-color: rgba(#ff0000, 0.15);
+  }
+}
