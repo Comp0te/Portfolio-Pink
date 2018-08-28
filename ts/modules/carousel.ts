@@ -158,15 +158,17 @@ class Carousel {
 
   public disableArrows() {
     if (this.arrowLeft !== null && this.arrowRight !== null) {
-      this.arrowRight.removeAttribute("disabled");
-      this.arrowLeft.removeAttribute("disabled");
+      this.arrowRight.disabled = false;
+      this.arrowLeft.disabled = false;
 
       if (this.currentSlide === 0) {
-        this.arrowLeft.setAttribute("disabled", "");
+        this.arrowLeft.disabled = true;
+        this.arrowLeft.blur();
       }
 
       if (this.currentSlide === this.slides.length - 1) {
-        this.arrowRight.setAttribute("disabled", "");
+        this.arrowRight.disabled = true;
+        this.arrowRight.blur();
       }
     }
   }
@@ -179,9 +181,9 @@ class Carousel {
       if (this.bullets !== null) {
         this.activeBullet(this.currentSlide);
       }
-    }
 
-    this.disableArrows();
+      this.disableArrows();
+    }
   }
 
   public toLeftSlide() {
@@ -192,9 +194,9 @@ class Carousel {
       if (this.bullets !== null) {
         this.activeBullet(this.currentSlide);
       }
-    }
 
-    this.disableArrows();
+      this.disableArrows();
+    }
   }
 
   private focusBullet(elem) {
