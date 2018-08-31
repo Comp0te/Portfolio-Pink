@@ -30,13 +30,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@types/picturefill@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/picturefill/-/picturefill-3.0.0.tgz#c0cf09a40ff5bbb823c96a2284d9425c5f462785"
-
-"@types/svg4everybody@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/svg4everybody/-/svg4everybody-2.1.0.tgz#99c3db9b22a6cfb3845cadc6e3c9fe640f4cb51d"
+"@types/googlemaps@^3.30.12":
+  version "3.30.12"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.30.12.tgz#14d62bd8da288a25e9f8c939f5c326fadd58a628"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -5771,10 +5767,6 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-picturefill@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/picturefill/-/picturefill-3.0.2.tgz#fa3d35fffbef5ab5300fe2ad9dca8f2e36cba27b"
-
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -7600,10 +7592,6 @@ sver-compat@^1.5.0:
 svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
-
-svg4everybody@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/svg4everybody/-/svg4everybody-2.1.9.tgz#5bd9f6defc133859a044646d4743fabc28db7e2d"
 
 svgo@^1.0.0:
   version "1.0.5"
