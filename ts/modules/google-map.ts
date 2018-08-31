@@ -9,12 +9,10 @@ const coords = {
     lng: 30.3230474,
   },
 };
-const markerImageSrs = "/img/map-marker.png";
+const markerImageSrs = "https://comp0te.github.io/Portfolio-Pink/img/map-marker.png";
 const infoWindowContent = `<p style="text-align: center;">ул. Большая Конюшенная, 19/8. Очень ждем Вас</p>`;
 let googleMapsScript;
 let isMapAlreadyDownload = false;
-
-// const googleMapTimer = setTimeout(getGoogleMaps, 300);
 
 showGoogleMap();
 window.addEventListener("scroll", showGoogleMap, false);
