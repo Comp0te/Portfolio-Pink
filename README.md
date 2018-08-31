@@ -29,7 +29,7 @@ In the process of creating the site, I used the following technologies, tools, e
       - Carousel: mouse, keyboard and touch controls.
         - Carousel of comments users.
         - Carousel of table columns in mobile view.
-      - Google Maps JavaScript API (will soon be implemented).
+      - Google Maps JavaScript API.
     - Photo.html:
       - Generation of posts using a `<template>` after `GET` request to the server.
       - Lazy display of posts.
@@ -40,7 +40,6 @@ In the process of creating the site, I used the following technologies, tools, e
       - Form validation.
     - Contest.html
       - Form validation.
-  - To be continued.
 - **Graphics:**
 	- Retina 2x, SVG sprite `<use>` with external source.
 	- Progressive enhancement to WebP.
