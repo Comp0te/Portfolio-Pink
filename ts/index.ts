@@ -1,4 +1,5 @@
 import {Page, ScreenWidth} from "./modules/enums";
+import "./modules/google-map";
 import headerMenu from "./modules/page-header";
 import priceCarousel from "./modules/price-carousel";
 import "./modules/review-carousel";
