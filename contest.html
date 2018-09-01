@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="Vinnik Dmitriy">
+<meta name="description" content="Конкурс на лучшее путешествие Пинк, заполните форму и выиграйте приз">
+<meta name="keywords" content="Конкурс, ценный приз, оправить форму в Пинк">
+<link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font">
+<link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font">
+<link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font">
+<link rel="stylesheet" href="css/style.min.css">
+<title>Конкурс Пинк</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#d22856">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:image:height" content="137">
+<meta property="og:image:width" content="262">
+<meta property="og:title" content="Pink - приложение для мобильного телефона">
+<meta property="og:url" content="https://comp0te.github.io/Portfolio-Pink/">
+<meta property="og:image" content="https://comp0te.github.io/Portfolio-Pink/og-image.jpg">
+<meta property="og:description" content="Устали от серости мегаполиса? Нам есть, что вам предложить! Наше приложение поднимает настроение, меняет мир вокруг, заводит новых друзей.">
+</head>
+<body>
+<header class="page-header page-header--menu-open">
+<div class="page-header__wraper">
+<a href="index.html" class="page-header__logo-link">
+<span class="visually-hidden">Главная страница приложения пинк</span>
+<svg class="page-header__logo-mobile" width="74.43" height="22.86" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-mobile"></use>
+</svg>
+<svg class="page-header__logo-tablet" width="146.3" height="40.38" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-tablet"></use>
+</svg>
+<svg class="page-header__logo-desktop" width="146.3" height="40.37" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-desktop"></use>
+</svg>
+</a>
+<nav class="main-navigation main-navigation--open main-navigation--nojs">
+<button class="main-navigation__toggle" type="button">
+<svg class="main-navigation__menu-cross" width="24" height="23">
+<title>Закрыть меню</title>
+<use xlink:href="img/sprite.svg#menu-cross"></use>
+</svg>
+<svg class="main-navigation__menu-burger" width="50" height="24">
+<title>Открыть меню</title>
+<use xlink:href="img/sprite.svg#menu-burger"></use>
+</svg>
+</button>
+<ul class="main-navigation__list">
+<li class="main-navigation__item" role="presentation">
+<a href="index.html" class="main-navigation__link">Главная</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="photo.html" class="main-navigation__link">Фотографии</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="contest.html" class="main-navigation__link">Конкурс</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="#" class="main-navigation__link">HTML Academy</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<section class="contest">
+<div class="contest__intro" role="presentation">
+<h1 class="contest__heading" aria-describedby="aria-contest-about">Конкурс на самое безбашенное путешествие с Пинк</h1>
+</div>
+<p class="contest__about container" id="aria-contest-about">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+<span class="contest__about-request">Пожалуйста, заполните форму ниже:</span>
+</p>
+<form class="contest__form" action="#" method="POST" enctype="multipart/form-data" novalidate="">
+<fieldset class="contest__full-name full-name">
+<legend class="visually-hidden">ФИО</legend>
+<ul class="full-name__list">
+<li class="full-name__item">
+<label class="full-name__label" for="surname">Фамилия:</label>
+<input class="full-name__input text-input" type="text" placeholder="Укажите фамилию *" autocomplete="family-name" spellcheck="true" name="surname" id="surname" required="">
+</li>
+<li class="full-name__item">
+<label class="full-name__label" for="name">Имя:</label>
+<input class="full-name__input text-input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name" id="name" required="">
+</li>
+<li class="full-name__item">
+<label class="full-name__label" for="patronymic">Отчество:</label>
+<input class="full-name__input text-input" type="text" placeholder="Ну и отчество тоже" autocomplete="additional-name" spellcheck="true" name="patronymic" id="patronymic">
+</li>
+</ul>
+</fieldset>
+<fieldset class="contest__os os">
+<legend class="os__title">С каким приложением путешествовали?</legend>
+<ul class="os__list">
+<li class="os__item">
+<input class="os__radio visually-hidden" type="radio" name="os" value="ios" id="ios" checked="">
+<label class="os__label" for="ios">Pink для iOS</label>
+</li>
+<li class="os__item">
+<input class="os__radio visually-hidden" type="radio" name="os" value="android" id="android">
+<label class="os__label" for="android">Pink на Android</label>
+</li>
+<li class="os__item">
+<input class="os__radio visually-hidden" type="radio" name="os" value="windowsPhone" id="windowsPhone">
+<label class="os__label" for="windowsPhone">Windows Phone</label>
+</li>
+</ul>
+</fieldset>
+<fieldset class="contest__contacts form-contacts">
+<legend class="form-contacts__title">Контактная информация</legend>
+<ul class="form-contacts__list">
+<li class="form-contacts__item form-contacts__item--tel">
+<input class="form-contacts__input" type="tel" placeholder="Номер, пожалуйста" autocomplete="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{7}">
+<label class="form-contacts__label" for="tel">Номер телефона</label>
+</li>
+<li class="form-contacts__item form-contacts__item--email">
+<input class="form-contacts__input" type="email" placeholder="Введите почту *" autocomplete="email" name="email" id="email" required="">
+<label class="form-contacts__label" for="email">Адрес почты</label>
+</li>
+</ul>
+</fieldset>
+<fieldset class="contest__achievements achievements">
+<legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
+<ul class="achievements__list">
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="shark" id="check1" checked="">
+<label class="achievements__label" for="check1">Сделал селфи с акулой</label>
+</li>
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="beaсh" id="check2" checked="">
+<label class="achievements__label" for="check2">Обгорел на пляже</label>
+</li>
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="Chuck" id="check3">
+<label class="achievements__label" for="check3">Видел Чака Норриса</label>
+</li>
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="souvenir" id="check4">
+<label class="achievements__label" for="check4">Накупил сувениров</label>
+</li>
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="tower" id="check5" checked="">
+<label class="achievements__label" for="check5">Удержал башню</label>
+</li>
+<li class="achievements__item">
+<input class="achievements__checkbox visually-hidden" type="checkbox" name="achievements" value="hotel" id="check6">
+<label class="achievements__label" for="check6">Разгромил отель</label>
+</li>
+</ul>
+</fieldset>
+<div class="contest__emotions emotions" role="presentation">
+<label class="emotions__label" for="emotions">Опишите свои эмоции</label>
+<textarea class="emotions__textarea textarea" name="emotions" id="emotions" cols="25" rows="5" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+</div>
+<div class="contest__submit">
+<button class="contest__submit-button form-button" type="submit">Отправить форму</button>
+<p class="contest__required-text">&#8212; обязательные <span class="contest__required-extension">для заполнения</span> поля</p>
+</div>
+<div class="contest__pop-up" role="dialog" aria-modal="true" aria-labelledby="aria-dialog-title" aria-describedby="aria-dialog-message">
+<div class="contest__pop-up-wraper form-pop-up" role="presentation">
+<strong class="form-pop-up__title" id="aria-dialog-title"></strong>
+<p class="form-pop-up__text" id="aria-dialog-message"></p>
+<div class="form-pop-up__wraper" role="presentation">
+<button class="form-pop-up__button form-button" type="button">Ок</button>
+</div>
+</div>
+</div>
+</form>
+</section>
+</main>
+<footer class="page-footer container">
+<a href="index.html" class="page-footer__logo-link">
+<span class="visually-hidden">Главная страница приложения пинк</span>
+<svg class="page-footer__logo-tablet" width="147" height="40" role="presentation">
+<title>Логотип приложения Пинк</title>
+<use xlink:href="img/sprite.svg#footer-logo-tablet"></use>
+</svg>
+<svg class="page-footer__logo-desktop" width="146.3" height="40.38" role="presentation">
+<title>Логотип приложения Пинк</title>
+<use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
+</svg>
+</a>
+<ul class="page-footer__social socials" aria-label="Мы в социальных сетях">
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы в twitter</span>
+<svg class="socials__svg" width="18" height="14" role="presentation">
+<title>Логотип twitter</title>
+<use xlink:href="img/sprite.svg#twitter"></use>
+</svg>
+</a>
+</li>
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы в facebook</span>
+<svg class="socials__svg" width="9" height="18" role="presentation">
+<title>Логотип facebook</title>
+<use xlink:href="img/sprite.svg#facebook"></use>
+</svg>
+</a>
+</li>
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы на youtube</span>
+<svg class="socials__svg" width="15" height="13" role="presentation">
+<use xlink:href="img/sprite.svg#youtube"></use>
+</svg>
+</a>
+</li>
+</ul>
+<p class="page-footer__academy">
+<span class="page-footer__academy-text" id="aria-academy">Разработано</span>
+<a href="#" class="page-footer__academy-link" aria-labelledby="aria-academy">
+<svg class="page-footer__academy-logo" width="27" height="34">
+<title>Логотип HTML Academy</title>
+<use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+</svg>
+</a>
+</p>
+</footer>
+<script src="js/commons.js"></script>
+<script src="js/contest.js"></script>
+</body>
+</html>

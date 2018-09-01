@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="Vinnik Dmitriy">
+<meta name="description" content="Просмотр фотографий пользователей приложения Пинк, добавление своих фотографий и коментариев">
+<meta name="keywords" content="Фотографии пользователей, комментарии, загрузка своих фоторгафий">
+<link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font">
+<link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font">
+<link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font">
+<link rel="stylesheet" href="css/style.min.css">
+<title>Pink - фоторгафии пользователей</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#d22856">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:image:height" content="137">
+<meta property="og:image:width" content="262">
+<meta property="og:title" content="Pink - приложение для мобильного телефона">
+<meta property="og:url" content="https://comp0te.github.io/Portfolio-Pink/">
+<meta property="og:image" content="https://comp0te.github.io/Portfolio-Pink/og-image.jpg">
+<meta property="og:description" content="Устали от серости мегаполиса? Нам есть, что вам предложить! Наше приложение поднимает настроение, меняет мир вокруг, заводит новых друзей.">
+</head>
+<body>
+<header class="page-header page-header--menu-open">
+<div class="page-header__wraper">
+<a href="index.html" class="page-header__logo-link">
+<span class="visually-hidden">Главная страница приложения пинк</span>
+<svg class="page-header__logo-mobile" width="74.43" height="22.86" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-mobile"></use>
+</svg>
+<svg class="page-header__logo-tablet" width="146.3" height="40.38" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-tablet"></use>
+</svg>
+<svg class="page-header__logo-desktop" width="146.3" height="40.37" role="presentation">
+<title>Логотип Пинк</title>
+<use xlink:href="img/sprite.svg#logo-desktop"></use>
+</svg>
+</a>
+<nav class="main-navigation main-navigation--open main-navigation--nojs">
+<button class="main-navigation__toggle" type="button">
+<svg class="main-navigation__menu-cross" width="24" height="23">
+<title>Закрыть меню</title>
+<use xlink:href="img/sprite.svg#menu-cross"></use>
+</svg>
+<svg class="main-navigation__menu-burger" width="50" height="24">
+<title>Открыть меню</title>
+<use xlink:href="img/sprite.svg#menu-burger"></use>
+</svg>
+</button>
+<ul class="main-navigation__list">
+<li class="main-navigation__item" role="presentation">
+<a href="index.html" class="main-navigation__link">Главная</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="photo.html" class="main-navigation__link">Фотографии</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="contest.html" class="main-navigation__link">Конкурс</a>
+</li>
+<li class="main-navigation__item" role="presentation">
+<a href="#" class="main-navigation__link">HTML Academy</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<section class="photo">
+<div class="photo__wraper-heading">
+<h1 class="photo__heading" id="aria-photo">Фотографии пользователей</h1>
+</div>
+<p class="photo__intro container">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
+<article class="photo__panorama post post--panorama" aria-labelledby="aria-panorama">
+<div class="photo__container-title container" role="presentation">
+<h2 class="photo__panorama-title" id="aria-panorama">Панорама дня</h2>
+</div>
+</article>
+<ul class="photo__list container" aria-labelledby="aria-photo">
+</ul>
+</section>
+<section class="upload">
+<h2 class="visually-hidden">Обработать фотографию и выложить</h2>
+<p class="upload__slogan">Затмите их всех!
+<br>Выкладывайте все, что накопилось в телефоне!</p>
+<form class="upload__form container" action="#" method="POST" enctype="multipart/form-data" novalidate="">
+<div class="upload__wraper-photo" aria-label="Выбрать фотографию для загрузки">
+<picture>
+<source class="upload__photo-webp" type="image/webp" srcset="img/photo-upload-1x.webp, img/photo-upload-2x.webp 2x">
+<img class="upload__photo" src="img/photo-upload-1x.jpg" srcset="img/photo-upload-2x.jpg 2x" alt="Фотография для поста">
+</picture>
+<div class="upload__wraper-layer upload__wraper-layer--pink"></div>
+<div class="upload__wraper-layer upload__wraper-layer--grey"></div>
+<label class="upload__source-label" for="pick-photo" tabindex="0">Выбрать фотографию</label>
+<input class="upload__source-input visually-hidden" type="file" accept="image/*" name="user-photo" id="pick-photo" tabindex="-1" required="">
+</div>
+<div class="upload__wraper">
+<ul class="upload__tools tools" aria-label="Обработать фотографию">
+<li class="tools__item tools__item--active" aria-labelledby="crop">
+<label class="tools__label tools__label--crop tools__label--active" for="crop">
+<span class="visually-hidden">Обрезать</span>
+<svg class="tools__icon" width="44" height="44" role="presentation">
+<title>Обрезать фотографию</title>
+<use xlink:href="img/sprite.svg#crop"></use>
+</svg>
+</label>
+<input class="tools__slider tools__slider--active slider" type="range" name="crop" id="crop" min="0" max="100" step="1" value="0">
+</li>
+<li class="tools__item" aria-labelledby="fill">
+<label class="tools__label tools__label--fill" for="fill">
+<span class="visually-hidden">Залить розовым</span>
+<svg class="tools__icon" width="48" height="44" role="presentation">
+<title>Залить фотографию розовым</title>
+<use xlink:href="img/sprite.svg#fill"></use>
+</svg>
+</label>
+<input class="tools__slider slider" type="range" name="fill" id="fill" min="0" max="0.5" step="0.01" value="0">
+</li>
+<li class="tools__item" aria-labelledby="contrast">
+<label class="tools__label tools__label--contrast" for="contrast">
+<span class="visually-hidden">Задать контраст</span>
+<svg class="tools__icon" width="32" height="32" role="presentation">
+<title>Задать фотографии контраст</title>
+<use xlink:href="img/sprite.svg#contrast"></use>
+</svg>
+</label>
+<input class="tools__slider slider" type="range" name="contrast" id="contrast" min="0" max="0.5" step="0.01" value="0">
+</li>
+</ul>
+<button class="upload__submit button button--submit" type="button">Далее</button>
+<button class="upload__reset button button--reset" type="reset" disabled="">Отмена</button>
+</div>
+<div class="upload__wraper-comment comment">
+<div class="comment__author">
+<label class="comment__name-label" for="name">Ваше имя:</label>
+<input class="comment__name-input text-input" type="text" placeholder="Введите ваше имя *" autocomplete="name" spellcheck="true" name="name" id="name" required="">
+</div>
+<div class="comment__container" role="presentation">
+<label class="comment__label" for="comment">Комментарий к Вашей фоторграфии</label>
+<textarea class="comment__textarea textarea" name="comment" id="comment" cols="25" rows="5" spellcheck="true" placeholder="Можно прям в красках, не стесняясь в выражениях *" required=""></textarea>
+</div>
+<p class="comment__required">* &#8212; обязательные для заполнения поля</p>
+<button class="comment__submit button button--submit" type="submit">Запостить</button>
+<button class="comment__reset button button--reset" type="button">К выбору фото</button>
+</div>
+</form>
+</section>
+</main>
+<footer class="page-footer container">
+<a href="index.html" class="page-footer__logo-link">
+<span class="visually-hidden">Главная страница приложения пинк</span>
+<svg class="page-footer__logo-tablet" width="147" height="40" role="presentation">
+<title>Логотип приложения Пинк</title>
+<use xlink:href="img/sprite.svg#footer-logo-tablet"></use>
+</svg>
+<svg class="page-footer__logo-desktop" width="146.3" height="40.38" role="presentation">
+<title>Логотип приложения Пинк</title>
+<use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
+</svg>
+</a>
+<ul class="page-footer__social socials" aria-label="Мы в социальных сетях">
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы в twitter</span>
+<svg class="socials__svg" width="18" height="14" role="presentation">
+<title>Логотип twitter</title>
+<use xlink:href="img/sprite.svg#twitter"></use>
+</svg>
+</a>
+</li>
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы в facebook</span>
+<svg class="socials__svg" width="9" height="18" role="presentation">
+<title>Логотип facebook</title>
+<use xlink:href="img/sprite.svg#facebook"></use>
+</svg>
+</a>
+</li>
+<li class="socials__item" role="presentation">
+<a href="#" class="socials__link">
+<span class="visually-hidden">Мы на youtube</span>
+<svg class="socials__svg" width="15" height="13" role="presentation">
+<use xlink:href="img/sprite.svg#youtube"></use>
+</svg>
+</a>
+</li>
+</ul>
+<p class="page-footer__academy">
+<span class="page-footer__academy-text" id="aria-academy">Разработано</span>
+<a href="#" class="page-footer__academy-link" aria-labelledby="aria-academy">
+<svg class="page-footer__academy-logo" width="27" height="34">
+<title>Логотип HTML Academy</title>
+<use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+</svg>
+</a>
+</p>
+</footer>
+<template class="post-template">
+<li class="photo__item">
+<article class="post">
+<div class="post__wraper-photo" role="presentation">
+<a class="post__link-photo">
+<picture class="post__picture">
+<source class="post-template__webp-desktop" type="image/webp" media="(min-width: 960px)" srcset="">
+<source class="post-template__webp-tablet" type="image/webp" media="(min-width: 660px)" srcset="">
+<source class="post-template__webp-mobile" type="image/webp" srcset="">
+<source class="post-template__desktop" media="(min-width: 960px)" srcset="">
+<source class="post-template__tablet" media="(min-width: 660px)" srcset="">
+<img class="post__photo post-template__mobile" src="#" srcset="" alt="Фотография пользователя">
+</picture>
+</a>
+</div>
+<div class="post__wraper-author" aria-label="Автор и дата поста">
+<b class="post__author"></b>
+<time datetime="" class="post__time"></time>
+</div>
+<p class="post__content" aria-label="Комментарий пользователя"></p>
+<div class="post__wraper-like">
+<button class="post__button" type="button">
+<span class="visually-hidden">Мне нравится</span>
+</button>
+<span class="post__like">Нравится: 0</span>
+</div>
+</article>
+</li>
+</template>
+<div class="upload__pop-up form-pop-up" role="dialog" aria-labelledby="aria-dialog-title" aria-describedby="aria-dialog-message">
+<strong class="form-pop-up__title" id="aria-dialog-title"></strong>
+<p class="form-pop-up__text" id="aria-dialog-message"></p>
+<button class="form-pop-up__button button button--submit" type="button">Ок</button>
+</div>
+<script src="js/commons.js"></script>
+<script src="js/photo.js"></script>
+</body>
+</html>

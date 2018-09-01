@@ -1,0 +1,17 @@
+(window.webpackJsonpapp=window.webpackJsonpapp||[]).push([[1],{1:
+/*!**************************!*\
+  !*** ./modules/enums.ts ***!
+  \**************************/
+/*! exports provided: Page, ScreenWidth, SecondIn, Key */function(t,e,n){"use strict";var i,o,a,s;n.r(e),n.d(e,"Page",function(){return i}),n.d(e,"ScreenWidth",function(){return o}),n.d(e,"SecondIn",function(){return a}),n.d(e,"Key",function(){return s}),function(t){t[t.Index=0]="Index",t[t.Photo=1]="Photo",t[t.Contest=2]="Contest",t[t.Htmlacademy=3]="Htmlacademy"}(i||(i={})),function(t){t[t.Tablet=660]="Tablet",t[t.Desktop=960]="Desktop"}(o||(o={})),function(t){t[t.Min=60]="Min",t[t.Hour=3600]="Hour",t[t.Day=86400]="Day",t[t.Year=31536e3]="Year"}(a||(a={})),function(t){t[t.LeftArrow=37]="LeftArrow",t[t.RightArrow=39]="RightArrow",t[t.Enter=13]="Enter",t[t.Space=32]="Space",t[t.Esc=27]="Esc"}(s||(s={}))},26:
+/*!***************************!*\
+  !*** ./modules/dialog.ts ***!
+  \***************************/
+/*! exports provided: Dialog */function(t,e,n){"use strict";n.r(e),n.d(e,"Dialog",function(){return o});var i=n(/*! ./enums */1);class o{constructor(t){this.dialogContainer=t.dialogContainer,this.dialogContainerShowState=t.dialogContainerShowState,this.dialogTitleElem=this.dialogContainer.querySelector(t.titleElemSelector),this.dialogMessageElem=this.dialogContainer.querySelector(t.messageElemSelector),this.dialogButton=this.dialogContainer.querySelector(t.buttonSelector),this.onClickDialogButton=(()=>{this.hideDialog()}),this.onKeyDownEscDialog=(t=>{t.keyCode===i.Key.Esc&&this.hideDialog()}),this.dialogButton.addEventListener("click",this.onClickDialogButton,!1)}showDialog(){this.dialogContainer.classList.add(this.dialogContainerShowState),this.dialogButton.focus(),document.addEventListener("keydown",this.onKeyDownEscDialog,!1)}hideDialog(){this.dialogContainer.classList.remove(this.dialogContainerShowState),document.removeEventListener("keydown",this.onKeyDownEscDialog,!1)}set newTitle(t){this.dialogTitleElem.textContent=t}set newMessage(t){this.dialogMessageElem.textContent=t}}},3:
+/*!********************************!*\
+  !*** ./modules/page-header.ts ***!
+  \********************************/
+/*! exports provided: default */function(t,e,n){"use strict";n.r(e);var i=n(/*! ./page-header-menu */4);const o={mainNav:document.querySelector(".main-navigation"),menuLinks:document.querySelectorAll(".main-navigation__link"),pageHeader:document.querySelector(".page-header"),toggleButton:document.querySelector(".main-navigation__toggle")},a=new i.default(o);e.default=a},4:
+/*!*************************************!*\
+  !*** ./modules/page-header-menu.ts ***!
+  \*************************************/
+/*! exports provided: default */function(t,e,n){"use strict";n.r(e),n.d(e,"default",function(){return i});class i{constructor(t){this.pageHeader=t.pageHeader,this.mainNav=t.mainNav,this.toggleButton=t.toggleButton,this.menuLinks=[...t.menuLinks],this.onClickToggleButton=(t=>{let e=t.target;for(;e!==t.currentTarget;){if(e===this.toggleButton)return void this.toggleMenu();e=e.parentNode}}),this.pageHeader.addEventListener("click",this.onClickToggleButton,!1),this.mainNav.classList.remove("main-navigation--nojs"),this.toggleMenu()}toggleMenu(){this.pageHeader.classList.toggle("page-header--menu-open"),this.mainNav.classList.toggle("main-navigation--open")}set menuItemActive(t){this.menuLinks[t].classList.toggle("main-navigation__link--active"),this.menuLinks[t].removeAttribute("href")}}}}]);
