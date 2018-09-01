@@ -2,7 +2,13 @@
 
 The design was created by the [HTML Academy](https://htmlacademy.ru), coded by me.
 
-[Portfolio-Pink on the GitHub Pages](https://comp0te.github.io/Portfolio-Pink/)
+## [Portfolio-Pink on the GitHub Pages.](https://comp0te.github.io/Portfolio-Pink/)
+
+## Table of contents:
+- [Used technologies.](#Used-technologies.)
+- [Chrome DevTools Audits.](#Chrome-DevTools-Audits:)
+
+### Used technologies.
 
 In the process of creating the site, I used the following technologies, tools, etc:
 
@@ -58,3 +64,24 @@ In the process of creating the site, I used the following technologies, tools, e
 	- Git, GitHub, Travis CI.
 	- Basic terminal usage.
 	- Visual Studio Code, Chrome DevTools, Adobe Photoshop.
+
+---
+
+### Chrome DevTools Audits:
+- Chrome v. 68.0.3440.106
+- Device: Mobile
+- Throttling: Applied Fast 3G, 4x CPU Slowdown
+
+**Index.html**
+
+![Index.html](chrome-devtools-audits/index.jpg)
+
+**Photo.html**
+
+![Photo.html](chrome-devtools-audits/photo.jpg)
+
+**Contest.html**
+
+![Contest.html](chrome-devtools-audits/contest.jpg)
+
+---
